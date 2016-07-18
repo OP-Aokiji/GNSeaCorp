@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GN.DataItem
 {
-    class Product
+    public class ProductItem
     {
         private string _productId;
         private string _productName;

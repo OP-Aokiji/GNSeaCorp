@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GN.DataItem
 {
-    class ProductMenu
+    public class ProductMenuItem
     {
         private string _menuId;
         private bool _type;

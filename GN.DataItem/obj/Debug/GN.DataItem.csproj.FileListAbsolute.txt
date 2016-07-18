@@ -1,0 +1,5 @@
+D:\WebForm\GNSeaCorp\GN.DataItem\bin\Debug\GN.DataItem.dll
+D:\WebForm\GNSeaCorp\GN.DataItem\bin\Debug\GN.DataItem.pdb
+D:\WebForm\GNSeaCorp\GN.DataItem\obj\Debug\GN.DataItem.csprojResolveAssemblyReference.cache
+D:\WebForm\GNSeaCorp\GN.DataItem\obj\Debug\GN.DataItem.dll
+D:\WebForm\GNSeaCorp\GN.DataItem\obj\Debug\GN.DataItem.pdb

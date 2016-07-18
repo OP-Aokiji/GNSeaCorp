@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace GN.DataItem
 {
-    public class MenuItem
+    public class TagItem
     {
-        private string _menuId;
-        private bool _type;
-        private string _parentId;
-        private string _menuName;
+        private string _tagId;
+        private string _tagName;
         private string _description;
         private bool _validFlag;
         private string _addUser;
@@ -19,55 +17,29 @@ namespace GN.DataItem
         private string _updateUser;
         private DateTime _updateDate;
 
-        public string MenuId
+        public string TagId
         {
             get
             {
-                return _menuId;
+                return _tagId;
             }
 
             set
             {
-                _menuId = value;
+                _tagId = value;
             }
         }
 
-        public bool Type
+        public string TagName
         {
             get
             {
-                return _type;
+                return _tagName;
             }
 
             set
             {
-                _type = value;
-            }
-        }
-
-        public string ParentId
-        {
-            get
-            {
-                return _parentId;
-            }
-
-            set
-            {
-                _parentId = value;
-            }
-        }
-
-        public string MenuName
-        {
-            get
-            {
-                return _menuName;
-            }
-
-            set
-            {
-                _menuName = value;
+                _tagName = value;
             }
         }
 
@@ -148,6 +120,5 @@ namespace GN.DataItem
                 _updateDate = value;
             }
         }
-
     }
 }

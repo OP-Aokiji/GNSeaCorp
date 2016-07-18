@@ -6,53 +6,53 @@ using System.Threading.Tasks;
 
 namespace GN.DataItem
 {
-    class Tag
+    public class ItemCoreItem
     {
-        private string _tagId;
-        private string _tagName;
-        private string _description;
+        private string _coreId;
+        private string _itemId;
+        private string _itemName;
         private bool _validFlag;
         private string _addUser;
         private DateTime _addDate;
         private string _updateUser;
         private DateTime _updateDate;
 
-        public string TagId
+        public string CoreId
         {
             get
             {
-                return _tagId;
+                return _coreId;
             }
 
             set
             {
-                _tagId = value;
+                _coreId = value;
             }
         }
 
-        public string TagName
+        public string ItemId
         {
             get
             {
-                return _tagName;
+                return _itemId;
             }
 
             set
             {
-                _tagName = value;
+                _itemId = value;
             }
         }
 
-        public string Description
+        public string ItemName
         {
             get
             {
-                return _description;
+                return _itemName;
             }
 
             set
             {
-                _description = value;
+                _itemName = value;
             }
         }
 

@@ -6,85 +6,85 @@ using System.Threading.Tasks;
 
 namespace GN.DataItem
 {
-    class News
+    public class SildeItem
     {
-        private string _newsId;
-        private string _tagId;
-        private string _title;
-        private string _summary;
-        private string _content;
-        private bool _validFlag;
-        private string _addUser;
+        private string _sildeId;
+        private string _description;
+        private string _imageUrl;
+        private string _slogan1;
+        private string _slogan2;
+        private string _validFlag;
+        private bool _addUser;
         private DateTime _addDate;
         private string _updateUser;
         private DateTime _updateDate;
 
-        public string NewsId
+        public string SildeId
         {
             get
             {
-                return _newsId;
+                return _sildeId;
             }
 
             set
             {
-                _newsId = value;
+                _sildeId = value;
             }
         }
 
-        public string TagId
+        public string Description
         {
             get
             {
-                return _tagId;
+                return _description;
             }
 
             set
             {
-                _tagId = value;
+                _description = value;
             }
         }
 
-        public string Title
+        public string ImageUrl
         {
             get
             {
-                return _title;
+                return _imageUrl;
             }
 
             set
             {
-                _title = value;
+                _imageUrl = value;
             }
         }
 
-        public string Summary
+        public string Slogan1
         {
             get
             {
-                return _summary;
+                return _slogan1;
             }
 
             set
             {
-                _summary = value;
+                _slogan1 = value;
             }
         }
 
-        public string Content
+        public string Slogan2
         {
             get
             {
-                return _content;
+                return _slogan2;
             }
 
             set
             {
-                _content = value;
+                _slogan2 = value;
             }
         }
 
-        public bool ValidFlag
+        public string ValidFlag
         {
             get
             {
@@ -97,7 +97,7 @@ namespace GN.DataItem
             }
         }
 
-        public string AddUser
+        public bool AddUser
         {
             get
             {

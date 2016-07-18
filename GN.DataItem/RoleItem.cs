@@ -6,29 +6,59 @@ using System.Threading.Tasks;
 
 namespace GN.DataItem
 {
-    class Silde
+    public class RoleItem
     {
-        private string _sildeId;
+        private string _roleId;
+        private bool _type;
+        private string _roleName;
         private string _description;
-        private string _imageUrl;
-        private string _slogan1;
-        private string _slogan2;
-        private string _validFlag;
-        private bool _addUser;
+        private bool _roleFlag;
+        private bool _validFlag;
+        private bool _readOnly;
+        private bool _enableInsert;
+        private bool _enableUpdate;
+        private bool _enableDelete;
+        private string _addUser;
         private DateTime _addDate;
         private string _updateUser;
         private DateTime _updateDate;
 
-        public string SildeId
+        public string RoleId
         {
             get
             {
-                return _sildeId;
+                return _roleId;
             }
 
             set
             {
-                _sildeId = value;
+                _roleId = value;
+            }
+        }
+
+        public bool Type
+        {
+            get
+            {
+                return _type;
+            }
+
+            set
+            {
+                _type = value;
+            }
+        }
+
+        public string RoleName
+        {
+            get
+            {
+                return _roleName;
+            }
+
+            set
+            {
+                _roleName = value;
             }
         }
 
@@ -45,46 +75,20 @@ namespace GN.DataItem
             }
         }
 
-        public string ImageUrl
+        public bool RoleFlag
         {
             get
             {
-                return _imageUrl;
+                return _roleFlag;
             }
 
             set
             {
-                _imageUrl = value;
+                _roleFlag = value;
             }
         }
 
-        public string Slogan1
-        {
-            get
-            {
-                return _slogan1;
-            }
-
-            set
-            {
-                _slogan1 = value;
-            }
-        }
-
-        public string Slogan2
-        {
-            get
-            {
-                return _slogan2;
-            }
-
-            set
-            {
-                _slogan2 = value;
-            }
-        }
-
-        public string ValidFlag
+        public bool ValidFlag
         {
             get
             {
@@ -97,7 +101,59 @@ namespace GN.DataItem
             }
         }
 
-        public bool AddUser
+        public bool ReadOnly
+        {
+            get
+            {
+                return _readOnly;
+            }
+
+            set
+            {
+                _readOnly = value;
+            }
+        }
+
+        public bool EnableInsert
+        {
+            get
+            {
+                return _enableInsert;
+            }
+
+            set
+            {
+                _enableInsert = value;
+            }
+        }
+
+        public bool EnableUpdate
+        {
+            get
+            {
+                return _enableUpdate;
+            }
+
+            set
+            {
+                _enableUpdate = value;
+            }
+        }
+
+        public bool EnableDelete
+        {
+            get
+            {
+                return _enableDelete;
+            }
+
+            set
+            {
+                _enableDelete = value;
+            }
+        }
+
+        public string AddUser
         {
             get
             {

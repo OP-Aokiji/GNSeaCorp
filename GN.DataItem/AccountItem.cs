@@ -6,85 +6,137 @@ using System.Threading.Tasks;
 
 namespace GN.DataItem
 {
-    class Role
+    public class AccountItem
     {
-        private string _roleId;
-        private bool _type;
-        private string _roleName;
-        private string _description;
-        private bool _roleFlag;
+        private string _userId;
+        private string _roldId;
+        private string _lastName;
+        private string _firstName;
+        private string _password;
+        private string _address;
+        private string _phoneNumber;
+        private string _identification;
+        private string _avatarUrl;
         private bool _validFlag;
-        private bool _readOnly;
-        private bool _enableInsert;
-        private bool _enableUpdate;
-        private bool _enableDelete;
         private string _addUser;
         private DateTime _addDate;
         private string _updateUser;
         private DateTime _updateDate;
 
-        public string RoleId
+        public string UserId
         {
             get
             {
-                return _roleId;
+                return _userId;
             }
 
             set
             {
-                _roleId = value;
+                _userId = value;
             }
         }
 
-        public bool Type
+        public string RoldId
         {
             get
             {
-                return _type;
+                return _roldId;
             }
 
             set
             {
-                _type = value;
+                _roldId = value;
             }
         }
 
-        public string RoleName
+        public string LastName
         {
             get
             {
-                return _roleName;
+                return _lastName;
             }
 
             set
             {
-                _roleName = value;
+                _lastName = value;
             }
         }
 
-        public string Description
+        public string FirstName
         {
             get
             {
-                return _description;
+                return _firstName;
             }
 
             set
             {
-                _description = value;
+                _firstName = value;
             }
         }
 
-        public bool RoleFlag
+        public string Password
         {
             get
             {
-                return _roleFlag;
+                return _password;
             }
 
             set
             {
-                _roleFlag = value;
+                _password = value;
+            }
+        }
+
+        public string Address
+        {
+            get
+            {
+                return _address;
+            }
+
+            set
+            {
+                _address = value;
+            }
+        }
+
+        public string PhoneNumber
+        {
+            get
+            {
+                return _phoneNumber;
+            }
+
+            set
+            {
+                _phoneNumber = value;
+            }
+        }
+
+        public string Identification
+        {
+            get
+            {
+                return _identification;
+            }
+
+            set
+            {
+                _identification = value;
+            }
+        }
+
+        public string AvatarUrl
+        {
+            get
+            {
+                return _avatarUrl;
+            }
+
+            set
+            {
+                _avatarUrl = value;
             }
         }
 
@@ -98,58 +150,6 @@ namespace GN.DataItem
             set
             {
                 _validFlag = value;
-            }
-        }
-
-        public bool ReadOnly
-        {
-            get
-            {
-                return _readOnly;
-            }
-
-            set
-            {
-                _readOnly = value;
-            }
-        }
-
-        public bool EnableInsert
-        {
-            get
-            {
-                return _enableInsert;
-            }
-
-            set
-            {
-                _enableInsert = value;
-            }
-        }
-
-        public bool EnableUpdate
-        {
-            get
-            {
-                return _enableUpdate;
-            }
-
-            set
-            {
-                _enableUpdate = value;
-            }
-        }
-
-        public bool EnableDelete
-        {
-            get
-            {
-                return _enableDelete;
-            }
-
-            set
-            {
-                _enableDelete = value;
             }
         }
 

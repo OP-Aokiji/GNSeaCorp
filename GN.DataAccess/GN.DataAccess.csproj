@@ -40,7 +40,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\ItemCoreDAO.cs" />
+    <Compile Include="DAO\MenuDAO.cs" />
+    <Compile Include="DAO\NewsDAO.cs" />
+    <Compile Include="DAO\ProductDAO.cs" />
+    <Compile Include="DAO\ProductMenuDAO.cs" />
+    <Compile Include="DAO\RoleDAO.cs" />
+    <Compile Include="DAO\SlideDAO.cs" />
+    <Compile Include="DAO\TagDAO.cs" />
+    <Compile Include="IDAO\IAccountDAO.cs" />
+    <Compile Include="IDAO\IItemCoreDAO.cs" />
+    <Compile Include="IDAO\IMenuDAO.cs" />
+    <Compile Include="IDAO\INewsDAO.cs" />
+    <Compile Include="IDAO\IProductDAO.cs" />
+    <Compile Include="IDAO\IProductMenuDAO.cs" />
+    <Compile Include="IDAO\IRoleDAO.cs" />
+    <Compile Include="IDAO\ISlideDAO.cs" />
+    <Compile Include="IDAO\ITagDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\GN.DataItem\GN.DataItem.csproj">
+      <Project>{c4c233d0-bcd9-47cc-976c-b854bb8f7918}</Project>
+      <Name>GN.DataItem</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
