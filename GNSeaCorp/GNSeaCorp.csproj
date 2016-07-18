@@ -94,10 +94,117 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\css\bootstrap.css" />
+    <Content Include="Admin\css\demo-page.css" />
+    <Content Include="Admin\css\examples.css" />
+    <Content Include="Admin\css\font-awesome.css" />
+    <Content Include="Admin\css\geochart.css" />
+    <Content Include="Admin\css\hover.css" />
+    <Content Include="Admin\css\magnific-popup.css" />
+    <Content Include="Admin\css\style.css" />
+    <Content Include="Admin\fonts\fontawesome-webfont.svg" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Admin\images\1.jpg" />
+    <Content Include="Admin\images\404.png" />
+    <Content Include="Admin\images\b3.png" />
+    <Content Include="Admin\images\climate.jpg" />
+    <Content Include="Admin\images\close.png" />
+    <Content Include="Admin\images\ftr-icons.png" />
+    <Content Include="Admin\images\icon.png" />
+    <Content Include="Admin\images\login.jpg" />
+    <Content Include="Admin\images\mess.png" />
+    <Content Include="Admin\images\next.png" />
+    <Content Include="Admin\images\p1.png" />
+    <Content Include="Admin\images\p2.png" />
+    <Content Include="Admin\images\p3.png" />
+    <Content Include="Admin\images\p4.png" />
+    <Content Include="Admin\images\p5.png" />
+    <Content Include="Admin\images\p6.png" />
+    <Content Include="Admin\images\p7.png" />
+    <Content Include="Admin\images\p8.png" />
+    <Content Include="Admin\images\prev.png" />
+    <Content Include="Admin\images\pro1.jpg" />
+    <Content Include="Admin\images\pro10.jpg" />
+    <Content Include="Admin\images\pro12.jpg" />
+    <Content Include="Admin\images\pro2.jpg" />
+    <Content Include="Admin\images\pro3.jpg" />
+    <Content Include="Admin\images\pro4.jpg" />
+    <Content Include="Admin\images\pro5.jpg" />
+    <Content Include="Admin\images\pro6.jpg" />
+    <Content Include="Admin\images\pro7.jpg" />
+    <Content Include="Admin\images\pro8.jpg" />
+    <Content Include="Admin\images\pro9.jpg" />
+    <Content Include="Admin\images\reg.png" />
+    <Content Include="Admin\images\search.png" />
+    <Content Include="Admin\images\shoppy.jpg" />
+    <Content Include="Admin\images\tick.png" />
+    <Content Include="Admin\images\visit.png" />
+    <Content Include="Admin\js\bars.js" />
+    <Content Include="Admin\js\bootstrap.js" />
+    <Content Include="Admin\js\Chart.min.js" />
+    <Content Include="Admin\js\chartinator.js" />
+    <Content Include="Admin\js\gmaps.js" />
+    <Content Include="Admin\js\jquery-2.1.1.min.js" />
+    <Content Include="Admin\js\jquery.magnific-popup.js" />
+    <Content Include="Admin\js\jquery.nicescroll.js" />
+    <Content Include="Admin\js\modernizr.min.js" />
+    <Content Include="Admin\js\nivo-lightbox.min.js" />
+    <Content Include="Admin\js\scripts.js" />
+    <Content Include="Admin\js\skycons.js" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\chocolat.css" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\2.jpg" />
+    <Content Include="images\3.jpg" />
+    <Content Include="images\4.jpg" />
+    <Content Include="images\5.jpg" />
+    <Content Include="images\6.jpg" />
+    <Content Include="images\7.jpg" />
+    <Content Include="images\8.jpg" />
+    <Content Include="images\banner.png" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\Fish\Basa Stomach-1.JPG" />
+    <Content Include="images\Fish\Basa Stomach-2.jpg" />
+    <Content Include="images\Fish\Beaded butterfly shrimp.jpg" />
+    <Content Include="images\Fish\Breaded PD shrimp.jpg" />
+    <Content Include="images\Fish\Breaded PTO shrimp.jpg" />
+    <Content Include="images\Fish\Four color Breaded shrimp.jpg" />
+    <Content Include="images\Fish\Shrimp Burger.jpg" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="images\close.png" />
+    <Content Include="images\co.png" />
+    <Content Include="images\glass.png" />
+    <Content Include="images\img-sp.png" />
+    <Content Include="js\jquery-1.11.1.min.js" />
+    <Content Include="js\jquery.chocolat.js" />
+    <Content Include="js\jquery.wmuSlider.js" />
+    <Content Include="images\left.png" />
+    <Content Include="images\logo-GN.JPG" />
+    <Content Include="images\LogoGN200.png" />
+    <Content Include="images\portfolio5.jpg" />
+    <Content Include="images\portfolio6.jpg" />
+    <Content Include="images\right.png" />
+    <Content Include="images\SLOGAN.png" />
+    <Content Include="images\update.png" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Admin\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Admin\fonts\FontAwesome.otf" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -118,13 +225,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\MasterPage\" />
     <Folder Include="App_Data\" />
-    <Folder Include="css\" />
-    <Folder Include="fonts\" />
-    <Folder Include="images\" />
-    <Folder Include="js\" />
     <Folder Include="MasterPage\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
