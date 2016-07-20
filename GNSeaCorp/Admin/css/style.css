@@ -259,12 +259,12 @@ a:hover {
 }
 .logo-name {
     float: left;
-    width: 30%;
+    width: 35%;
     margin: 0% 3% 0% 2%;
 }
 .logo-name h1 {
     font-size: 2.5em;
-    color: #FC8213;
+    color: #337ab7;
     margin: 0em;
     font-weight: 700;
     text-decoration: none;

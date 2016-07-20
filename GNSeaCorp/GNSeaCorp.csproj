@@ -139,6 +139,7 @@
     <Content Include="Admin\images\shoppy.jpg" />
     <Content Include="Admin\images\tick.png" />
     <Content Include="Admin\images\visit.png" />
+    <Content Include="Admin\index.aspx" />
     <Content Include="Admin\js\bars.js" />
     <Content Include="Admin\js\bootstrap.js" />
     <Content Include="Admin\js\Chart.min.js" />
@@ -205,6 +206,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Admin\MasterPage\GNSeaAdmin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -219,13 +221,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MasterPage\GNSeaAdmin.Master.cs">
+      <DependentUpon>GNSeaAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MasterPage\GNSeaAdmin.Master.designer.cs">
+      <DependentUpon>GNSeaAdmin.Master</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\MasterPage\" />
     <Folder Include="App_Data\" />
     <Folder Include="MasterPage\" />
   </ItemGroup>
