@@ -173,6 +173,7 @@
     <Content Include="images\Fish\Breaded PTO shrimp.jpg" />
     <Content Include="images\Fish\Four color Breaded shrimp.jpg" />
     <Content Include="images\Fish\Shrimp Burger.jpg" />
+    <Content Include="index.aspx" />
     <Content Include="js\bootstrap.js" />
     <Content Include="images\close.png" />
     <Content Include="images\co.png" />
@@ -207,6 +208,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Admin\MasterPage\GNSeaAdmin.Master" />
+    <Content Include="MasterPage\UserMasterPage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -238,11 +240,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\UserMasterPage.Master.cs">
+      <DependentUpon>UserMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\UserMasterPage.Master.designer.cs">
+      <DependentUpon>UserMasterPage.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="MasterPage\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
