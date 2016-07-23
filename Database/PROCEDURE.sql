@@ -3,20 +3,20 @@
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE <Procedure_Name, sysname, ProcedureName> 
-	-- Add the parameters for the stored procedure here
-	<@Param1, sysname, @p1> <Datatype_For_Param1, , int> = <Default_Value_For_Param1, , 0>, 
-	<@Param2, sysname, @p2> <Datatype_For_Param2, , int> = <Default_Value_For_Param2, , 0>
-AS
-BEGIN
-	-- SET NOCOUNT ON added to prevent extra result sets from
-	-- interfering with SELECT statements.
-	SET NOCOUNT ON;
+--CREATE PROCEDURE <Procedure_Name, sysname, ProcedureName> 
+--	-- Add the parameters for the stored procedure here
+--	<@Param1, sysname, @p1> <Datatype_For_Param1, , int> = <Default_Value_For_Param1, , 0>, 
+--	<@Param2, sysname, @p2> <Datatype_For_Param2, , int> = <Default_Value_For_Param2, , 0>
+--AS
+--BEGIN
+--	-- SET NOCOUNT ON added to prevent extra result sets from
+--	-- interfering with SELECT statements.
+--	SET NOCOUNT ON;
 
-    -- Insert statements for procedure here
-	SELECT <@Param1, sysname, @p1>, <@Param2, sysname, @p2>
-END
-GO
+--    -- Insert statements for procedure here
+--	SELECT <@Param1, sysname, @p1>, <@Param2, sysname, @p2>
+--END
+--GO
 -- PROCEDURE OF TABLE SLIDE --
 CREATE PROCEDURE p_SlideSearch
 	@SLIDE_ID	CHAR(5),
@@ -45,7 +45,6 @@ BEGIN
 	EXEC(@V_SQL_QUERY);
 END
 GO
-
 CREATE PROCEDURE p_SlideEntry
 	@SLIDE_ID		CHAR(5),
 	@DESCRIPTION	NVARCHAR(500),
@@ -97,7 +96,6 @@ BEGIN
 		SELECT ERR_CODE = 'E';
 END
 GO
-
 CREATE PROCEDURE p_SlideDelete
 	@SLIDE_ID		CHAR(5),
 	@UPDATE_USER	CHAR(20),
@@ -115,18 +113,17 @@ BEGIN
 	ELSE                              
 		SELECT ERR_CODE = 'E';        
 END                                   
-GO                                    
-                                      
--- PROCEDURE OF TABLE USER --
-CREATE PROCEDURE p_UserSearch
-	@Offset		VARCHAR,
-	@Limit		VARCHAR,
-	@Order		VARCHAR
-AS
-BEGIN
+GO                                                                         
+---- PROCEDURE OF TABLE USER --
+--CREATE PROCEDURE p_UserSearch
+--	@Offset		VARCHAR,
+--	@Limit		VARCHAR,
+--	@Order		VARCHAR
+--AS
+--BEGIN
 	
-END
-GO
+--END
+--GO
 
 CREATE PROCEDURE p_UserEntry
 	@USER_ID		VARCHAR(20),
@@ -142,8 +139,8 @@ CREATE PROCEDURE p_UserEntry
 	@USER			NVARCHAR(20)
 AS
 BEGIN
-	IF NOT EXISTS(SELECT 1 FROM USER WHERE USER_ID = @USER_ID)
-		INSERT INTO USER (
+	IF NOT EXISTS(SELECT 1 FROM ACCOUNT WHERE USER_ID = @USER_ID)
+		INSERT INTO ACCOUNT(
 			USER_ID,
 			ROLD_ID,
 			PASSWORD,
@@ -177,7 +174,7 @@ BEGIN
 			,FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
 		);
 	ELSE
-		UPDATE USER SET
+		UPDATE ACCOUNT SET
 			 ROLD_ID       	= @ROLD_ID
 			,PASSWORD      	= @PASSWORD
 			,FIRST_NAME    	= @FIRST_NAME
@@ -206,7 +203,7 @@ CREATE PROCEDURE p_UserDelete
 	@USER			NVARCHAR(20)
 AS
 BEGIN
-	UPDATE USER SET
+	UPDATE ACCOUNT SET
 		 VALID_FLAG    	= '0'
 		,UPDATE_USER   	= @USER
 		,UPDATE_DATE   	= FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
@@ -215,15 +212,15 @@ END
 GO
 
 -- PROCEDURE OF TABLE ROLE --
-CREATE PROCEDURE p_RoleSearch
-@Offset		VARCHAR,
-@Limit		VARCHAR,
-@Order		VARCHAR
-AS
-BEGIN
-	RETURN TRUE
-END
-GO
+--CREATE PROCEDURE p_RoleSearch
+--@Offset		VARCHAR,
+--@Limit		VARCHAR,
+--@Order		VARCHAR
+--AS
+--BEGIN
+--	RETURN TRUE
+--END
+--GO
 
 CREATE PROCEDURE p_RoleEntry
 	@ROLE_ID			CHAR(5),
@@ -234,10 +231,10 @@ CREATE PROCEDURE p_RoleEntry
 	@ENABLE_UPDATE		BIT,
 	@ENABLE_DELETE		BIT,
 	@DESCRIPTION		NVARCHAR(500),
-	@USER
+	@USER				NVARCHAR(20)
 AS
 BEGIN
-	IF NOT EXISTS (SELECT 1 FROM ROLE WHERE ROLD_ID = @ROLD_ID AND TYPE = @TYPE)
+	IF NOT EXISTS (SELECT 1 FROM ROLE WHERE ROLE_ID = @ROLE_ID AND TYPE = @TYPE)
 		INSERT INTO ROLE (
 			 ROLE_ID
 			,TYPE
@@ -269,18 +266,18 @@ BEGIN
 		);
 	ELSE
 		UPDATE ROLE SET
-			ROLD_NAME
-			READ_ONLY
-			ENABLE_INSERT
-			ENABLE_UPDATE
-			ENABLE_DELETE
-			DESCRIPTION
-			VALID_FLAG
-			ADD_USER
-			ADD_DATE
-			UPDATE_USER
-			UPDATE_DATE
-		WHERE	ROLD_ID = @ROLD_ID
+			ROLD_NAME      = 	@ROLD_NAME,
+			READ_ONLY      = 	@READ_ONLY,
+			ENABLE_INSERT  = 	@ENABLE_INSERT,
+			ENABLE_UPDATE  = 	@ENABLE_UPDATE,
+			ENABLE_DELETE  = 	@ENABLE_DELETE,
+			DESCRIPTION    = 	@DESCRIPTION,
+			VALID_FLAG     = 	'1',
+			ADD_USER       = 	@USER,
+			ADD_DATE       = 	FORMAT(GETDATE(),'dd/MM/yyyy HH:mm'),
+			UPDATE_USER    = 	@USER,
+			UPDATE_DATE    =  	FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+		WHERE	ROLE_ID = @ROLE_ID
 		AND		TYPE	= @TYPE;
 	
 	IF @@ROWCOUNT > 0
@@ -311,25 +308,26 @@ END
 GO
 
 -- PROCEDURE OF TABLE NEWS --
-CREATE PROCEDURE p_NewsSearch
-@Offset		VARCHAR,
-@Limit		VARCHAR,
-@Order		VARCHAR
-AS
-BEGIN
-	RETURN TRUE
-END
-GO
+--CREATE PROCEDURE p_NewsSearch
+--@Offset		VARCHAR,
+--@Limit		VARCHAR,
+--@Order		VARCHAR
+--AS
+--BEGIN
+--	RETURN TRUE
+--END
+--GO
 
 CREATE PROCEDURE p_NewsEntry
 	@NEWS_ID		CHAR(5),
-	@TITLE		NVARCHAR(50),
+	@TITLE			NVARCHAR(50),
 	@SUMMARY		NVARCHAR(200),
 	@CONTENT		TEXT,
-	@USER
+	@USER			NVARCHAR(20)
 AS
 BEGIN
 	IF NOT EXISTS (SELECT 1 FROM NEWS WHERE NEWS_ID = @NEWS_ID)
+	BEGIN
 		INSERT INTO NEWS (
 			 NEWS_ID		
 			,TAG_ID		
@@ -353,40 +351,18 @@ BEGIN
 			,@USER
 			,FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
 		);
-		
-		INSERT INTO TAG (
-			 TAG_ID		
-			,TAG_NAME	
-			,DESCRIPTION
-			,VALID_FLAG	
-			,ADD_USER	
-			,ADD_DATE	
-			,UPDATE_USER
-			,UPDATE_DATE
-		) VALUES (
-			 @NEWS_ID
-			,@TITLE
-			,''
-			,'1'
-			,@USER
-			,FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
-			,@USER
-			,FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
-		);
-	ELSE (
-		UPDATE NEWS SET
-			TITLE		= @TITLE,
-			SUMMARY	    = @SUMMARY,
-			CONTENT	    = @CONTENT,
-			VALID_FLAG	= '1'
-			UPDATE_USER = @USER,
-			UPDATE_DATE = FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
-		WHERE NEWS_ID = @NEWS_ID;
-		
-		UPDATE TAG SET
-			VALID_FLAG = '1'
-		WHERE TAG_ID = @NEWS_ID;
-	)
+		END
+	ELSE 
+		BEGIN
+			UPDATE NEWS SET
+				TITLE		= @TITLE,
+				SUMMARY	    = @SUMMARY,
+				CONTENT	    = @CONTENT,
+				VALID_FLAG	= '1',
+				UPDATE_USER = @USER,
+				UPDATE_DATE = FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			WHERE NEWS_ID = @NEWS_ID;
+		END
 	
 	IF @@ROWCOUNT > 0
 		SELECT ERR_CODE = 'S';        
@@ -397,11 +373,11 @@ GO
 
 CREATE PROCEDURE p_NewsDelete
 	@NEWS_ID		CHAR(5),
-	@USER
+	@USER			NVARCHAR(20)
 AS
 BEGIN
 	UPDATE NEWS SET
-		VALID_FLAG	= '0'
+		VALID_FLAG	= '0',
 		UPDATE_USER = @USER,
 		UPDATE_DATE = FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
 	WHERE NEWS_ID = @NEWS_ID;
@@ -418,38 +394,39 @@ END
 GO
 
 -- PROCEDURE OF TABLE TAG -- Hiện tại không cần cái này
-CREATE PROCEDURE p_TAGSearch
-@Offset		VARCHAR,
-@Limit		VARCHAR,
-@Order		VARCHAR
-AS
-BEGIN
-	RETURN TRUE
-END
-GO
+--CREATE PROCEDURE p_TAGSearch
+--@Offset		VARCHAR,
+--@Limit		VARCHAR,
+--@Order		VARCHAR
+--AS
+--BEGIN
+--	RETURN TRUE
+--END
+--GO
 
-CREATE PROCEDURE p_TAGEntry
-AS
-BEGIN
-END
-GO
+--CREATE PROCEDURE p_TAGEntry
+--AS
+--BEGIN
+--END
+--GO
 
-CREATE PROCEDURE p_TAGDelete
-AS
-BEGIN
-END
-GO
+--CREATE PROCEDURE p_TAGDelete
+--AS
+--BEGIN
+--END
+--GO
 
 -- PROCEDURE OF CATEGORY (MENU)
-CREATE PROCEDURE p_CategorySearch
-@Offset		VARCHAR,
-@Limit		VARCHAR,
-@Order		VARCHAR
-AS
-BEGIN
-	RETURN TRUE
-END
-GO
+--CREATE PROCEDURE p_CategorySearch
+--@Offset		VARCHAR,
+--@Limit		VARCHAR,
+--@Order		VARCHAR
+--AS
+--BEGIN
+--	RETURN TRUE
+--END
+--GO
+
 -- NÊN SELECT LẤY MENU ID LỚN NHẤT
 CREATE PROCEDURE p_CategoryEntry
 	@MENU_ID		CHAR(2),
@@ -458,7 +435,7 @@ CREATE PROCEDURE p_CategoryEntry
 	@USER			NVARCHAR(20)
 AS
 BEGIN
-	IF NOT EXISTS (SELECT 1 FROM MENU FROM MENU_ID = @MENU_ID AND PARENT_ID = '03' AND TYPE = '2')
+	IF NOT EXISTS (SELECT 1 FROM MENU WHERE MENU_ID = @MENU_ID AND PARENT_ID = '03' AND TYPE = '2')
 		INSERT INTO MENU (
 			 MENU_ID
 			,TYPE		
@@ -511,89 +488,92 @@ END
 GO
 
 -- PROCEDURE OF PRODUCT & PRODUCT_MENU
-CREATE PROCEDURE p_ProductSearch
-@Offset		VARCHAR,
-@Limit		VARCHAR,
-@Order		VARCHAR
-AS
-BEGIN
-	RETURN TRUE
-END
-GO
+--CREATE PROCEDURE p_ProductSearch
+--@Offset		VARCHAR,
+--@Limit		VARCHAR,
+--@Order		VARCHAR
+--AS
+--BEGIN
+--	RETURN TRUE
+--END
+--GO
 
 CREATE PROCEDURE p_ProductEntry
 	@PRODUCT_ID		CHAR(10),		
 	@PRODUCT_NAME	NVARCHAR(50),
-	@PRICE1			MONEY			
+	@PRICE1			MONEY,			
 	@DESCRIPTION	NVARCHAR(500),
 	@IMAGE_URL		TEXT,			
 	@USER			NVARCHAR(20),
 	@MENU_ID		CHAR(2)
 AS
 BEGIN
-	IF NOT EXISTS (SELECT 1 FROM PRODUCT WHERE PRODUCT_ID = @PRODUCT_ID) (
-		INSERT INTO PRODUCT (
-			PRODUCT_ID,
-			PRODUCT_NAME,
-			PRICE1,
-			DESCRIPTION,
-			IMAGE_URL,
-			VALID_FLAG,
-			ADD_USER,
-			ADD_DATE,
-			UPDATE_USER,
-			UPDATE_DATE
-		) VALUES (
-			@PRODUCT_ID,
-			@PRODUCT_NAME,
-			@PRICE1,
-			@DESCRIPTION,
-			@IMAGE_URL,
-			'1',
-			@USER,
-			FORMAT(GETDATE(),'dd/MM/yyyy HH:mm'),
-			@USER,
-			FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
-		);
+	IF NOT EXISTS (SELECT 1 FROM PRODUCT WHERE PRODUCT_ID = @PRODUCT_ID) 
+	BEGIN
+			INSERT INTO PRODUCT (
+				PRODUCT_ID,
+				PRODUCT_NAME,
+				PRICE1,
+				DESCRIPTION,
+				IMAGE_URL,
+				VALID_FLAG,
+				ADD_USER,
+				ADD_DATE,
+				UPDATE_USER,
+				UPDATE_DATE
+			) VALUES (
+				@PRODUCT_ID,
+				@PRODUCT_NAME,
+				@PRICE1,
+				@DESCRIPTION,
+				@IMAGE_URL,
+				'1',
+				@USER,
+				FORMAT(GETDATE(),'dd/MM/yyyy HH:mm'),
+				@USER,
+				FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			);
 		
-		INSERT INTO PRODUCT_MENU (
-			MENU_ID,
-			TYPE,	
-			PRODUCT_ID,
-			VALID_FLAG,
-			ADD_USER,
-			ADD_DATE,
-			UPDATE_USER,
-			UPDATE_DATE,
-		) VALUES (
-			@MENU_ID,
-			'2',
-			@PRODUCT_ID,
-			'1',
-			@USER,
-			FORMAT(GETDATE(),'dd/MM/yyyy HH:mm'),
-			@USER,
-			FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
-		)
-	) ELSE (
-		UPDATE PRODUCT SET
-			PRODUCT_NAME = @PRODUCT_NAME,
-			PRICE1		 = @PRICE1,
-			DESCRIPTION	 = @DESCRIPTION,
-			IMAGE_URL	 = @IMAGE_URL,
-			VALID_FLAG	 = '1',
-			UPDATE_USER	 = @USER,
-			UPDATE_DATE	 = FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
-		WHERE	PRODUCT_ID = @PRODUCT_ID;
+			INSERT INTO PRODUCT_MENU (
+				MENU_ID,
+				TYPE,	
+				PRODUCT_ID,
+				VALID_FLAG,
+				ADD_USER,
+				ADD_DATE,
+				UPDATE_USER,
+				UPDATE_DATE
+			) VALUES (
+				@MENU_ID,
+				'2',
+				@PRODUCT_ID,
+				'1',
+				@USER,
+				FORMAT(GETDATE(),'dd/MM/yyyy HH:mm'),
+				@USER,
+				FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			)
+		END 
+	ELSE 
+		BEGIN
+			UPDATE PRODUCT SET
+				PRODUCT_NAME = @PRODUCT_NAME,
+				PRICE1		 = @PRICE1,
+				DESCRIPTION	 = @DESCRIPTION,
+				IMAGE_URL	 = @IMAGE_URL,
+				VALID_FLAG	 = '1',
+				UPDATE_USER	 = @USER,
+				UPDATE_DATE	 = FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			WHERE	PRODUCT_ID = @PRODUCT_ID;
 		
-		UPDATE PRODUCT_MENU SET
-			VALID_FLAG	 = '1',
-			UPDATE_USER	 = @USER,
-			UPDATE_DATE	 = FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
-		WHERE	PRODUCT_ID	= @PRODUCT_ID
-		AND		MENU_ID		= @MENU_ID
-		AND		TYPE		= '2';
-	)
+			UPDATE PRODUCT_MENU SET
+				VALID_FLAG	 = '1',
+				UPDATE_USER	 = @USER,
+				UPDATE_DATE	 = FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			WHERE	PRODUCT_ID	= @PRODUCT_ID
+			AND		MENU_ID		= @MENU_ID
+			AND		TYPE		= '2';
+		END
 	
 END
 GO
