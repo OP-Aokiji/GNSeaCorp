@@ -4,139 +4,87 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GN.DataItem
+namespace GN.Common.DataItem
 {
-    public class AccountItem
+    public class RoleItem
     {
-        private string _userId;
-        private string _roldId;
-        private string _lastName;
-        private string _firstName;
-        private string _password;
-        private string _address;
-        private string _phoneNumber;
-        private string _identification;
-        private string _avatarUrl;
+        private string _roleId;
+        private bool _type;
+        private string _roleName;
+        private string _description;
+        private bool _roleFlag;
         private bool _validFlag;
+        private bool _readOnly;
+        private bool _enableInsert;
+        private bool _enableUpdate;
+        private bool _enableDelete;
         private string _addUser;
         private DateTime _addDate;
         private string _updateUser;
         private DateTime _updateDate;
 
-        public string UserId
+        public string RoleId
         {
             get
             {
-                return _userId;
+                return _roleId;
             }
 
             set
             {
-                _userId = value;
+                _roleId = value;
             }
         }
 
-        public string RoldId
+        public bool Type
         {
             get
             {
-                return _roldId;
+                return _type;
             }
 
             set
             {
-                _roldId = value;
+                _type = value;
             }
         }
 
-        public string LastName
+        public string RoleName
         {
             get
             {
-                return _lastName;
+                return _roleName;
             }
 
             set
             {
-                _lastName = value;
+                _roleName = value;
             }
         }
 
-        public string FirstName
+        public string Description
         {
             get
             {
-                return _firstName;
+                return _description;
             }
 
             set
             {
-                _firstName = value;
+                _description = value;
             }
         }
 
-        public string Password
+        public bool RoleFlag
         {
             get
             {
-                return _password;
+                return _roleFlag;
             }
 
             set
             {
-                _password = value;
-            }
-        }
-
-        public string Address
-        {
-            get
-            {
-                return _address;
-            }
-
-            set
-            {
-                _address = value;
-            }
-        }
-
-        public string PhoneNumber
-        {
-            get
-            {
-                return _phoneNumber;
-            }
-
-            set
-            {
-                _phoneNumber = value;
-            }
-        }
-
-        public string Identification
-        {
-            get
-            {
-                return _identification;
-            }
-
-            set
-            {
-                _identification = value;
-            }
-        }
-
-        public string AvatarUrl
-        {
-            get
-            {
-                return _avatarUrl;
-            }
-
-            set
-            {
-                _avatarUrl = value;
+                _roleFlag = value;
             }
         }
 
@@ -150,6 +98,58 @@ namespace GN.DataItem
             set
             {
                 _validFlag = value;
+            }
+        }
+
+        public bool ReadOnly
+        {
+            get
+            {
+                return _readOnly;
+            }
+
+            set
+            {
+                _readOnly = value;
+            }
+        }
+
+        public bool EnableInsert
+        {
+            get
+            {
+                return _enableInsert;
+            }
+
+            set
+            {
+                _enableInsert = value;
+            }
+        }
+
+        public bool EnableUpdate
+        {
+            get
+            {
+                return _enableUpdate;
+            }
+
+            set
+            {
+                _enableUpdate = value;
+            }
+        }
+
+        public bool EnableDelete
+        {
+            get
+            {
+                return _enableDelete;
+            }
+
+            set
+            {
+                _enableDelete = value;
             }
         }
 

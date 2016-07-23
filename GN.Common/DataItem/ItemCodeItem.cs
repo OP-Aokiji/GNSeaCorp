@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GN.DataItem
+namespace GN.Common.DataItem
 {
-    public class ItemCoreItem
+    public class ItemCodeItem
     {
         private string _coreId;
         private string _itemId;

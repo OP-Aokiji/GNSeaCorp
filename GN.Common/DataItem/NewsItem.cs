@@ -4,69 +4,83 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GN.DataItem
+namespace GN.Common.DataItem
 {
-    public class ProductMenuItem
+    public class NewsItem
     {
-        private string _menuId;
-        private bool _type;
-        private string _productId;
-        private string _description;
+        private string _newsId;
+        private string _tagId;
+        private string _title;
+        private string _summary;
+        private string _content;
         private bool _validFlag;
         private string _addUser;
         private DateTime _addDate;
         private string _updateUser;
         private DateTime _updateDate;
 
-        public string MenuId
+        public string NewsId
         {
             get
             {
-                return _menuId;
+                return _newsId;
             }
 
             set
             {
-                _menuId = value;
+                _newsId = value;
             }
         }
 
-        public bool Type
+        public string TagId
         {
             get
             {
-                return _type;
+                return _tagId;
             }
 
             set
             {
-                _type = value;
+                _tagId = value;
             }
         }
 
-        public string ProductId
+        public string Title
         {
             get
             {
-                return _productId;
+                return _title;
             }
 
             set
             {
-                _productId = value;
+                _title = value;
             }
         }
 
-        public string Description
+        public string Summary
         {
             get
             {
-                return _description;
+                return _summary;
             }
 
             set
             {
-                _description = value;
+                _summary = value;
+            }
+        }
+
+        public string Content
+        {
+            get
+            {
+                return _content;
+            }
+
+            set
+            {
+                _content = value;
             }
         }
 

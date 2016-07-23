@@ -4,83 +4,139 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GN.DataItem
+namespace GN.Common.DataItem
 {
-    public class MenuItem
+    public class AccountItem
     {
-        private string _menuId;
-        private bool _type;
-        private string _parentId;
-        private string _menuName;
-        private string _description;
+        private string _userId;
+        private string _roldId;
+        private string _lastName;
+        private string _firstName;
+        private string _password;
+        private string _address;
+        private string _phoneNumber;
+        private string _identification;
+        private string _avatarUrl;
         private bool _validFlag;
         private string _addUser;
         private DateTime _addDate;
         private string _updateUser;
         private DateTime _updateDate;
 
-        public string MenuId
+        public string UserId
         {
             get
             {
-                return _menuId;
+                return _userId;
             }
 
             set
             {
-                _menuId = value;
+                _userId = value;
             }
         }
 
-        public bool Type
+        public string RoldId
         {
             get
             {
-                return _type;
+                return _roldId;
             }
 
             set
             {
-                _type = value;
+                _roldId = value;
             }
         }
 
-        public string ParentId
+        public string LastName
         {
             get
             {
-                return _parentId;
+                return _lastName;
             }
 
             set
             {
-                _parentId = value;
+                _lastName = value;
             }
         }
 
-        public string MenuName
+        public string FirstName
         {
             get
             {
-                return _menuName;
+                return _firstName;
             }
 
             set
             {
-                _menuName = value;
+                _firstName = value;
             }
         }
 
-        public string Description
+        public string Password
         {
             get
             {
-                return _description;
+                return _password;
             }
 
             set
             {
-                _description = value;
+                _password = value;
+            }
+        }
+
+        public string Address
+        {
+            get
+            {
+                return _address;
+            }
+
+            set
+            {
+                _address = value;
+            }
+        }
+
+        public string PhoneNumber
+        {
+            get
+            {
+                return _phoneNumber;
+            }
+
+            set
+            {
+                _phoneNumber = value;
+            }
+        }
+
+        public string Identification
+        {
+            get
+            {
+                return _identification;
+            }
+
+            set
+            {
+                _identification = value;
+            }
+        }
+
+        public string AvatarUrl
+        {
+            get
+            {
+                return _avatarUrl;
+            }
+
+            set
+            {
+                _avatarUrl = value;
             }
         }
 
@@ -148,6 +204,5 @@ namespace GN.DataItem
                 _updateDate = value;
             }
         }
-
     }
 }

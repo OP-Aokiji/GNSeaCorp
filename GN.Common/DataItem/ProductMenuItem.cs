@@ -4,31 +4,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GN.DataItem
+namespace GN.Common.DataItem
 {
-    public class SildeItem
+    public class ProductMenuItem
     {
-        private string _sildeId;
+        private string _menuId;
+        private bool _type;
+        private string _productId;
         private string _description;
-        private string _imageUrl;
-        private string _slogan1;
-        private string _slogan2;
-        private string _validFlag;
-        private bool _addUser;
+        private bool _validFlag;
+        private string _addUser;
         private DateTime _addDate;
         private string _updateUser;
         private DateTime _updateDate;
 
-        public string SildeId
+        public string MenuId
         {
             get
             {
-                return _sildeId;
+                return _menuId;
             }
 
             set
             {
-                _sildeId = value;
+                _menuId = value;
+            }
+        }
+
+        public bool Type
+        {
+            get
+            {
+                return _type;
+            }
+
+            set
+            {
+                _type = value;
+            }
+        }
+
+        public string ProductId
+        {
+            get
+            {
+                return _productId;
+            }
+
+            set
+            {
+                _productId = value;
             }
         }
 
@@ -45,46 +70,7 @@ namespace GN.DataItem
             }
         }
 
-        public string ImageUrl
-        {
-            get
-            {
-                return _imageUrl;
-            }
-
-            set
-            {
-                _imageUrl = value;
-            }
-        }
-
-        public string Slogan1
-        {
-            get
-            {
-                return _slogan1;
-            }
-
-            set
-            {
-                _slogan1 = value;
-            }
-        }
-
-        public string Slogan2
-        {
-            get
-            {
-                return _slogan2;
-            }
-
-            set
-            {
-                _slogan2 = value;
-            }
-        }
-
-        public string ValidFlag
+        public bool ValidFlag
         {
             get
             {
@@ -97,7 +83,7 @@ namespace GN.DataItem
             }
         }
 
-        public bool AddUser
+        public string AddUser
         {
             get
             {

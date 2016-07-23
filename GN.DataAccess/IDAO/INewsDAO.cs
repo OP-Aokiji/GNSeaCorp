@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GN.DataItem;
+using GN.Common.DataItem;
 
 namespace GN.DataAccess.IDAO
 {
