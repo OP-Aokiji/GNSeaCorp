@@ -8,16 +8,21 @@ using System.Threading.Tasks;
 
 namespace GN.Common.Schema
 {
-    class DbSchema
+    public class DbSchema
     {
         public const string DES = "DESCRIPTION";
         public const string USER = "USER";
-        public const string DATE = "DATE";
+        public const string ADD_USER = "ADD_USER";
+        public const string ADD_DATE = "ADD_DATE";
+        public const string UPDATE_USER = "UPDATE_USER";
+        public const string UPDATE_DATE = "UPDATE_DATE";
         public const string VALID_FLAG = "VALID_FLAG";
         public const string TYPE = "TYPE";
         public const string IMAGE_URL = "IMAGE_URL";
         public static class  Account
         {
+            public const string USER_ID = "USER_ID";
+            public const string ROLD_ID = "ROLD_ID";
             public const string LAST_NAME = "LAST_NAME";
             public const string FIST_NAME = "FIST_NAME";
             public const string PASSWORD = "PASSWORD";
@@ -25,7 +30,12 @@ namespace GN.Common.Schema
             public const string PHONE_NUMBER = "PHONE_NUMBER";
             public const string IDENTIFICATION = "IDENTIFICATION";
             public const string AVATAR_URL = "AVATAR_URL";
-            
+            public const string GENDER = "GENDER";
+
+            public const string P_USERENTRY = "P_USERENTRY";
+            public const string P_USERDELETE = "p_UserDelete";
+            public const string P_ACCOUNT_LOGIN = "P_ACCOUNT_LOGIN";
+
         }
 
         public static class ItemCode

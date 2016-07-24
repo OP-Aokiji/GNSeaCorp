@@ -59,6 +59,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GN.ADOService\GN.ADOService.csproj">
+      <Project>{db88d2d0-eff5-4c0a-a534-a439e5dcccce}</Project>
+      <Name>GN.ADOService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GN.Common\GN.Common.csproj">
       <Project>{599be183-5a0c-4c7a-8f97-d3c04c6f713b}</Project>
       <Name>GN.Common</Name>

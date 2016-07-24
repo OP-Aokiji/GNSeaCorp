@@ -40,11 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IServiceProxy\IAccountProxy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceProxy\AccountProxy.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="IServiceProxy\" />
-    <Folder Include="ServiceProxy\" />
+    <ProjectReference Include="..\GN.Common\GN.Common.csproj">
+      <Project>{599be183-5a0c-4c7a-8f97-d3c04c6f713b}</Project>
+      <Name>GN.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GN.DataAccess\GN.DataAccess.csproj">
+      <Project>{733bfbd0-c1e8-4839-bc3c-487148f6a7ec}</Project>
+      <Name>GN.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

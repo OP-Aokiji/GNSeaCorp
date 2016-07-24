@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GN.Common.DataItem
 {
-    public class SildeItem
+    public class SildeItem:DataItem
     {
         private string _sildeId;
         private string _description;
@@ -14,10 +14,6 @@ namespace GN.Common.DataItem
         private string _slogan1;
         private string _slogan2;
         private string _validFlag;
-        private bool _addUser;
-        private DateTime _addDate;
-        private string _updateUser;
-        private DateTime _updateDate;
 
         public string SildeId
         {
@@ -94,58 +90,6 @@ namespace GN.Common.DataItem
             set
             {
                 _validFlag = value;
-            }
-        }
-
-        public bool AddUser
-        {
-            get
-            {
-                return _addUser;
-            }
-
-            set
-            {
-                _addUser = value;
-            }
-        }
-
-        public DateTime AddDate
-        {
-            get
-            {
-                return _addDate;
-            }
-
-            set
-            {
-                _addDate = value;
-            }
-        }
-
-        public string UpdateUser
-        {
-            get
-            {
-                return _updateUser;
-            }
-
-            set
-            {
-                _updateUser = value;
-            }
-        }
-
-        public DateTime UpdateDate
-        {
-            get
-            {
-                return _updateDate;
-            }
-
-            set
-            {
-                _updateDate = value;
             }
         }
     }

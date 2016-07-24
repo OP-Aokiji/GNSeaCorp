@@ -11,6 +11,8 @@ namespace GN.Common
         //Defaul URL
         public const string NAVIGATE_DEFAULT_PAGE = "Default.aspx?ctr=";
 
+        public const string REFIX_PARAMETER = "@";
+
         //User Control Dir
         public const string USER_CONTROL_DIR = "uc/{0}.ascx";
 
@@ -31,10 +33,10 @@ namespace GN.Common
         public const string WR_CONSTRAINT_DATA = "CONSTRAINT_DATA";
 
         //Working Status
-        public const string WS_QUERY = "QUERY";
-        public const string WS_DELETE = "DELETE";
-        public const string WS_UPDATE = "UPDATE";
-        public const string WS_INSERT = "INSERT";
+        public const string RETRIEVE = "R";
+        public const string WS_DELETE = "D";
+        public const string WS_UPDATE = "U";
+        public const string WS_INSERT = "I";
 
         //Other Working Status
         public const string WS_LOGIN = "ADMIN_LOGIN";

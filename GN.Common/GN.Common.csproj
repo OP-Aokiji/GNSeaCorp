@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Constants\Constants.cs" />
     <Compile Include="DataItem\AccountItem.cs" />
+    <Compile Include="DataItem\DataItem.cs" />
     <Compile Include="DataItem\ItemCodeItem.cs" />
     <Compile Include="DataItem\MenuItem.cs" />
     <Compile Include="DataItem\NewsItem.cs" />
@@ -49,7 +50,6 @@
     <Compile Include="DataItem\ProductMenuItem.cs" />
     <Compile Include="DataItem\RoleItem.cs" />
     <Compile Include="DataItem\SildeItem.cs" />
-    <Compile Include="IDataAccessObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schema\DbSchema.cs" />
   </ItemGroup>

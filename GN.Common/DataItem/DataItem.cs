@@ -6,64 +6,64 @@ using System.Threading.Tasks;
 
 namespace GN.Common.DataItem
 {
-    public class MenuItem:DataItem
+    public class DataItem
     {
-        private string _menuId;
-        private bool _type;
-        private string _parentId;
-        private string _menuName;
-        private string _description;
-        private bool _validFlag;
+        private string _crud = "";
+        private string _addUser;
+        private DateTime _addDate;
+        private string _updateUser;
+        private DateTime _updateDate;
+        private string _description = "";
 
-        public string MenuId
+        public string Crud
         {
             get
             {
-                return _menuId;
+                return _crud;
             }
 
             set
             {
-                _menuId = value;
+                _crud = value;
             }
         }
 
-        public bool Type
+        public DateTime AddDate
         {
             get
             {
-                return _type;
+                return _addDate;
             }
 
             set
             {
-                _type = value;
+                _addDate = value;
             }
         }
 
-        public string ParentId
+        public string UpdateUser
         {
             get
             {
-                return _parentId;
+                return _updateUser;
             }
 
             set
             {
-                _parentId = value;
+                _updateUser = value;
             }
         }
 
-        public string MenuName
+        public DateTime UpdateDate
         {
             get
             {
-                return _menuName;
+                return _updateDate;
             }
 
             set
             {
-                _menuName = value;
+                _updateDate = value;
             }
         }
 
@@ -80,12 +80,17 @@ namespace GN.Common.DataItem
             }
         }
 
-        public bool ValidFlag
+        public string AddUser
         {
-            get { return _validFlag; }
+            get
+            {
+                return _addUser;
+            }
 
-            set { _validFlag = value; }
-
+            set
+            {
+                _addUser = value;
+            }
         }
     }
 }

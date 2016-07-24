@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GN.Common.DataItem
 {
-    public class NewsItem
+    public class NewsItem:DataItem
     {
         private string _newsId;
         private string _tagId;
@@ -14,10 +14,6 @@ namespace GN.Common.DataItem
         private string _summary;
         private string _content;
         private bool _validFlag;
-        private string _addUser;
-        private DateTime _addDate;
-        private string _updateUser;
-        private DateTime _updateDate;
 
         public string NewsId
         {
@@ -94,58 +90,6 @@ namespace GN.Common.DataItem
             set
             {
                 _validFlag = value;
-            }
-        }
-
-        public string AddUser
-        {
-            get
-            {
-                return _addUser;
-            }
-
-            set
-            {
-                _addUser = value;
-            }
-        }
-
-        public DateTime AddDate
-        {
-            get
-            {
-                return _addDate;
-            }
-
-            set
-            {
-                _addDate = value;
-            }
-        }
-
-        public string UpdateUser
-        {
-            get
-            {
-                return _updateUser;
-            }
-
-            set
-            {
-                _updateUser = value;
-            }
-        }
-
-        public DateTime UpdateDate
-        {
-            get
-            {
-                return _updateDate;
-            }
-
-            set
-            {
-                _updateDate = value;
             }
         }
     }
