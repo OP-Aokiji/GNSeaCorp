@@ -1,0 +1,11 @@
+D:\WebForm\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.ServiceProxy.dll
+D:\WebForm\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.ServiceProxy.pdb
+D:\WebForm\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.Common.dll
+D:\WebForm\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.DataAccess.dll
+D:\WebForm\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.ADOService.dll
+D:\WebForm\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.Common.pdb
+D:\WebForm\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.DataAccess.pdb
+D:\WebForm\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.ADOService.pdb
+D:\WebForm\GNSeaCorp\GN.ServiceProxy\obj\Debug\GN.ServiceProxy.csprojResolveAssemblyReference.cache
+D:\WebForm\GNSeaCorp\GN.ServiceProxy\obj\Debug\GN.ServiceProxy.dll
+D:\WebForm\GNSeaCorp\GN.ServiceProxy\obj\Debug\GN.ServiceProxy.pdb
