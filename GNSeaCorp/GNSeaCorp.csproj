@@ -139,7 +139,7 @@
     <Content Include="Admin\images\shoppy.jpg" />
     <Content Include="Admin\images\tick.png" />
     <Content Include="Admin\images\visit.png" />
-    <Content Include="Admin\index.aspx" />
+    <Content Include="Admin\Default.aspx" />
     <Content Include="Admin\js\bars.js" />
     <Content Include="Admin\js\bootstrap.js" />
     <Content Include="Admin\js\Chart.min.js" />
@@ -152,6 +152,7 @@
     <Content Include="Admin\js\nivo-lightbox.min.js" />
     <Content Include="Admin\js\scripts.js" />
     <Content Include="Admin\js\skycons.js" />
+    <Content Include="Admin\Login.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\chocolat.css" />
     <Content Include="css\style.css" />
@@ -173,7 +174,7 @@
     <Content Include="images\Fish\Breaded PTO shrimp.jpg" />
     <Content Include="images\Fish\Four color Breaded shrimp.jpg" />
     <Content Include="images\Fish\Shrimp Burger.jpg" />
-    <Content Include="index.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="js\bootstrap.js" />
     <Content Include="images\close.png" />
     <Content Include="images\co.png" />
@@ -223,12 +224,19 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\MasterPage\GNSeaAdmin.Master.cs">
       <DependentUpon>GNSeaAdmin.Master</DependentUpon>
@@ -237,15 +245,17 @@
     <Compile Include="Admin\MasterPage\GNSeaAdmin.Master.designer.cs">
       <DependentUpon>GNSeaAdmin.Master</DependentUpon>
     </Compile>
+    <Compile Include="cm\MessageBox.cs" />
+    <Compile Include="cm\Security.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage\UserMasterPage.Master.cs">
       <DependentUpon>UserMasterPage.Master</DependentUpon>
@@ -258,6 +268,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GN.Common\GN.Common.csproj">
+      <Project>{599be183-5a0c-4c7a-8f97-d3c04c6f713b}</Project>
+      <Name>GN.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GN.ServiceProxy\GN.ServiceProxy.csproj">
+      <Project>{3e71e9ba-0a94-4b16-b0db-08623fb9f351}</Project>
+      <Name>GN.ServiceProxy</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

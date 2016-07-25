@@ -81,7 +81,7 @@ namespace GN.DataAccess.DAO
             {
                 obj = new object[] {
                                         Constants.REFIX_PARAMETER + DbSchema.Account.USER_ID , accountItem.UserId,
-                                       Constants.REFIX_PARAMETER + DbSchema.USER,   accountItem.UpdateUser
+                                       Constants.REFIX_PARAMETER + DbSchema.Account.PASSWORD, accountItem.Password
                                     };
                 procedureName = DbSchema.Account.P_ACCOUNT_LOGIN;
                 returnDatatype = Constants.DATATABLE;

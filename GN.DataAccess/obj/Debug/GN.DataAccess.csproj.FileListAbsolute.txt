@@ -1,0 +1,9 @@
+D:\WebForm\GNSeaCorp\GN.DataAccess\bin\Debug\GN.DataAccess.dll
+D:\WebForm\GNSeaCorp\GN.DataAccess\bin\Debug\GN.DataAccess.pdb
+D:\WebForm\GNSeaCorp\GN.DataAccess\bin\Debug\GN.ADOService.dll
+D:\WebForm\GNSeaCorp\GN.DataAccess\bin\Debug\GN.Common.dll
+D:\WebForm\GNSeaCorp\GN.DataAccess\bin\Debug\GN.ADOService.pdb
+D:\WebForm\GNSeaCorp\GN.DataAccess\bin\Debug\GN.Common.pdb
+D:\WebForm\GNSeaCorp\GN.DataAccess\obj\Debug\GN.DataAccess.csprojResolveAssemblyReference.cache
+D:\WebForm\GNSeaCorp\GN.DataAccess\obj\Debug\GN.DataAccess.dll
+D:\WebForm\GNSeaCorp\GN.DataAccess\obj\Debug\GN.DataAccess.pdb

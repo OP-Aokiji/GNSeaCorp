@@ -31,3 +31,11 @@ D:\WebForm\GNSeaCorp\GNSeaCorp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPla
 D:\WebForm\GNSeaCorp\GNSeaCorp\obj\Debug\GNSeaCorp.csprojResolveAssemblyReference.cache
 D:\WebForm\GNSeaCorp\GNSeaCorp\obj\Debug\GNSeaCorp.dll
 D:\WebForm\GNSeaCorp\GNSeaCorp\obj\Debug\GNSeaCorp.pdb
+D:\WebForm\GNSeaCorp\GNSeaCorp\bin\GN.Common.dll
+D:\WebForm\GNSeaCorp\GNSeaCorp\bin\GN.ServiceProxy.dll
+D:\WebForm\GNSeaCorp\GNSeaCorp\bin\GN.DataAccess.dll
+D:\WebForm\GNSeaCorp\GNSeaCorp\bin\GN.ADOService.dll
+D:\WebForm\GNSeaCorp\GNSeaCorp\bin\GN.Common.pdb
+D:\WebForm\GNSeaCorp\GNSeaCorp\bin\GN.ServiceProxy.pdb
+D:\WebForm\GNSeaCorp\GNSeaCorp\bin\GN.DataAccess.pdb
+D:\WebForm\GNSeaCorp\GNSeaCorp\bin\GN.ADOService.pdb
