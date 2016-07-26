@@ -300,7 +300,6 @@
 		</script>
 		<!-- /script-for sticky-nav -->
 <!--inner block start here-->
-<div class="inner-block">
 <!--market updates updates-->
 	<form id="form1" runat="server">
     <div class="inner-block" >
