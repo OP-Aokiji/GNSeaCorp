@@ -33,7 +33,7 @@ namespace GN.Common
         public const string WR_CONSTRAINT_DATA = "CONSTRAINT_DATA";
 
         //Working Status
-        public const string RETRIEVE = "R";
+        public const string WS_RETRIEVE = "R";
         public const string WS_DELETE = "D";
         public const string WS_UPDATE = "U";
         public const string WS_INSERT = "I";

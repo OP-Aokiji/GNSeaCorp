@@ -14,6 +14,9 @@ namespace GN.Common.DataItem
         private string _updateUser;
         private DateTime _updateDate;
         private string _description = "";
+        private string _offSet;
+        private string _limit;
+        private string _order;
 
         public string Crud
         {
@@ -90,6 +93,45 @@ namespace GN.Common.DataItem
             set
             {
                 _addUser = value;
+            }
+        }
+
+        public string OffSet
+        {
+            get
+            {
+                return _offSet;
+            }
+
+            set
+            {
+                _offSet = value;
+            }
+        }
+
+        public string Limit
+        {
+            get
+            {
+                return _limit;
+            }
+
+            set
+            {
+                _limit = value;
+            }
+        }
+
+        public string Order
+        {
+            get
+            {
+                return _order;
+            }
+
+            set
+            {
+                _order = value;
             }
         }
     }

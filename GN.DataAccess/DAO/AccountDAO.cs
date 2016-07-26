@@ -22,7 +22,7 @@ namespace GN.DataAccess.DAO
             string procedureName = string.Empty;
             string returnDatatype = string.Empty;
 
-            if (accountItem.Crud.Equals(Constants.RETRIEVE))
+            if (accountItem.Crud.Equals(Constants.WS_RETRIEVE))
             {
                 obj = new object[] { "@P_USER_ID", accountItem.UserId };
                 procedureName = "SP_USER_ACOUNT_RETRIEVE";

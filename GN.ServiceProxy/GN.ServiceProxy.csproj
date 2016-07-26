@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IServiceProxy\IAccountProxy.cs" />
+    <Compile Include="IServiceProxy\ISlideProxy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceProxy\AccountProxy.cs" />
+    <Compile Include="ServiceProxy\SlideProxy.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

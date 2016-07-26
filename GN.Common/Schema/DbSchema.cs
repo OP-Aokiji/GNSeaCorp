@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,6 +20,10 @@ namespace GN.Common.Schema
         public const string VALID_FLAG = "VALID_FLAG";
         public const string TYPE = "TYPE";
         public const string IMAGE_URL = "IMAGE_URL";
+        public const string OFFSET = "OFFSET";
+        public const string LIMIT = "LIMIT";
+        public const string ORDER = "ORDER";
+
         public static class  Account
         {
             public const string USER_ID = "USER_ID";
@@ -98,6 +103,8 @@ namespace GN.Common.Schema
             public const string ENABLE_UPDATE = "ENABLE_UPDATE";
             public const string ENABLE_DELETE = "ENABLE_DELETE";
 
+            public const string P_ROLEENTRY = "P_ROLEENTRY";
+            public const string P_ROLEDELETE = "P_ROLEDELETE";
         }
 
         public static class Slide
@@ -105,7 +112,9 @@ namespace GN.Common.Schema
             public const string SLIDE_ID = "SLIDE_ID";
             public const string SLOGAN1 = "SLOGAN1";
             public const string SLOGAN2 = "SLOGAN2";
-
+            public const string P_SLIDESEARCH = "P_SLIDESEARCH";
+            public const string P_SLIDEENTRY = "P_SLIDEENTRY";
+            public const string P_SLIDEDELETE = "P_SLIDEDELETE";
         }
 
     }

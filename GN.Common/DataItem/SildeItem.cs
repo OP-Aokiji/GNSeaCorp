@@ -8,23 +8,23 @@ namespace GN.Common.DataItem
 {
     public class SildeItem:DataItem
     {
-        private string _sildeId;
+        private string _slideId;
         private string _description;
         private string _imageUrl;
         private string _slogan1;
         private string _slogan2;
         private string _validFlag;
 
-        public string SildeId
+        public string SlideId
         {
             get
             {
-                return _sildeId;
+                return _slideId;
             }
 
             set
             {
-                _sildeId = value;
+                _slideId = value;
             }
         }
 
