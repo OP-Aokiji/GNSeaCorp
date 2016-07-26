@@ -10,7 +10,7 @@
 namespace GNSeaCorp.Admin.MasterPage {
     
     
-    public partial class Test {
+    public partial class GNSeaAdmin {
         
         /// <summary>
         /// head control.

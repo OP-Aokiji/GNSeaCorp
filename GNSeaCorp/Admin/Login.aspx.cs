@@ -38,7 +38,7 @@ namespace GNSeaCorp.Admin
                     dataResult.Rows[0][Constants.ERR_CODE].ToString().Equals(Constants.WR_SUCCESS))
                 {
                     Session["Admin-Login-Status"] = Constants.WR_SUCCESS;
-                    Response.Redirect("Default.aspx");
+                    Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + "UcSlideCU");
                 }
                 else
                 {

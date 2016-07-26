@@ -4,75 +4,87 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Gia Nguyen Corp</title>
+    <title>Easy Admin Panel an Admin Panel Category Flat Bootstrap Responsive Website Template | Sign In :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Easy Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <link href="../Admin/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
-    <!-- Custom Theme files -->
-    <link href="../Admin/css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <!--js-->
-    <script src="../Admin/js/jquery-2.1.1.min.js"></script> 
-    <!--icons-css-->
-    <link href="../Admin/css/font-awesome.css" rel="stylesheet"> 
-    <!--Google Fonts-->
-    <link href='//fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
-    <!--static chart-->
+    <!-- Bootstrap Core CSS -->
+    <link href="../Admin/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="../Admin/css/style.css" rel='stylesheet' type='text/css' />
+    <!-- Graph CSS -->
+    <link href="../Admin/css/font-awesome.css" rel="stylesheet">
+    <!-- jQuery -->
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="../Admin/css/icon-font.min.css" type='text/css' />
+    <!-- //lined-icons -->
+    <!-- chart -->
+    <script src="../Admin/js/Chart.js"></script>
+    <!-- //chart -->
+    <!--animate-->
+    <link href="../Admin/css/animate.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../Admin/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!--//end-animate-->
+    <!----webfonts--->
+    <link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!---//webfonts--->
+    <!-- Meters graphs -->
+    <script src="../Admin/js/jquery-1.10.2.min.js"></script>
+    <!-- Placed js at the end of the document so the pages load faster -->
 </head>
-<body>
-   
-    <div class="login-page">
-        <div class="login-main">  	
-    	     <div class="login-head">
-				    <h1>Login</h1>
-			    </div>
-			    <div class="login-block">
-				     <form id="form1" runat="server">
-                         <asp:TextBox ID="txtUserName" runat="server" placeholder="User Name" ></asp:TextBox>
-					    <%--<input type="text" name="email" placeholder="Email" required="">--%>
-                         <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" TextMode="Password" ></asp:TextBox>
-					    <%--<input type="password" name="password" class="lock" placeholder="Password">--%>
-					    <!-- <div class="forgot-top-grids">
-						    <div class="forgot-grid">
-							    <ul>
-								    <li>
-									    <input type="checkbox" id="brand1" value="">
-									    <label for="brand1"><span></span>Remember me</label>
-								    </li>
-							    </ul>
-						    </div>
-						    <div class="forgot">
-							    <a href="#">Forgot password?</a>
-						    </div>
-						    <div class="clearfix"> </div>
-					    </div> -->
-                         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
-					    <%--<input type="submit" name="Sign In" value="Login">--%>	
-					    <!-- <h3>Not a member?<a href="signup.html"> Sign up now</a></h3>				
-					    <h2>or login with</h2>
-					    <div class="login-icons">
-						    <ul>
-							    <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-							    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-							    <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>						
-						    </ul>
-					    </div> -->
-				    </form>
-				    <h5><a href="../Default.aspx">Go Back to Home</a></h5>
-			    </div>
-          </div>
-    </div>
-<!--inner block end here-->
-<!--copy rights start here-->
-<div class="copyrights">
-	 <p>© 2016 Gia Nguyen Corp</p>
-</div>	
-<!--COPY rights end here-->
-<!--scrolling js-->
-		<script src="../Admin/js/jquery.nicescroll.js"></script>
-		<script src="../Admin/js/scripts.js"></script>
-		<!--//scrolling js-->
-<script src="../Admin/js/bootstrap.js"> </script>
-<!-- mother grid end here-->
+<body class="sign-in-up">
+
+    <section>
+        <div id="page-wrapper" class="sign-in-wrapper">
+            <div class="graphs">
+                <div class="sign-in-form">
+                    <div class="sign-in-form-top">
+                        <p><span>Sign In to</span> <a href="index.html">Admin</a></p>
+                    </div>
+                    <div class="signin">
+                        <form id="form1" runat="server">
+                            <div class="log-input">
+                                <div class="log-input-left">
+                                     <asp:TextBox ID="txtUserName" CssClass="user" runat="server" placeholder="User Name"></asp:TextBox>
+                                </div>
+                               <%-- <span class="checkbox2">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox" checked=""><i> </i></label>
+                                </span>--%>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="log-input">
+                                <div class="log-input-left">
+                                    <asp:TextBox ID="txtPassword" runat="server" CssClass="lock" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                </div>
+                               <%-- <span class="checkbox2">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox" checked=""><i> </i></label>
+                                </span>--%>
+                                <div class="clearfix"></div>
+                            </div>
+                           <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer section start--> 
+        <footer>
+            <p>&copy 2015 Easy Admin Panel. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts.</a></p>
+        </footer>
+        <!--footer section end-->
+    </section>
+    
+
+    <script src="../Admin/js/jquery.nicescroll.js"></script>
+    <script src="../Admin/js/scripts.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../Admin/js/bootstrap.min.js"></script>
 </body>
 </html>
