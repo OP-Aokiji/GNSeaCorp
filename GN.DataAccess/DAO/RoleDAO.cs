@@ -40,7 +40,6 @@ namespace GN.DataAccess.DAO
                     Constants.REFIX_PARAMETER + DbSchema.Role.ENABLE_INSERT, roleItem.EnableInsert,
                     Constants.REFIX_PARAMETER + DbSchema.Role.ENABLE_UPDATE, roleItem.EnableUpdate,
                     Constants.REFIX_PARAMETER + DbSchema.Role.ENABLE_DELETE, roleItem.EnableDelete,
-                    Constants.REFIX_PARAMETER + DbSchema.Role.ENABLE_DELETE, roleItem.EnableDelete,
                     Constants.REFIX_PARAMETER + DbSchema.DES, roleItem.Description,
                     Constants.REFIX_PARAMETER + DbSchema.VALID_FLAG, roleItem.ValidFlag,
                     Constants.REFIX_PARAMETER + DbSchema.ADD_USER, roleItem.AddUser,

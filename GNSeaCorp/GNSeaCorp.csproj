@@ -153,6 +153,7 @@
     <Content Include="Admin\js\scripts.js" />
     <Content Include="Admin\js\skycons.js" />
     <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\uc\UcSlideCU.ascx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\chocolat.css" />
     <Content Include="css\style.css" />
@@ -244,6 +245,13 @@
     </Compile>
     <Compile Include="Admin\MasterPage\GNSeaAdmin.Master.designer.cs">
       <DependentUpon>GNSeaAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\uc\UcSlideCU.ascx.cs">
+      <DependentUpon>UcSlideCU.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\uc\UcSlideCU.ascx.designer.cs">
+      <DependentUpon>UcSlideCU.ascx</DependentUpon>
     </Compile>
     <Compile Include="cm\MessageBox.cs" />
     <Compile Include="cm\Security.cs" />
