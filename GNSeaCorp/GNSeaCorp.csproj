@@ -176,14 +176,10 @@
     <Content Include="images\Fish\Four color Breaded shrimp.jpg" />
     <Content Include="images\Fish\Shrimp Burger.jpg" />
     <Content Include="Default.aspx" />
-    <Content Include="js\bootstrap.js" />
     <Content Include="images\close.png" />
     <Content Include="images\co.png" />
     <Content Include="images\glass.png" />
     <Content Include="images\img-sp.png" />
-    <Content Include="js\jquery-1.11.1.min.js" />
-    <Content Include="js\jquery.chocolat.js" />
-    <Content Include="js\jquery.wmuSlider.js" />
     <Content Include="images\left.png" />
     <Content Include="images\logo-GN.JPG" />
     <Content Include="images\LogoGN200.png" />
@@ -192,6 +188,10 @@
     <Content Include="images\right.png" />
     <Content Include="images\SLOGAN.png" />
     <Content Include="images\update.png" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\jquery-1.11.1.min.js" />
+    <Content Include="js\jquery.chocolat.js" />
+    <Content Include="js\jquery.wmuSlider.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
