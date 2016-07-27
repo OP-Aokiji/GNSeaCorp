@@ -57,6 +57,10 @@ namespace GN.Common.Schema
             public const string MENU_ID = "MENU_ID";
             public const string PARENT_ID = "PARENT_ID";
             public const string MENU_NAME = "MENU_NAME";
+            //Procedure Process
+            public const string P_MENUSEARCH = "P_CATEGORYSEARCH";
+            public const string P_MENUENTRY = "P_CATEGORYENTRY";
+            public const string P_MENUDELETE = "P_CATEGORYDELETE";
         }
 
         public static class News
