@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GNSeaCorp.Admin
+namespace GNSeaCorp.Admin.uc
 {
 
 
-    public partial class Catelogy
+    public partial class UcMenuR
     {
     }
 }

@@ -353,7 +353,6 @@ BEGIN
 	BEGIN
 		INSERT INTO NEWS (
 			 NEWS_ID		
-			,TAG_ID		
 			,TITLE		
 			,SUMMARY		
 			,CONTENT		
@@ -364,7 +363,6 @@ BEGIN
 			,UPDATE_DATE
 		) VALUES (
 			 @NEWS_ID
-			,@NEWS_ID
 			,@TITLE
 			,@SUMMARY
 			,@CONTENT
@@ -440,15 +438,21 @@ GO
 --GO
 
 -- PROCEDURE OF CATEGORY (MENU)
---CREATE PROCEDURE p_CategorySearch
---@Offset		VARCHAR,
---@Limit		VARCHAR,
---@Order		VARCHAR
---AS
---BEGIN
---	RETURN TRUE
---END
---GO
+CREATE PROCEDURE p_CategorySearch
+@Offset		VARCHAR,
+@Limit		VARCHAR
+AS
+BEGIN
+SET @Limit = 5
+SET @Offset = 10
+	SELECT	* 
+	FROM	MENU
+	WHERE	TYPE		= '2'
+	AND		PARENT_ID	= '03'
+	ORDER BY MENU_ID
+	LIMIT @Limit OFFSET @Offset
+END
+GO
 
 -- NÊN SELECT LẤY MENU ID LỚN NHẤT
 CREATE PROCEDURE p_CategoryEntry

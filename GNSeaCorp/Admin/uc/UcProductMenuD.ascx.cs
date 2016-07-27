@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace GNSeaCorp.Admin
+namespace GNSeaCorp.Admin.uc
 {
-    public partial class Catelogy : System.Web.UI.Page
+    public partial class UcProductMenuD : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

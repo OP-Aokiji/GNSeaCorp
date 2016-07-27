@@ -11,8 +11,10 @@ namespace GN.Common.DataItem
         private string _menuId;
         private bool _type;
         private string _productId;
+        private string _productName;
         private string _description;
         private bool _validFlag;
+
         public string MenuId
         {
             get
@@ -75,6 +77,18 @@ namespace GN.Common.DataItem
             set
             {
                 _validFlag = value;
+            }
+        }
+
+        public string ProductName
+        {
+            get
+            {
+                return _productName;
+            }
+            set
+            {
+                _productName = value;
             }
         }
     }
