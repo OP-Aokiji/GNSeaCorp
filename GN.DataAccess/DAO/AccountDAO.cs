@@ -22,10 +22,10 @@ namespace GN.DataAccess.DAO
             string procedureName = string.Empty;
             string returnDatatype = string.Empty;
 
-            if (accountItem.Crud.Equals(Constants.WS_RETRIEVE))
+            if (accountItem.Crud.Equals(Constants.RETRIEVE_ALL))
             {
-                obj = new object[] { "@P_USER_ID", accountItem.UserId };
-                procedureName = "SP_USER_ACOUNT_RETRIEVE";
+                obj = new object[] {  };
+                procedureName = "p_CategorySearch";
                 returnDatatype = Constants.DATATABLE;
             }
             else if (accountItem.Crud.Equals(Constants.WS_INSERT))
