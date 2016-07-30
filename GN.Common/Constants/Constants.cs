@@ -71,5 +71,16 @@ namespace GN.Common
 
         //Select All
         public const string RETRIEVE_ALL = "ALL";
+
+        public const string UCSLIDECU = "UcSlideCU";
+        public const string UCPRODUCTCU = "UcProductCU";
+        public const string UCPRODUCTLIST = "UcProductList";
+
+        public const string UCMENUCU = "IMenuDAO";
+
+
+        //Icon
+        public const string DELETE_ICON = "~/Admin/images/delete.png";
+        public const string MODIFY_ICON = "~/Admin/images/edit.png";
     }
 }

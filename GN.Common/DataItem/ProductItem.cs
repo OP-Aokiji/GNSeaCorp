@@ -8,26 +8,27 @@ namespace GN.Common.DataItem
 {
     public class ProductItem:DataItem
     {
-        private string _productId;
-        private string _productName;
-        private string _madeIn;
-        private int _quantity;
-        private string _type;
-        private string _unit1;
-        private string _unit2;
-        private string _unit3;
-        private long _price1;
-        private long _price2;
-        private long _price3;
-        private int _discount1;
+        private string _productId = "";
+        private string _productName = "";
+        private string _madeIn = "";
+        private int _quantity = 0;
+        private string _type = "";
+        private string _unit1 = "";
+        private string _unit2 = "";
+        private string _unit3 = "";
+        private long _price1 = 0;
+        private long _price2 = 0;
+        private long _price3 = 0;
+        private int _discount1 = 0;
         private int _discount2;
         private int _discount3;
-        private long _vat1;
-        private long _vat2;
-        private long _vat3;
-        private string _description;
-        private string _imageUrl;
-        private bool _validFlag;
+        private long _vat1 = 0;
+        private long _vat2 = 0;
+        private long _vat3 = 0;
+        private string _description = "";
+        private string _imageUrl = "";
+        private bool _validFlag = true;
+        private string _menuId = "";
 
         public string ProductId
         {
@@ -286,6 +287,19 @@ namespace GN.Common.DataItem
             set
             {
                 _validFlag = value;
+            }
+        }
+
+        public string MenuId
+        {
+            get
+            {
+                return _menuId;
+            }
+
+            set
+            {
+                _menuId = value;
             }
         }
     }

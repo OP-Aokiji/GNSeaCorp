@@ -8,12 +8,12 @@ namespace GN.Common.DataItem
 {
     public class SildeItem:DataItem
     {
-        private string _slideId;
-        private string _description;
-        private string _imageUrl;
-        private string _slogan1;
-        private string _slogan2;
-        private string _validFlag;
+        private string _slideId = "";
+        private string _description = "";
+        private string _imageUrl = "";
+        private string _slogan1 = "";
+        private string _slogan2 ="";
+        private bool _validFlag;
 
         public string SlideId
         {
@@ -80,7 +80,7 @@ namespace GN.Common.DataItem
             }
         }
 
-        public string ValidFlag
+        public bool ValidFlag
         {
             get
             {

@@ -8,15 +8,16 @@ namespace GN.Common.DataItem
 {
     public class DataItem
     {
-        private string _crud = "";
-        private string _addUser;
+        private string _crud = Constants.WS_RETRIEVE;
+        private string _addUser = "";
         private DateTime _addDate;
-        private string _updateUser;
+        private string _updateUser = "";
         private DateTime _updateDate;
         private string _description = "";
-        private string _offSet;
-        private string _limit;
-        private string _order;
+        private string _offSet = "";
+        private string _limit = "";
+        private string _order = "";
+        private string _user = "";
 
         public string Crud
         {
@@ -132,6 +133,19 @@ namespace GN.Common.DataItem
             set
             {
                 _order = value;
+            }
+        }
+
+        public string User
+        {
+            get
+            {
+                return _user;
+            }
+
+            set
+            {
+                _user = value;
             }
         }
     }

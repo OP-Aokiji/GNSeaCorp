@@ -41,7 +41,6 @@ namespace GN.DataAccess.DAO
                     Constants.REFIX_PARAMETER + DbSchema.IMAGE_URL, slideItem.ImageUrl,
                     Constants.REFIX_PARAMETER + DbSchema.Slide.SLOGAN1, slideItem.Slogan1,
                     Constants.REFIX_PARAMETER + DbSchema.Slide.SLOGAN2, slideItem.Slogan2,
-                    Constants.REFIX_PARAMETER + DbSchema.VALID_FLAG, slideItem.ValidFlag,
                     Constants.REFIX_PARAMETER + DbSchema.USER, slideItem.UpdateUser
                 };
                 procedureName = DbSchema.Slide.P_SLIDEENTRY;

@@ -9,6 +9,6 @@ namespace GN.DataAccess.IDAO
 {
     public interface IProductDAO
     {
-        Object ProductCRUD(ProductItem prodcItem);
+        Object ProductCRUD(ProductItem productItem);
     }
 }

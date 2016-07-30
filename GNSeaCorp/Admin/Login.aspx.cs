@@ -32,13 +32,13 @@ namespace GNSeaCorp.Admin
 
                 IAccountProxy proxy = new AccountProxy();
 
-                DataTable dataResult = (DataTable) (proxy.AccountCRUD(accountItem));
+                DataTable dataResult = (DataTable)(proxy.AccountCRUD(accountItem));
 
                 if (dataResult != null && dataResult.Rows.Count > 0 &&
                     dataResult.Rows[0][Constants.ERR_CODE].ToString().Equals(Constants.WR_SUCCESS))
                 {
                     Session["Admin-Login-Status"] = Constants.WR_SUCCESS;
-                    Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + "UcSlideCU");
+                    Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE+ "UcProductCU");
                 }
                 else
                 {
@@ -49,7 +49,7 @@ namespace GNSeaCorp.Admin
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(), this);
+                MessageBox.Show(ex.ToString(), this);
             }
         }
     }

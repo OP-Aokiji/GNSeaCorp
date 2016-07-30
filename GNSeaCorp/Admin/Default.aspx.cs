@@ -27,7 +27,9 @@ namespace GNSeaCorp.Admin
             try
             {
                 string[] arrUserControl = new string[] {
-                                                         "UcSlideCU"
+                                                         "UcSlideCU",
+                                                         "UcProductCU",
+                                                         "UcProductList"
                                                       };
                 string usercontrolName = Request["ctr"];
                 if (string.IsNullOrEmpty(usercontrolName))

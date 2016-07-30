@@ -57,6 +57,10 @@ namespace GN.Common.Schema
             public const string MENU_ID = "MENU_ID";
             public const string PARENT_ID = "PARENT_ID";
             public const string MENU_NAME = "MENU_NAME";
+            //Procedure Process
+            public const string P_MENUSEARCH = "P_CATEGORYSEARCH";
+            public const string P_MENUENTRY = "P_CATEGORYENTRY";
+            public const string P_MENUDELETE = "P_CATEGORYDELETE";
         }
 
         public static class News
@@ -65,6 +69,10 @@ namespace GN.Common.Schema
             public const string TITLE = "TITLE";
             public const string SUMMARY = "SUMMARY";
             public const string CONTENT = "CONTENT";
+
+            public const string P_NEWSENTRY = "P_NEWSENTRY";
+            public const string P_NEWSDELETE = "P_NEWSDELETE";
+            public const string P_NEWSSEARCH = "P_NEWSSEARCH";
         }
 
         public static class Product
@@ -86,6 +94,10 @@ namespace GN.Common.Schema
             public const string VAT2 = "VAT2";
             public const string VAT3 = "VAT3";
             public const string DESCRIPTION = "DESCRIPTION";
+
+            public const string P_PRODUCTENTRY = "P_PRODUCTENTRY"; 
+            public const string P_PRODUCTDELETE = "P_PRODUCTDELETE";
+            public const string P_PRODUCTALL = "P_PRODUCTALL";
         }
 
         public static class ProductMenu
@@ -103,6 +115,7 @@ namespace GN.Common.Schema
             public const string ENABLE_UPDATE = "ENABLE_UPDATE";
             public const string ENABLE_DELETE = "ENABLE_DELETE";
 
+            public const string P_ROLESEARCH = "P_ROLESEARCH";
             public const string P_ROLEENTRY = "P_ROLEENTRY";
             public const string P_ROLEDELETE = "P_ROLEDELETE";
         }

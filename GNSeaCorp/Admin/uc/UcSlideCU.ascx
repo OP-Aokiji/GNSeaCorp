@@ -29,19 +29,30 @@
                     <label for="txtarea1" class="col-sm-2 control-label">Description</label>
                     <div class="col-sm-8">
                         <asp:TextBox ID="txtDescription" class="form-control1" runat="server" TextMode="MultiLine"></asp:TextBox>
-                        <textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="media-left">
+                        <asp:Label ID="lblImageUrlTemp" runat="server" Text="" Visible="True"></asp:Label>
+                        <asp:DataList ID="dlImage" runat="server">
+                            <ItemTemplate>
+                                <asp:Image ID="imgSlide" Height="64px" Width="64px" runat="server" ImageUrl='<%# Eval("imageUrl", "~/~/Admin/images/{0}") %>' />
+                            </ItemTemplate>
+                        </asp:DataList>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile">Image Url</label>
-                    <input type="file" id="exampleInputFile">
-
-                    <p class="help-block">Example block-level help text here.</p>
+                    <asp:FileUpload ID="fuImage1" runat="server" OnPreRender="fuImage1_PreRender" />
+                    <%--<p class="help-block">Example block-level help text here.</p>--%>
+                </div>
+                <div class="form-group">
+                    <asp:Button ID="btnUploadImage" runat="server" Text="Upload" OnClick="btnUploadImage_Click" />
                 </div>
                 <div class="panel-footer">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2">
-                            <asp:Button ID="btnSubmit" CssClass="btn-success btn" runat="server" Text="Submit" />
+                            <asp:Button ID="btnSubmit" CssClass="btn-success btn" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
                             <asp:Button ID="btnCancel" CssClass="btn-success btn" runat="server" Text="Cancel" />
                             <asp:Button ID="btnReset" CssClass="btn-success btn" runat="server" Text="Reset" />
                         </div>

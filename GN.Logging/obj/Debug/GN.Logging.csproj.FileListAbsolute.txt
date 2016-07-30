@@ -1,0 +1,5 @@
+H:\GNSeaCorp\GN.Logging\bin\Debug\GN.Logging.dll
+H:\GNSeaCorp\GN.Logging\bin\Debug\GN.Logging.pdb
+H:\GNSeaCorp\GN.Logging\obj\Debug\GN.Logging.csprojResolveAssemblyReference.cache
+H:\GNSeaCorp\GN.Logging\obj\Debug\GN.Logging.dll
+H:\GNSeaCorp\GN.Logging\obj\Debug\GN.Logging.pdb
