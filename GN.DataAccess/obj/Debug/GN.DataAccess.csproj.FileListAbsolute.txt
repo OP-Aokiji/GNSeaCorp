@@ -7,12 +7,21 @@ D:\WebForm\GNSeaCorp\GN.DataAccess\bin\Debug\GN.Common.pdb
 D:\WebForm\GNSeaCorp\GN.DataAccess\obj\Debug\GN.DataAccess.csprojResolveAssemblyReference.cache
 D:\WebForm\GNSeaCorp\GN.DataAccess\obj\Debug\GN.DataAccess.dll
 D:\WebForm\GNSeaCorp\GN.DataAccess\obj\Debug\GN.DataAccess.pdb
+<<<<<<< HEAD
 H:\GNSeaCorp\GN.DataAccess\obj\Debug\GN.DataAccess.csprojResolveAssemblyReference.cache
 H:\GNSeaCorp\GN.DataAccess\obj\Debug\GN.DataAccess.dll
 H:\GNSeaCorp\GN.DataAccess\obj\Debug\GN.DataAccess.pdb
+=======
+>>>>>>> 3599e44e034c672f6cefa36b92b42134ed419aa6
 H:\GNSeaCorp\GN.DataAccess\bin\Debug\GN.DataAccess.dll
 H:\GNSeaCorp\GN.DataAccess\bin\Debug\GN.DataAccess.pdb
 H:\GNSeaCorp\GN.DataAccess\bin\Debug\GN.ADOService.dll
 H:\GNSeaCorp\GN.DataAccess\bin\Debug\GN.Common.dll
 H:\GNSeaCorp\GN.DataAccess\bin\Debug\GN.ADOService.pdb
 H:\GNSeaCorp\GN.DataAccess\bin\Debug\GN.Common.pdb
+<<<<<<< HEAD
+=======
+H:\GNSeaCorp\GN.DataAccess\obj\Debug\GN.DataAccess.csprojResolveAssemblyReference.cache
+H:\GNSeaCorp\GN.DataAccess\obj\Debug\GN.DataAccess.dll
+H:\GNSeaCorp\GN.DataAccess\obj\Debug\GN.DataAccess.pdb
+>>>>>>> 3599e44e034c672f6cefa36b92b42134ed419aa6

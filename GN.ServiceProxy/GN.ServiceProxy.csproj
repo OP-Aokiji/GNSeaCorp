@@ -42,16 +42,24 @@
   <ItemGroup>
     <Compile Include="IServiceProxy\IAccountProxy.cs" />
     <Compile Include="IServiceProxy\IMenuProxy.cs" />
+<<<<<<< HEAD
     <Compile Include="IServiceProxy\INewsRoxy.cs" />
     <Compile Include="IServiceProxy\IRoleRoxy.cs" />
     <Compile Include="IServiceProxy\IProductProxy.cs" />
+=======
+    <Compile Include="IServiceProxy\IProductMenuProxy.cs" />
+>>>>>>> 3599e44e034c672f6cefa36b92b42134ed419aa6
     <Compile Include="IServiceProxy\ISlideProxy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceProxy\AccountProxy.cs" />
     <Compile Include="ServiceProxy\MenuProxy.cs" />
+<<<<<<< HEAD
     <Compile Include="ServiceProxy\NewsRoxy.cs" />
     <Compile Include="ServiceProxy\ProductProxy.cs" />
     <Compile Include="ServiceProxy\RoleRoxy.cs" />
+=======
+    <Compile Include="ServiceProxy\ProductMenuProxy.cs" />
+>>>>>>> 3599e44e034c672f6cefa36b92b42134ed419aa6
     <Compile Include="ServiceProxy\SlideProxy.cs" />
   </ItemGroup>
   <ItemGroup />

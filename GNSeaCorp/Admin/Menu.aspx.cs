@@ -23,7 +23,11 @@ namespace GNSeaCorp.Admin
                 switch (WS_OPTION)
                 {
                     case "SEARCH":
+<<<<<<< HEAD
                         placeHolderMenu.Controls.Add(LoadControl(string.Format(Constants.USER_CONTROL_DIR, arrUserControl[0])));
+=======
+                        placeHolderMenu.Controls.Add(LoadControl(String.Format(Constants.USER_CONTROL_DIR, arrUserControl[1])));
+>>>>>>> 3599e44e034c672f6cefa36b92b42134ed419aa6
                         break;
                 }
             }
