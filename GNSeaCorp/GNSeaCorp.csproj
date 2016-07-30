@@ -1158,9 +1158,9 @@
     <Content Include="Admin\uc\UcProductList.ascx" />
     <Content Include="Admin\uc\UcRoleCU.ascx" />
     <Content Include="Admin\uc\UcRoleR.ascx" />
-    <Content Include="Admin\uc\UcMenuR.ascx" />
     <Content Include="Admin\uc\UcProductMenuD.ascx" />
     <Content Include="Admin\uc\UcSlideCU.ascx" />
+    <Content Include="Admin\uc\UcSlideList.ascx" />
     <Content Include="Admin\uc\UcUserCU.ascx" />
     <Content Include="Admin\uc\UcUserR.ascx" />
     <Content Include="css\bootstrap.css" />
@@ -1368,6 +1368,12 @@
     </Compile>
     <Compile Include="Admin\uc\UcSlideCU.ascx.designer.cs">
       <DependentUpon>UcSlideCU.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\uc\UcSlideList.ascx.cs">
+      <DependentUpon>UcSlideList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\uc\UcSlideList.ascx.designer.cs">
+      <DependentUpon>UcSlideList.ascx</DependentUpon>
     </Compile>
     <Compile Include="Admin\uc\UcUserCU.ascx.cs">
       <DependentUpon>UcUserCU.ascx</DependentUpon>

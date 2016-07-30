@@ -73,6 +73,7 @@ namespace GN.Common
         public const string RETRIEVE_ALL = "ALL";
 
         public const string UCSLIDECU = "UcSlideCU";
+        public const string UCSLIDELIST = "UcSlideList";
         public const string UCPRODUCTCU = "UcProductCU";
         public const string UCPRODUCTLIST = "UcProductList";
 
@@ -82,5 +83,7 @@ namespace GN.Common
         //Icon
         public const string DELETE_ICON = "~/Admin/images/delete.png";
         public const string MODIFY_ICON = "~/Admin/images/edit.png";
+
+        public const string Page404 = "404.aspx";
     }
 }

@@ -92,7 +92,9 @@ namespace GNSeaCorp.Admin.uc
                 productItem.ProductName = txtProductName.Text;
                 productItem.Price1 = Convert.ToDecimal(txtPrice.Text);
                 productItem.Description = txtDescription.Text;
-                productItem.User = "Admin";
+                if (Session["UserId"] != null)
+                    productItem.User = Session["UserId"].ToString();
+
                 if (!string.IsNullOrEmpty(lblImageUrlTemp.Text))
                     productItem.ImageUrl = lblImageUrlTemp.Text;
 
@@ -120,9 +122,14 @@ namespace GNSeaCorp.Admin.uc
             catch (Exception ex)
             {
 
-                Response.Redirect("~/Admin/404.aspx");
+                Response.Redirect("~/Admin/" + Constants.Page404);
             }
 
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + Constants.UCPRODUCTLIST, false);
         }
     }
 }

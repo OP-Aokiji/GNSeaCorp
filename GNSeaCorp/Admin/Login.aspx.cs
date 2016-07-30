@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using GN.Common;
 using GN.Common.DataItem;
+using GN.Common.Schema;
 using GN.ServiceProxy.IServiceProxy;
 using GN.ServiceProxy.ServiceProxy;
 using GNSeaCorp.cm;
@@ -38,11 +39,13 @@ namespace GNSeaCorp.Admin
                     dataResult.Rows[0][Constants.ERR_CODE].ToString().Equals(Constants.WR_SUCCESS))
                 {
                     Session["Admin-Login-Status"] = Constants.WR_SUCCESS;
-                    Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE+ "UcProductCU");
+                    Session["UserId"] = dataResult.Rows[0][DbSchema.Account.USER_ID].ToString();
+                    Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + Constants.UCSLIDELIST);
                 }
                 else
                 {
                     Session["admin-login-status"] = Constants.WR_ERROR;
+                    Session["UserId"] = "";
                     MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác  !!!", this);
                 }
 

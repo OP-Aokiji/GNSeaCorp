@@ -60,21 +60,34 @@ namespace GNSeaCorp.Admin.uc
 
         protected void grdProduct_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            ProductItem productItem = new ProductItem();
-            productItem.ProductId = grdProduct.Rows[e.RowIndex].Cells[0].Text;
-            productItem.Crud = Constants.WS_DELETE;
-            productItem.User = "Admin";
-
-            IProductProxy proxy = new ProductProxy();
-            string resut = (string) proxy.ProductCRUD(productItem);
-
-            if (resut.Equals(Constants.WR_SUCCESS))
+            try
             {
-                MessageBox.Show("Delete success", this);
-                BindData();
+                ProductItem productItem = new ProductItem();
+                productItem.ProductId = grdProduct.Rows[e.RowIndex].Cells[0].Text;
+                productItem.Crud = Constants.WS_DELETE;
+                if(Session["UserId"] != null)
+                    productItem.User = Session["UserId"].ToString();
+
+                IProductProxy proxy = new ProductProxy();
+                string resut = (string)proxy.ProductCRUD(productItem);
+
+                if (resut.Equals(Constants.WR_SUCCESS))
+                {
+                    MessageBox.Show("Delete success", this);
+                    BindData();
+                }
+                else
+                    MessageBox.Show("Delete fail", this);
             }
-            else
-                MessageBox.Show("Delete fail", this);
+            catch (Exception)
+            {
+                Response.Redirect("~/Admin/404.aspx");
+            }
+        }
+
+        protected void btnNew_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + Constants.UCPRODUCTCU, false);
         }
     }
 }

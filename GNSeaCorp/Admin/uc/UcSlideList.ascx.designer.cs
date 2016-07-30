@@ -10,15 +10,24 @@
 namespace GNSeaCorp.Admin.uc {
     
     
-    public partial class UcMenuR {
+    public partial class UcSlideList {
         
         /// <summary>
-        /// gridMenu control.
+        /// btnNew control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridMenu;
+        protected global::System.Web.UI.WebControls.Button btnNew;
+        
+        /// <summary>
+        /// repeaterBanner control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repeaterBanner;
     }
 }

@@ -28,28 +28,7 @@ namespace GN.DataAccess.DAO
                 procedureName = "p_CategorySearch";
                 returnDatatype = Constants.DATATABLE;
             }
-            else if (accountItem.Crud.Equals(Constants.WS_INSERT))
-            {
-                obj = new object[] {    Constants.REFIX_PARAMETER + DbSchema.Account.USER_ID, accountItem.UserId,
-                                        Constants.REFIX_PARAMETER + DbSchema.Account.ROLD_ID,  accountItem.RoldId,
-                                        Constants.REFIX_PARAMETER + DbSchema.Account.PASSWORD,  accountItem.Password,
-                                        Constants.REFIX_PARAMETER + DbSchema.Account.FIST_NAME,  accountItem.FirstName,
-                                        Constants.REFIX_PARAMETER + DbSchema.Account.LAST_NAME,  accountItem.LastName,
-                                        Constants.REFIX_PARAMETER + DbSchema.Account.ADDRESS,  accountItem.Address,
-                                        Constants.REFIX_PARAMETER + DbSchema.Account.GENDER,  accountItem.Gender,
-                                        Constants.REFIX_PARAMETER + DbSchema.Account.PHONE_NUMBER,  accountItem.PhoneNumber,
-                                        Constants.REFIX_PARAMETER + DbSchema.Account.IDENTIFICATION,  accountItem.Identification,
-                                        Constants.REFIX_PARAMETER + DbSchema.Account.AVATAR_URL,  accountItem.AvatarUrl,
-                                        Constants.REFIX_PARAMETER + DbSchema.VALID_FLAG,  accountItem.ValidFlag,
-                                        Constants.REFIX_PARAMETER + DbSchema.ADD_DATE,  accountItem.AddUser,
-                                        Constants.REFIX_PARAMETER + DbSchema.ADD_DATE,  accountItem.AddDate,
-                                        Constants.REFIX_PARAMETER + DbSchema.UPDATE_USER,  accountItem.UpdateUser,
-                                        Constants.REFIX_PARAMETER + DbSchema.UPDATE_DATE,  accountItem.UpdateDate
-                                    };
-                procedureName = DbSchema.Account.P_USERENTRY;
-                returnDatatype = Constants.STRING;
-            }
-            else if (accountItem.Crud.Equals(Constants.WS_UPDATE))
+            else if (accountItem.Crud.Equals(Constants.WS_INSERT) || accountItem.Crud.Equals(Constants.WS_UPDATE))
             {
                 obj = new object[] {    Constants.REFIX_PARAMETER + DbSchema.Account.USER_ID, accountItem.UserId,
                                         Constants.REFIX_PARAMETER + DbSchema.Account.ROLD_ID,  accountItem.RoldId,

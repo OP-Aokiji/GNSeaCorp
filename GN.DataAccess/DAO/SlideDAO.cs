@@ -24,13 +24,11 @@ namespace GN.DataAccess.DAO
             {
                 obj = new object[]
                 {
-                    Constants.REFIX_PARAMETER + DbSchema.Slide.SLIDE_ID, slideItem.Slogan1,
-                    Constants.REFIX_PARAMETER + DbSchema.OFFSET, slideItem.OffSet,
-                    Constants.REFIX_PARAMETER + DbSchema.LIMIT, slideItem.Limit,
+                    Constants.REFIX_PARAMETER + DbSchema.Slide.SLIDE_ID, slideItem.SlideId,
                     Constants.REFIX_PARAMETER + DbSchema.ORDER, slideItem.Order
                 };
                 procedureName = DbSchema.Slide.P_SLIDESEARCH;
-                returnType = Constants.STRING;
+                returnType = Constants.DATATABLE;
             }
             else if (slideItem.Crud.Equals(Constants.WS_INSERT) || slideItem.Crud.Equals(Constants.WS_UPDATE))
             {
@@ -41,7 +39,7 @@ namespace GN.DataAccess.DAO
                     Constants.REFIX_PARAMETER + DbSchema.IMAGE_URL, slideItem.ImageUrl,
                     Constants.REFIX_PARAMETER + DbSchema.Slide.SLOGAN1, slideItem.Slogan1,
                     Constants.REFIX_PARAMETER + DbSchema.Slide.SLOGAN2, slideItem.Slogan2,
-                    Constants.REFIX_PARAMETER + DbSchema.USER, slideItem.UpdateUser
+                    Constants.REFIX_PARAMETER + DbSchema.USER, slideItem.User
                 };
                 procedureName = DbSchema.Slide.P_SLIDEENTRY;
                 returnType = Constants.STRING;
@@ -51,10 +49,9 @@ namespace GN.DataAccess.DAO
                 obj = new object[]
                 {
                     Constants.REFIX_PARAMETER + DbSchema.Slide.SLIDE_ID, slideItem.SlideId,
-                    Constants.REFIX_PARAMETER + DbSchema.UPDATE_USER, slideItem.UpdateUser,
-                    Constants.REFIX_PARAMETER + DbSchema.UPDATE_DATE, slideItem.UpdateDate
+                    Constants.REFIX_PARAMETER + DbSchema.USER, slideItem.User
                 };
-                procedureName = DbSchema.Slide.P_SLIDEENTRY;
+                procedureName = DbSchema.Slide.P_SLIDEDELETE;
                 returnType = Constants.STRING;
             }
 

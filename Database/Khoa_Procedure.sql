@@ -49,11 +49,6 @@ BEGIN
 		SELECT ERR_CODE = 'ERROR';
 END
 GO
-
-exec p_productEntry '', N'test', 11, N'asdfasdfasdf','','Admin','2'
-
-select * from product
-
 ALTER PROCEDURE p_ProductEntry 
 	@PRODUCT_ID		CHAR(10),		
 	@PRODUCT_NAME	NVARCHAR(50),
@@ -191,3 +186,11 @@ BEGIN
  
 END
 GO
+
+SELECT  PRODUCT_ID,
+		PRODUCT_NAME,
+		PRICE1,
+		DESCRIPTION,
+		IMAGE_URL
+FROM PRODUCT 
+WHERE VALID_FLAG = 0

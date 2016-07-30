@@ -28,8 +28,18 @@ namespace GNSeaCorp.Admin
             {
                 string[] arrUserControl = new string[] {
                                                          "UcSlideCU",
+                                                         "UcSlideList",
                                                          "UcProductCU",
-                                                         "UcProductList"
+                                                         "UcProductList",
+                                                         "UcMenuCU",
+                                                         "UcMenuR",
+                                                         "UcNewsCU",
+                                                         "UcNewsR",
+                                                         "UcUserR",
+                                                         "UcUserCU",
+                                                         "UcRoleR",
+                                                         "UcRoleCU",
+                                                         "UcProductMenuD"
                                                       };
                 string usercontrolName = Request["ctr"];
                 if (string.IsNullOrEmpty(usercontrolName))

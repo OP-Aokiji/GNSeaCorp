@@ -37,7 +37,8 @@ namespace GNSeaCorp.Admin
                     slideItem.Slogan2 = txtSlogan2.Text;
                 if (txtSlogan1.Text != null && txtSlogan2.Text != "")
                     slideItem.Description = txtSlogan1.Text;
-                slideItem.User = "Admin";
+                if(Session["UserId"] != null)
+                    slideItem.User = Session["UserId"].ToString();
                 slideItem.Crud = Constants.WS_INSERT;
 
                 ISlideProxy proxy = new SlideProxy();

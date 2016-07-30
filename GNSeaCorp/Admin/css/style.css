@@ -4159,6 +4159,10 @@ div#container-rpm1{
 	min-height:500px;
 	margin:2em 0 0;
 }
+.content-center {
+    margin: 0 auto;
+    text-align: center;
+}
 .position-center {
     width: 65%;
     margin: 0 auto;

@@ -3,8 +3,14 @@
     <div class="graphs">
         <h3 class="blank1">Products</h3>
         <div class="xs tabls">
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="">
+                        <asp:Button ID="btnNew" CssClass="btn-success btn" runat="server" Text="Create" OnClick="btnNew_Click" />
+                    </div>
+                </div>
+            </div>
             <div class="bs-example4" data-example-id="contextual-table">
-
                 <asp:GridView ID="grdProduct" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered" AllowPaging="True" OnPageIndexChanging="grdProduct_PageIndexChanging" OnRowEditing="grdProduct_RowEditing" PageSize="20" OnRowDeleting="grdProduct_RowDeleting">
                     <Columns>
                         <asp:BoundField DataField="Product_Id" HeaderText="Product ID" />
