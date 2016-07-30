@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,6 +12,7 @@ using GN.Common.Schema;
 using GN.ServiceProxy.IServiceProxy;
 using GN.ServiceProxy.ServiceProxy;
 using GNSeaCorp.cm;
+using Microsoft.SqlServer.Server;
 using MenuItem = GN.Common.DataItem.MenuItem;
 
 namespace GNSeaCorp.Admin.uc
@@ -39,7 +41,7 @@ namespace GNSeaCorp.Admin.uc
 
                                 txtProductName.Text = result.Rows[0][DbSchema.Product.PRODUCT_NAME].ToString();
                                 txtDescription.Text = result.Rows[0][DbSchema.Product.DESCRIPTION].ToString();
-                                txtPrice.Text = result.Rows[0][DbSchema.Product.PRICE1].ToString();
+                                txtPrice.Text = Convert.ToDouble(result.Rows[0][DbSchema.Product.PRICE1].ToString()).ToString();
                                 lblImageUrlTemp.Text =
                                     (string.IsNullOrEmpty(result.Rows[0][DbSchema.IMAGE_URL].ToString()))
                                         ? "image.jpg"
@@ -88,7 +90,7 @@ namespace GNSeaCorp.Admin.uc
                 ProductItem productItem = new ProductItem();
 
                 productItem.ProductName = txtProductName.Text;
-                productItem.Price1 = int.Parse(txtPrice.Text);
+                productItem.Price1 = Convert.ToDecimal(txtPrice.Text);
                 productItem.Description = txtDescription.Text;
                 productItem.User = "Admin";
                 if (!string.IsNullOrEmpty(lblImageUrlTemp.Text))
@@ -108,7 +110,7 @@ namespace GNSeaCorp.Admin.uc
                 if (result.Equals(Constants.WR_SUCCESS))
                 {
                     MessageBox.Show("Save is successful", this);
-                    Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + "UcProductList");
+                    Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + "UcProductList", false);
                 }
                 else
                 {

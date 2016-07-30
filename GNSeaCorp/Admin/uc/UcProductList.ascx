@@ -16,7 +16,7 @@
                                 <asp:Label ID="Label1" runat="server" Text='<%# Bind("Product_Name") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:BoundField DataField="Price1" HeaderText="Price" />
+                        <asp:BoundField DataField="Price1" HeaderText="Price" DataFormatString="{0:0,000}" />
                         <asp:BoundField DataField="Description" HeaderText="Description" />
                         <asp:TemplateField HeaderText="Image">
                             <EditItemTemplate>

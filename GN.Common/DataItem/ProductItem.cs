@@ -16,7 +16,7 @@ namespace GN.Common.DataItem
         private string _unit1 = "";
         private string _unit2 = "";
         private string _unit3 = "";
-        private long _price1 = 0;
+        private decimal _price1 = 0;
         private long _price2 = 0;
         private long _price3 = 0;
         private int _discount1 = 0;
@@ -134,7 +134,7 @@ namespace GN.Common.DataItem
             }
         }
 
-        public long Price1
+        public decimal Price1
         {
             get
             {

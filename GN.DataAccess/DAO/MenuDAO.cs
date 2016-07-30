@@ -5,15 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using GN.DataAccess.IDAO;
 using GN.Common.DataItem;
-<<<<<<< HEAD
 using GN.Common.Schema;
 using GN.Common;
 using GN.ADOService;
-=======
 using GN.ADOService;
 using GN.Common;
 using GN.Common.Schema;
->>>>>>> 3599e44e034c672f6cefa36b92b42134ed419aa6
 using System.Data;
 
 namespace GN.DataAccess.DAO
@@ -30,13 +27,11 @@ namespace GN.DataAccess.DAO
             switch (menuItem.Crud)
             {
                 case Constants.WS_RETRIEVE:
-<<<<<<< HEAD
                     obj = new object[] {
                                         Constants.REFIX_PARAMETER + DbSchema.Menu.MENU_ID, menuItem.MenuId
                                     };
-=======
+
                     obj = new object[] { };
->>>>>>> 3599e44e034c672f6cefa36b92b42134ed419aa6
                     procedureName = DbSchema.Menu.P_MENUSEARCH;
                     returnDatatype = Constants.DATATABLE;
                     break;
@@ -63,10 +58,7 @@ namespace GN.DataAccess.DAO
                                        Constants.REFIX_PARAMETER + DbSchema.USER,   menuItem.UpdateUser
                                     };
                     procedureName = DbSchema.Menu.P_MENUDELETE;
-<<<<<<< HEAD
                     returnDatatype = Constants.STRING;
-=======
->>>>>>> 3599e44e034c672f6cefa36b92b42134ed419aa6
                     break;
             }
 

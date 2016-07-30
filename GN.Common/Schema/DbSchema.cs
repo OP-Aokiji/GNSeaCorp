@@ -98,6 +98,7 @@ namespace GN.Common.Schema
             public const string P_PRODUCTENTRY = "P_PRODUCTENTRY"; 
             public const string P_PRODUCTDELETE = "P_PRODUCTDELETE";
             public const string P_PRODUCTALL = "P_PRODUCTALL";
+            public const string P_PRODUCT = "P_PRODUCT";
         }
 
         public static class ProductMenu

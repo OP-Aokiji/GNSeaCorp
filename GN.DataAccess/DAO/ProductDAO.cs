@@ -26,6 +26,16 @@ namespace GN.DataAccess.DAO
             {
                 obj = new object[]
                 {
+                    Constants.REFIX_PARAMETER + DbSchema.Product.PRODUCT_ID, productItem.ProductId
+                };
+
+                procedureName = DbSchema.Product.P_PRODUCT;
+                returnType = Constants.DATATABLE;
+            }
+            else if (productItem.Crud == Constants.RETRIEVE_ALL)
+            {
+                obj = new object[]
+                {
                     Constants.REFIX_PARAMETER + DbSchema.OFFSET, productItem.OffSet,
                     Constants.REFIX_PARAMETER + DbSchema.LIMIT, productItem.Limit,
                     Constants.REFIX_PARAMETER + DbSchema.ORDER, productItem.Order

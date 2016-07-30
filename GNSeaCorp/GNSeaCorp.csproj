@@ -1150,7 +1150,6 @@
     <Content Include="Admin\js\wow.min.js" />
     <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\Menu.aspx" />
-<<<<<<< HEAD
     <Content Include="Admin\uc\UcMenuCU.ascx" />
     <Content Include="Admin\uc\UcMenuR.ascx" />
     <Content Include="Admin\uc\UcNewsCU.ascx" />
@@ -1159,10 +1158,8 @@
     <Content Include="Admin\uc\UcProductList.ascx" />
     <Content Include="Admin\uc\UcRoleCU.ascx" />
     <Content Include="Admin\uc\UcRoleR.ascx" />
-=======
     <Content Include="Admin\uc\UcMenuR.ascx" />
     <Content Include="Admin\uc\UcProductMenuD.ascx" />
->>>>>>> 3599e44e034c672f6cefa36b92b42134ed419aa6
     <Content Include="Admin\uc\UcSlideCU.ascx" />
     <Content Include="Admin\uc\UcUserCU.ascx" />
     <Content Include="Admin\uc\UcUserR.ascx" />
@@ -1302,7 +1299,6 @@
     <Compile Include="Admin\Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Admin\uc\UcMenuCU.ascx.cs">
       <DependentUpon>UcMenuCU.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1310,8 +1306,6 @@
     <Compile Include="Admin\uc\UcMenuCU.ascx.designer.cs">
       <DependentUpon>UcMenuCU.ascx</DependentUpon>
     </Compile>
-=======
->>>>>>> 3599e44e034c672f6cefa36b92b42134ed419aa6
     <Compile Include="Admin\uc\UcMenuR.ascx.cs">
       <DependentUpon>UcMenuR.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1319,7 +1313,6 @@
     <Compile Include="Admin\uc\UcMenuR.ascx.designer.cs">
       <DependentUpon>UcMenuR.ascx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Admin\uc\UcNewsCU.ascx.cs">
       <DependentUpon>UcNewsCU.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1361,14 +1354,13 @@
     </Compile>
     <Compile Include="Admin\uc\UcRoleR.ascx.designer.cs">
       <DependentUpon>UcRoleR.ascx</DependentUpon>
-=======
+    </Compile>
     <Compile Include="Admin\uc\UcProductMenuD.ascx.cs">
       <DependentUpon>UcProductMenuD.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\uc\UcProductMenuD.ascx.designer.cs">
       <DependentUpon>UcProductMenuD.ascx</DependentUpon>
->>>>>>> 3599e44e034c672f6cefa36b92b42134ed419aa6
     </Compile>
     <Compile Include="Admin\uc\UcSlideCU.ascx.cs">
       <DependentUpon>UcSlideCU.ascx</DependentUpon>

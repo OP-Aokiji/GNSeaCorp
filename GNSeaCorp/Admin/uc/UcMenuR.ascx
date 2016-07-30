@@ -1,5 +1,4 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UcMenuR.ascx.cs" Inherits="GNSeaCorp.Admin.uc.UcMenuR" %>
-<<<<<<< HEAD
 <%@ Import Namespace="GN.Common" %>
 <div id="page-wrapper">
 	<div class="graphs">
@@ -12,7 +11,6 @@
                 <asp:CommandField ButtonType="Image" CancelText="" DeleteImageUrl="B" InsertVisible="False" ShowCancelButton="False" ShowDeleteButton="True" ShowEditButton="True" UpdateImageUrl="<%# Constants.DELETE_ICON %>"></asp:CommandField>
             </Columns>
         </asp:gridview>
-=======
 <div id="page-wrapper">
 	<div class="graphs">
 		<h3 class="blank1">Basic Tables</h3>
@@ -22,6 +20,5 @@
                     <asp:BoundField HeaderText="TÊN MENU"></asp:BoundField>
                 </Columns>
             </asp:gridview>
->>>>>>> 3599e44e034c672f6cefa36b92b42134ed419aa6
 	</div>
 </div>

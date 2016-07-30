@@ -1,5 +1,4 @@
 D:\WebForm\GNSeaCorp\GN.ADOService\bin\Debug\GN.ADOService.dll
 D:\WebForm\GNSeaCorp\GN.ADOService\bin\Debug\GN.ADOService.pdb
-D:\WebForm\GNSeaCorp\GN.ADOService\obj\Debug\GN.ADOService.csprojResolveAssemblyReference.cache
 D:\WebForm\GNSeaCorp\GN.ADOService\obj\Debug\GN.ADOService.dll
 D:\WebForm\GNSeaCorp\GN.ADOService\obj\Debug\GN.ADOService.pdb
