@@ -98,6 +98,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.aspx" />
     <Content Include="Admin\404.aspx" />
     <Content Include="Admin\Catelogy.aspx" />
     <Content Include="Admin\ckeditor\adapters\jquery.js" />
@@ -1163,6 +1164,7 @@
     <Content Include="Admin\uc\UcSlideList.ascx" />
     <Content Include="Admin\uc\UcUserCU.ascx" />
     <Content Include="Admin\uc\UcUserR.ascx" />
+    <Content Include="ContactUs.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\chocolat.css" />
     <Content Include="css\style.css" />
@@ -1201,6 +1203,8 @@
     <Content Include="js\jquery-1.11.1.min.js" />
     <Content Include="js\jquery.chocolat.js" />
     <Content Include="js\jquery.wmuSlider.js" />
+    <Content Include="js\Script.js" />
+    <Content Include="News.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -1252,11 +1256,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Product.aspx" />
+    <Content Include="ProductDetail.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="uc\ucNewsLeft.ascx" />
+    <Content Include="uc\ucSlide.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\404.aspx.cs">
       <DependentUpon>404.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1371,6 +1386,7 @@
     </Compile>
     <Compile Include="Admin\uc\UcSlideList.ascx.cs">
       <DependentUpon>UcSlideList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\uc\UcSlideList.ascx.designer.cs">
       <DependentUpon>UcSlideList.ascx</DependentUpon>
@@ -1392,6 +1408,13 @@
     <Compile Include="cm\ImageUtility.cs" />
     <Compile Include="cm\MessageBox.cs" />
     <Compile Include="cm\Security.cs" />
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1409,7 +1432,42 @@
     <Compile Include="MasterPage\UserMasterPage.Master.designer.cs">
       <DependentUpon>UserMasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetail.aspx.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetail.aspx.designer.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uc\ucNewsLeft.ascx.cs">
+      <DependentUpon>ucNewsLeft.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucNewsLeft.ascx.designer.cs">
+      <DependentUpon>ucNewsLeft.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucSlide.ascx.cs">
+      <DependentUpon>ucSlide.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucSlide.ascx.designer.cs">
+      <DependentUpon>ucSlide.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

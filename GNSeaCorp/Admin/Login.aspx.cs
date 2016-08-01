@@ -39,7 +39,7 @@ namespace GNSeaCorp.Admin
                     dataResult.Rows[0][Constants.ERR_CODE].ToString().Equals(Constants.WR_SUCCESS))
                 {
                     Session["Admin-Login-Status"] = Constants.WR_SUCCESS;
-                    Session["UserId"] = dataResult.Rows[0][DbSchema.Account.USER_ID].ToString();
+                    Session["UserId"] = txtUserName.Text;
                     Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + Constants.UCSLIDELIST);
                 }
                 else
