@@ -40,3 +40,130 @@ D:\WebForm\GNSeaCorp\GNSeaCorp\bin\GN.ServiceProxy.pdb
 D:\WebForm\GNSeaCorp\GNSeaCorp\bin\GN.DataAccess.pdb
 D:\WebForm\GNSeaCorp\GNSeaCorp\bin\GN.ADOService.pdb
 D:\WebForm\GNSeaCorp\GNSeaCorp\bin\CKEditor.NET.pdb
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\ApplicationInsights.config
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\roslyn\csc.exe
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\roslyn\System.Collections.Immutable.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\roslyn\System.Reflection.Metadata.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\roslyn\vbc.exe
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\roslyn\VBCSCompiler.exe
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\roslyn\VBCSCompiler.exe.config
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\GNSeaCorp.dll.config
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\GNSeaCorp.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\GNSeaCorp.pdb
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\GN.Common.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\GN.ServiceProxy.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.DependencyCollector.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.Web.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.WindowsServer.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\Microsoft.ApplicationInsights.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\GN.DataAccess.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\GN.ADOService.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\GN.Common.pdb
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\GN.ServiceProxy.pdb
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.DependencyCollector.xml
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.Web.xml
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.WindowsServer.xml
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\Microsoft.ApplicationInsights.xml
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\GN.DataAccess.pdb
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\bin\GN.ADOService.pdb
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\obj\Debug\GNSeaCorp.csprojResolveAssemblyReference.cache
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\obj\Debug\GNSeaCorp.dll
+E:\Chung Hieu\GNSeaCorp\GNSeaCorp\obj\Debug\GNSeaCorp.pdb
+H:\GNSeaCorp\GNSeaCorp\bin\ApplicationInsights.config
+H:\GNSeaCorp\GNSeaCorp\bin\roslyn\csc.exe
+H:\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+H:\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+H:\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.CodeAnalysis.dll
+H:\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+H:\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.CSharp.Core.targets
+H:\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+H:\GNSeaCorp\GNSeaCorp\bin\roslyn\System.Collections.Immutable.dll
+H:\GNSeaCorp\GNSeaCorp\bin\roslyn\System.Reflection.Metadata.dll
+H:\GNSeaCorp\GNSeaCorp\bin\roslyn\vbc.exe
+H:\GNSeaCorp\GNSeaCorp\bin\roslyn\VBCSCompiler.exe
+H:\GNSeaCorp\GNSeaCorp\bin\roslyn\VBCSCompiler.exe.config
+H:\GNSeaCorp\GNSeaCorp\bin\GNSeaCorp.dll.config
+H:\GNSeaCorp\GNSeaCorp\bin\GNSeaCorp.dll
+H:\GNSeaCorp\GNSeaCorp\bin\GNSeaCorp.pdb
+H:\GNSeaCorp\GNSeaCorp\bin\CKEditor.NET.dll
+H:\GNSeaCorp\GNSeaCorp\bin\GN.Common.dll
+H:\GNSeaCorp\GNSeaCorp\bin\GN.ServiceProxy.dll
+H:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.Agent.Intercept.dll
+H:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.DependencyCollector.dll
+H:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.PerfCounterCollector.dll
+H:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+H:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.Web.dll
+H:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.WindowsServer.dll
+H:\GNSeaCorp\GNSeaCorp\bin\Microsoft.ApplicationInsights.dll
+H:\GNSeaCorp\GNSeaCorp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+H:\GNSeaCorp\GNSeaCorp\bin\GN.DataAccess.dll
+H:\GNSeaCorp\GNSeaCorp\bin\GN.ADOService.dll
+H:\GNSeaCorp\GNSeaCorp\bin\GN.Common.pdb
+H:\GNSeaCorp\GNSeaCorp\bin\GN.ServiceProxy.pdb
+H:\GNSeaCorp\GNSeaCorp\bin\CKEditor.NET.pdb
+H:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.DependencyCollector.xml
+H:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+H:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.Web.xml
+H:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.WindowsServer.xml
+H:\GNSeaCorp\GNSeaCorp\bin\Microsoft.ApplicationInsights.xml
+H:\GNSeaCorp\GNSeaCorp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+H:\GNSeaCorp\GNSeaCorp\bin\GN.DataAccess.pdb
+H:\GNSeaCorp\GNSeaCorp\bin\GN.ADOService.pdb
+H:\GNSeaCorp\GNSeaCorp\obj\Debug\GNSeaCorp.csprojResolveAssemblyReference.cache
+H:\GNSeaCorp\GNSeaCorp\obj\Debug\GNSeaCorp.dll
+H:\GNSeaCorp\GNSeaCorp\obj\Debug\GNSeaCorp.pdb
+F:\GNSeaCorp\GNSeaCorp\bin\ApplicationInsights.config
+F:\GNSeaCorp\GNSeaCorp\bin\roslyn\csc.exe
+F:\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\GNSeaCorp\GNSeaCorp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\GNSeaCorp\GNSeaCorp\bin\roslyn\System.Collections.Immutable.dll
+F:\GNSeaCorp\GNSeaCorp\bin\roslyn\System.Reflection.Metadata.dll
+F:\GNSeaCorp\GNSeaCorp\bin\roslyn\vbc.exe
+F:\GNSeaCorp\GNSeaCorp\bin\roslyn\VBCSCompiler.exe
+F:\GNSeaCorp\GNSeaCorp\bin\roslyn\VBCSCompiler.exe.config
+F:\GNSeaCorp\GNSeaCorp\bin\GNSeaCorp.dll.config
+F:\GNSeaCorp\GNSeaCorp\bin\GNSeaCorp.dll
+F:\GNSeaCorp\GNSeaCorp\bin\GNSeaCorp.pdb
+F:\GNSeaCorp\GNSeaCorp\bin\CKEditor.NET.dll
+F:\GNSeaCorp\GNSeaCorp\bin\GN.Common.dll
+F:\GNSeaCorp\GNSeaCorp\bin\GN.ServiceProxy.dll
+F:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.Agent.Intercept.dll
+F:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.DependencyCollector.dll
+F:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.Web.dll
+F:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.WindowsServer.dll
+F:\GNSeaCorp\GNSeaCorp\bin\Microsoft.ApplicationInsights.dll
+F:\GNSeaCorp\GNSeaCorp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\GNSeaCorp\GNSeaCorp\bin\GN.DataAccess.dll
+F:\GNSeaCorp\GNSeaCorp\bin\GN.ADOService.dll
+F:\GNSeaCorp\GNSeaCorp\bin\GN.Common.pdb
+F:\GNSeaCorp\GNSeaCorp\bin\GN.ServiceProxy.pdb
+F:\GNSeaCorp\GNSeaCorp\bin\CKEditor.NET.pdb
+F:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.DependencyCollector.xml
+F:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.Web.xml
+F:\GNSeaCorp\GNSeaCorp\bin\Microsoft.AI.WindowsServer.xml
+F:\GNSeaCorp\GNSeaCorp\bin\Microsoft.ApplicationInsights.xml
+F:\GNSeaCorp\GNSeaCorp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\GNSeaCorp\GNSeaCorp\bin\GN.DataAccess.pdb
+F:\GNSeaCorp\GNSeaCorp\bin\GN.ADOService.pdb
+F:\GNSeaCorp\GNSeaCorp\obj\Debug\GNSeaCorp.csprojResolveAssemblyReference.cache
+F:\GNSeaCorp\GNSeaCorp\obj\Debug\GNSeaCorp.dll
+F:\GNSeaCorp\GNSeaCorp\obj\Debug\GNSeaCorp.pdb

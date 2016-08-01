@@ -37,20 +37,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputFile">Image Url</label>
-                        <asp:FileUpload ID="fuImage1" runat="server" OnPreRender="fuImage1_PreRender" />
-                        <%--<p class="help-block">Example block-level help text here.</p>--%>
-                    </div>
-                    <div class="form-group">
-                        <asp:Button ID="btnUploadImage" runat="server" Text="Upload" OnClick="btnUploadImage_Click" />
-                    </div>
                     <div class="panel-footer">
                         <div class="row">
                             <div class="col-sm-8 col-sm-offset-2">
                                 <asp:Button ID="btnSubmit" CssClass="btn-success btn" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
-                                <asp:Button ID="btnCancel" CssClass="btn-success btn" runat="server" Text="Cancel" />
-                                <asp:Button ID="btnReset" CssClass="btn-success btn" runat="server" Text="Reset" />
+                                <asp:Button ID="btnCancel" CssClass="btn-success btn" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+                                <asp:Button ID="btnReset" CssClass="btn-success btn" runat="server" Text="Reset" OnClick="btnReset_Click" />
                             </div>
                         </div>
                     </div>

@@ -13,12 +13,21 @@ namespace GNSeaCorp.Admin.uc {
     public partial class UcUserR {
         
         /// <summary>
-        /// gridMenu control.
+        /// btnNew control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridMenu;
+        protected global::System.Web.UI.WebControls.Button btnNew;
+        
+        /// <summary>
+        /// gridAccount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridAccount;
     }
 }

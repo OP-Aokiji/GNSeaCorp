@@ -8,3 +8,8 @@ D:\WebForm\GNSeaCorp\GN.Logging\bin\Debug\GN.Logging.pdb
 D:\WebForm\GNSeaCorp\GN.Logging\obj\Debug\GN.Logging.csprojResolveAssemblyReference.cache
 D:\WebForm\GNSeaCorp\GN.Logging\obj\Debug\GN.Logging.dll
 D:\WebForm\GNSeaCorp\GN.Logging\obj\Debug\GN.Logging.pdb
+E:\Chung Hieu\GNSeaCorp\GN.Logging\bin\Debug\GN.Logging.dll
+E:\Chung Hieu\GNSeaCorp\GN.Logging\bin\Debug\GN.Logging.pdb
+E:\Chung Hieu\GNSeaCorp\GN.Logging\obj\Debug\GN.Logging.csprojResolveAssemblyReference.cache
+E:\Chung Hieu\GNSeaCorp\GN.Logging\obj\Debug\GN.Logging.dll
+E:\Chung Hieu\GNSeaCorp\GN.Logging\obj\Debug\GN.Logging.pdb

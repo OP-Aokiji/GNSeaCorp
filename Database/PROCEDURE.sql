@@ -38,6 +38,7 @@ BEGIN
 	EXEC(@V_SQL_QUERY);
 END
 GO
+
 CREATE PROCEDURE p_SlideEntry
 	@SLIDE_ID		CHAR(5),
 	@DESCRIPTION	NVARCHAR(500),
@@ -80,7 +81,7 @@ BEGIN
 			,SLOGAN2 = @SLOGAN2
 			,VALID_FLAG = '1'
 			,ADD_USER = @USER
-			,UPDATE_DATE = FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			,UPDATE_DATE = GETDATE()
 		WHERE SLIDE_ID = @SLIDE_ID
 			
 	IF @@ROWCOUNT > 0
@@ -90,7 +91,7 @@ BEGIN
 END
 GO
 
-ALTER PROCEDURE p_SlideDelete
+CREATE PROCEDURE p_SlideDelete
 	@SLIDE_ID		VARCHAR(5),
 	@USER			VARCHAR(20)
 AS
@@ -111,19 +112,37 @@ BEGIN
 END                                   
 GO                                                                         
 ---- PROCEDURE OF TABLE USER --
---CREATE PROCEDURE p_UserSearch
---	@Offset		VARCHAR,
---	@Limit		VARCHAR,
---	@Order		VARCHAR
---AS
---BEGIN
-	
---END
---GO
+ALTER PROCEDURE p_UserSearch
+	@USER_ID		VARCHAR(20)
+AS
+BEGIN
+	DECLARE @V_SQL_QUERY NVARCHAR(MAX);
+	SET @V_SQL_QUERY =   'SELECT	A.USER_ID,
+									R.ROLE_NAME,
+									A.PASSWORD,
+									A.FIRST_NAME,
+									A.LAST_NAME,
+									A.ADDRESS,
+									A.GENDER,
+									A.PHONE_NUMBER,
+									A.IDENTIFICATION,
+									A.AVATAR_URL
+						FROM		ACCOUNT A
+										LEFT JOIN ROLE R
+											ON R.ROLE_ID = A.ROLE_ID
+						WHERE		A.VALID_FLAG = ''1'' ';
+	IF @USER_ID <> ''
+		SET @V_SQL_QUERY = @V_SQL_QUERY + ' AND A.USER_ID LIKE ''%' + @USER_ID +  '%'' ';
+
+		SET @V_SQL_QUERY = @V_SQL_QUERY + ' ORDER BY A.USER_ID';
+
+	EXEC(@V_SQL_QUERY);	
+END
+GO
 
 CREATE PROCEDURE p_UserEntry
 	@USER_ID		VARCHAR(20),
-	@ROLD_ID		CHAR(5),
+	@ROLE_ID		CHAR(5),
 	@PASSWORD		NVARCHAR(MAX),
 	@FIRST_NAME		NVARCHAR(50),
 	@LAST_NAME		NVARCHAR(50),
@@ -138,7 +157,7 @@ BEGIN
 	IF NOT EXISTS(SELECT 1 FROM ACCOUNT WHERE USER_ID = @USER_ID)
 		INSERT INTO ACCOUNT(
 			USER_ID,
-			ROLD_ID,
+			ROLE_ID,
 			PASSWORD,
 			FIRST_NAME,
 			LAST_NAME,
@@ -154,7 +173,7 @@ BEGIN
 			UPDATE_DATE
 		) VALUES (
 			 @USER_ID
-			,@ROLD_ID
+			,@ROLE_ID
 			,@PASSWORD
 			,@FIRST_NAME
 			,@LAST_NAME
@@ -165,13 +184,13 @@ BEGIN
 			,@AVATAR_URL
 			,'1'
 			,@USER
-			,FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			,GETDATE()
 			,@USER
-			,FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			,GETDATE()
 		);
 	ELSE
 		UPDATE ACCOUNT SET
-			 ROLD_ID       	= @ROLD_ID
+			 ROLE_ID       	= @ROLE_ID
 			,PASSWORD      	= @PASSWORD
 			,FIRST_NAME    	= @FIRST_NAME
 			,LAST_NAME     	= @LAST_NAME
@@ -182,15 +201,15 @@ BEGIN
 			,AVATAR_URL    	= @AVATAR_URL
 			,VALID_FLAG    	= '1'
 			,ADD_USER      	= @USER
-			,ADD_DATE      	= FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			,ADD_DATE      	= GETDATE()
 			,UPDATE_USER   	= @USER
-			,UPDATE_DATE   	= FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			,UPDATE_DATE   	= GETDATE()
 		WHERE USER_ID       = @USER_ID;
 
 	IF @@ROWCOUNT > 0
-		SELECT ERR_CODE = 'S';        
-	ELSE                              
-		SELECT ERR_CODE = 'E';
+		SELECT ERR_CODE = 'SUCCESS';
+	ELSE
+		SELECT ERR_CODE = 'ERROR';
 END
 GO
 
@@ -202,7 +221,7 @@ BEGIN
 	UPDATE ACCOUNT SET
 		 VALID_FLAG    	= '0'
 		,UPDATE_USER   	= @USER
-		,UPDATE_DATE   	= FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+		,UPDATE_DATE   	= GETDATE()
 	WHERE USER_ID       = @USER_ID;
 END
 GO
@@ -220,7 +239,7 @@ BEGIN
 				AND PASSWORD = @PASSWORD
 			)
 		SELECT ERR_CODE = 'SUCCESS'
-			,*
+			,ROLE_ID
 		FROM ACCOUNT
 		WHERE USER_ID = @USER_ID
 			AND PASSWORD = @PASSWORD;
@@ -270,7 +289,7 @@ BEGIN
 		) VALUES (
 			 @ROLE_ID
 			,@TYPE
-			,@ROLD_NAME
+			,@ROLE_NAME
 			,@READ_ONLY
 			,@ENABLE_INSERT
 			,@ENABLE_UPDATE
@@ -278,13 +297,13 @@ BEGIN
 			,@DESCRIPTION	
 			,'1'
 			,@USER
-			,FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			,GETDATE()
 			,@USER
-			,FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			,GETDATE()
 		);
 	ELSE
 		UPDATE ROLE SET
-			ROLD_NAME      = 	@ROLD_NAME,
+			ROLE_NAME      = 	@ROLE_NAME,
 			READ_ONLY      = 	@READ_ONLY,
 			ENABLE_INSERT  = 	@ENABLE_INSERT,
 			ENABLE_UPDATE  = 	@ENABLE_UPDATE,
@@ -292,16 +311,16 @@ BEGIN
 			DESCRIPTION    = 	@DESCRIPTION,
 			VALID_FLAG     = 	'1',
 			ADD_USER       = 	@USER,
-			ADD_DATE       = 	FORMAT(GETDATE(),'dd/MM/yyyy HH:mm'),
+			ADD_DATE       = 	GETDATE(),
 			UPDATE_USER    = 	@USER,
-			UPDATE_DATE    =  	FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			UPDATE_DATE    =  	GETDATE()
 		WHERE	ROLE_ID = @ROLE_ID
 		AND		TYPE	= @TYPE;
 	
 	IF @@ROWCOUNT > 0
-		SELECT ERR_CODE = 'S';        
-	ELSE                              
-		SELECT ERR_CODE = 'E';
+		SELECT ERR_CODE = 'SUCCESS';
+	ELSE
+		SELECT ERR_CODE = 'ERROR';
 END
 GO
 
@@ -314,44 +333,50 @@ BEGIN
 	UPDATE ROLE SET
 		 VALID_FLAG    	= '0'
 		,UPDATE_USER   	= @USER
-		,UPDATE_DATE   	= FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+		,UPDATE_DATE   	= GETDATE()
 	WHERE	ROLE_ID = @ROLE_ID 
 	AND		TYPE	= @TYPE;
 
 	IF @@ROWCOUNT > 0
-		SELECT ERR_CODE = 'S';        
-	ELSE                              
-		SELECT ERR_CODE = 'E';
+		SELECT ERR_CODE = 'SUCCESS';
+	ELSE
+		SELECT ERR_CODE = 'ERROR';
 END
 GO
 
 -- PROCEDURE OF TABLE NEWS --
---CREATE PROCEDURE p_NewsSearch
---@Offset		VARCHAR,
---@Limit		VARCHAR,
---@Order		VARCHAR
---AS
---BEGIN
---	RETURN TRUE
---END
---GO
+CREATE PROCEDURE p_NewsSearch
+	@NEWS_ID		CHAR(5)
+AS
+BEGIN
+	DECLARE @V_SQL_QUERY NVARCHAR(MAX);
+  SET @V_SQL_QUERY =   'SELECT	NEWS_ID,
+								TITLE,
+								SUMMARY,
+								CONTENT
+						FROM	NEWS
+						WHERE	VALID_FLAG = ''1'' ';
+	IF @NEWS_ID <> ''
+		SET @V_SQL_QUERY = @V_SQL_QUERY + ' AND NEWS_ID LIKE ''%' + @NEWS_ID +  '%'' ';
+
+		SET @V_SQL_QUERY = @V_SQL_QUERY + ' ORDER BY NEWS_ID';
+
+	EXEC(@V_SQL_QUERY);
+END
+GO
 
 CREATE PROCEDURE p_NewsEntry
 	@NEWS_ID		CHAR(5),
 	@TITLE			NVARCHAR(50),
 	@SUMMARY		NVARCHAR(200),
-	@CONTENT		TEXT,
+	@CONTENT		NVARCHAR(MAX),
 	@USER			NVARCHAR(20)
 AS
 BEGIN
 	IF NOT EXISTS (SELECT 1 FROM NEWS WHERE NEWS_ID = @NEWS_ID)
 	BEGIN
 		INSERT INTO NEWS (
-<<<<<<< HEAD
-			 NEWS_ID			
-=======
-			 NEWS_ID		
->>>>>>> 3599e44e034c672f6cefa36b92b42134ed419aa6
+			 NEWS_ID
 			,TITLE		
 			,SUMMARY		
 			,CONTENT		
@@ -361,15 +386,15 @@ BEGIN
 			,UPDATE_USER
 			,UPDATE_DATE
 		) VALUES (
-			 @NEWS_ID
+			 (SELECT DBO.F_FORMAT(@NEWS_ID, 5, '0'))
 			,@TITLE
 			,@SUMMARY
 			,@CONTENT
 			,'1'
 			,@USER
-			,FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			,GETDATE()
 			,@USER
-			,FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			,GETDATE()
 		);
 		END
 	ELSE 
@@ -380,14 +405,14 @@ BEGIN
 				CONTENT	    = @CONTENT,
 				VALID_FLAG	= '1',
 				UPDATE_USER = @USER,
-				UPDATE_DATE = FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
-			WHERE NEWS_ID = @NEWS_ID;
+				UPDATE_DATE = GETDATE()
+			WHERE NEWS_ID = (SELECT DBO.F_FORMAT(@NEWS_ID, 5, '0'));
 		END
 	
 	IF @@ROWCOUNT > 0
-		SELECT ERR_CODE = 'S';        
-	ELSE                              
-		SELECT ERR_CODE = 'E';
+		SELECT ERR_CODE = 'SUCCESS';
+	ELSE
+		SELECT ERR_CODE = 'ERROR';
 END
 GO
 
@@ -399,17 +424,13 @@ BEGIN
 	UPDATE NEWS SET
 		VALID_FLAG	= '0',
 		UPDATE_USER = @USER,
-		UPDATE_DATE = FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+		UPDATE_DATE = GETDATE()
 	WHERE NEWS_ID = @NEWS_ID;
 	
-	UPDATE TAG SET
-		VALID_FLAG = '0'
-	WHERE TAG_ID = @NEWS_ID;
-	
 	IF @@ROWCOUNT > 0
-		SELECT ERR_CODE = 'S';        
-	ELSE                              
-		SELECT ERR_CODE = 'E';
+		SELECT ERR_CODE = 'SUCCESS';
+	ELSE
+		SELECT ERR_CODE = 'ERROR';
 END
 GO
 
@@ -437,8 +458,7 @@ GO
 --GO
 
 -- PROCEDURE OF CATEGORY (MENU)
-<<<<<<< HEAD
-ALTER PROCEDURE p_CategorySearch
+CREATE PROCEDURE p_CategorySearch
 	@MENU_ID		CHAR(2)
 AS
 BEGIN
@@ -449,30 +469,12 @@ BEGIN
 							WHERE	TYPE		= ''2''
 							AND		PARENT_ID	= ''03''
 							AND		VALID_FLAG	= ''1'' ';
-	IF @MENU_ID IS NOT NULL
-		SET @V_SQL_QUERY = @V_SQL_QUERY + ' AND MENU_ID = ''' + @MENU_ID +  ''' ';
+	IF RTRIM(@MENU_ID) <> ''
+		SET @V_SQL_QUERY = @V_SQL_QUERY + ' AND MENU_ID LIKE ''%' + @MENU_ID +  '%'' ';
 
 	SET @V_SQL_QUERY = @V_SQL_QUERY + ' ORDER BY MENU_ID';
 
 	EXEC(@V_SQL_QUERY);
-
-	SELECT	MENU_ID,
-			MENU_NAME
-	FROM	MENU
-	WHERE	TYPE		= '2'
-	AND		PARENT_ID	= '03'
-	AND		VALID_FLAG	= '1'
-=======
-CREATE PROCEDURE p_CategorySearch
-
-AS
-BEGIN
-	SELECT	* 
-	FROM	MENU
-	WHERE	TYPE		= '2'
-	AND		PARENT_ID	= '03'
->>>>>>> 3599e44e034c672f6cefa36b92b42134ed419aa6
-	ORDER BY MENU_ID
 END
 GO
 
@@ -504,20 +506,25 @@ BEGIN
 			,@DESCRIPTION
 			,'1'
 			,@USER
-			,FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			,GETDATE()
+			,GETDATE()
 			,@USER
-			,FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
 		);
 	ELSE
 		UPDATE MENU SET
 			 MENU_NAME		= @MENU_NAME
 			,DESCRIPTION	= @DESCRIPTION
 			,VALID_FLAG		= '1'
-			,UPDATE_DATE	= FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+			,UPDATE_DATE	= GETDATE()
 			,UPDATE_USER	= @USER
 		WHERE	MENU_ID		= @MENU_ID
 		AND		TYPE		= '2'
 		AND		PARENT_ID	= '03';
+
+	IF @@ROWCOUNT > 0
+		SELECT ERR_CODE = 'SUCCESS';
+	ELSE
+		SELECT ERR_CODE = 'ERROR';
 END
 GO
 
@@ -528,7 +535,7 @@ AS
 BEGIN
 	UPDATE MENU SET
 		 VALID_FLAG		= '0'
-		,UPDATE_DATE	= FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+		,UPDATE_DATE	= GETDATE()
 		,UPDATE_USER	= @USER
 	WHERE	MENU_ID		= @MENU_ID
 	AND		TYPE		= '2'
@@ -547,7 +554,7 @@ GO
 --END
 --GO
 
-CREATE PROCEDURE p_ProductEntry
+CREATE PROCEDURE p_ProductEntry 
 	@PRODUCT_ID		CHAR(10),		
 	@PRODUCT_NAME	NVARCHAR(50),
 	@PRICE1			MONEY,			
@@ -571,37 +578,39 @@ BEGIN
 				UPDATE_USER,
 				UPDATE_DATE
 			) VALUES (
-				@PRODUCT_ID,
+				(SELECT  DBO.F_FORMAT(ISNULL(MAX(CONVERT(INT, PRODUCT_ID)) + 1, 1), 10, '0')
+				FROM PRODUCT),
 				@PRODUCT_NAME,
 				@PRICE1,
 				@DESCRIPTION,
 				@IMAGE_URL,
 				'1',
 				@USER,
-				FORMAT(GETDATE(),'dd/MM/yyyy HH:mm'),
+				GETDATE(),
 				@USER,
-				FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+				GETDATE()
 			);
-		
-			INSERT INTO PRODUCT_MENU (
-				MENU_ID,
-				TYPE,	
-				PRODUCT_ID,
-				VALID_FLAG,
-				ADD_USER,
-				ADD_DATE,
-				UPDATE_USER,
-				UPDATE_DATE
-			) VALUES (
-				@MENU_ID,
-				'2',
-				@PRODUCT_ID,
-				'1',
-				@USER,
-				FORMAT(GETDATE(),'dd/MM/yyyy HH:mm'),
-				@USER,
-				FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
-			)
+
+			IF @@ROWCOUNT > 0
+					INSERT INTO PRODUCT_MENU (
+						MENU_ID,
+						TYPE,	
+						PRODUCT_ID,
+						VALID_FLAG,
+						ADD_USER,
+						ADD_DATE,
+						UPDATE_USER,
+						UPDATE_DATE
+					) VALUES (
+						@MENU_ID,
+						'2',
+						(SELECT MAX(PRODUCT_ID) FROM PRODUCT),
+						'1',
+						@USER,
+						GETDATE(),
+						@USER,
+						GETDATE()
+					)
 		END 
 	ELSE 
 		BEGIN
@@ -609,21 +618,26 @@ BEGIN
 				PRODUCT_NAME = @PRODUCT_NAME,
 				PRICE1		 = @PRICE1,
 				DESCRIPTION	 = @DESCRIPTION,
-				IMAGE_URL	 = @IMAGE_URL,
+				IMAGE_URL	 = @IMAGE_URL,			
 				VALID_FLAG	 = '1',
 				UPDATE_USER	 = @USER,
-				UPDATE_DATE	 = FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+				UPDATE_DATE	 = GETDATE()
 			WHERE	PRODUCT_ID = @PRODUCT_ID;
 		
 			UPDATE PRODUCT_MENU SET
+				MENU_ID		 = @MENU_ID,
 				VALID_FLAG	 = '1',
 				UPDATE_USER	 = @USER,
-				UPDATE_DATE	 = FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+				UPDATE_DATE	 = GETDATE()
 			WHERE	PRODUCT_ID	= @PRODUCT_ID
 			AND		MENU_ID		= @MENU_ID
 			AND		TYPE		= '2';
 		END
 	
+	IF @@ROWCOUNT > 0
+		SELECT ERR_CODE = 'SUCCESS';
+	ELSE
+		SELECT ERR_CODE = 'ERROR';
 END
 GO
 
@@ -636,16 +650,39 @@ BEGIN
 	UPDATE PRODUCT SET
 		VALID_FLAG	 = '0',
 		UPDATE_USER	 = @USER,
-		UPDATE_DATE	 = FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
+		UPDATE_DATE	 = GETDATE()
 	WHERE	PRODUCT_ID = @PRODUCT_ID;
 	
-	UPDATE PRODUCT_MENU SET
-		VALID_FLAG	 = '0',
-		UPDATE_USER	 = @USER,
-		UPDATE_DATE	 = FORMAT(GETDATE(),'dd/MM/yyyy HH:mm')
-	WHERE	PRODUCT_ID	= @PRODUCT_ID
-	AND		MENU_ID		= @MENU_ID
-	AND		TYPE		= '2';
+	--UPDATE PRODUCT_MENU SET
+	--	VALID_FLAG	 = '0',
+	--	UPDATE_USER	 = @USER,
+	--	UPDATE_DATE	 = GETDATE()
+	--WHERE	PRODUCT_ID	= @PRODUCT_ID
+	--AND		MENU_ID		= @MENU_ID
+	--AND		TYPE		= '2';
+
+	IF @@ROWCOUNT > 0
+		SELECT ERR_CODE = 'SUCCESS';
+	ELSE
+		SELECT ERR_CODE = 'ERROR';
+END
+GO
+
+CREATE PROCEDURE P_ProductALL
+
+AS
+BEGIN
+	DECLARE @V_SQL_QUERY NVARCHAR(MAX);
+	SET @V_SQL_QUERY = '
+						SELECT  PRODUCT_ID,
+								PRODUCT_NAME,
+								PRICE1,
+								DESCRIPTION,
+								IMAGE_URL
+						FROM PRODUCT 
+						WHERE VALID_FLAG = 1';
+	EXEC(@V_SQL_QUERY);
+ 
 END
 GO
 --https://www.youtube.com/watch?v=OGhVgf9lafc

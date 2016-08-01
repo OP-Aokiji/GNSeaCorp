@@ -2,3 +2,12 @@ D:\WebForm\GNSeaCorp\GN.ADOService\bin\Debug\GN.ADOService.dll
 D:\WebForm\GNSeaCorp\GN.ADOService\bin\Debug\GN.ADOService.pdb
 D:\WebForm\GNSeaCorp\GN.ADOService\obj\Debug\GN.ADOService.dll
 D:\WebForm\GNSeaCorp\GN.ADOService\obj\Debug\GN.ADOService.pdb
+E:\Chung Hieu\GNSeaCorp\GN.ADOService\bin\Debug\GN.ADOService.dll
+E:\Chung Hieu\GNSeaCorp\GN.ADOService\bin\Debug\GN.ADOService.pdb
+E:\Chung Hieu\GNSeaCorp\GN.ADOService\obj\Debug\GN.ADOService.dll
+E:\Chung Hieu\GNSeaCorp\GN.ADOService\obj\Debug\GN.ADOService.pdb
+F:\GNSeaCorp\GN.ADOService\bin\Debug\GN.ADOService.dll
+F:\GNSeaCorp\GN.ADOService\bin\Debug\GN.ADOService.pdb
+F:\GNSeaCorp\GN.ADOService\obj\Debug\GN.ADOService.csprojResolveAssemblyReference.cache
+F:\GNSeaCorp\GN.ADOService\obj\Debug\GN.ADOService.dll
+F:\GNSeaCorp\GN.ADOService\obj\Debug\GN.ADOService.pdb

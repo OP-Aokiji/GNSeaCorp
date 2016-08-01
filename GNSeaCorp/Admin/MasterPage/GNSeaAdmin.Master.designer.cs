@@ -22,6 +22,15 @@ namespace GNSeaCorp.Admin.MasterPage {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
+        /// cphMenuAdmin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphMenuAdmin;
+        
+        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>

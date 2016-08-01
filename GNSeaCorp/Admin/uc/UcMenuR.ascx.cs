@@ -25,41 +25,72 @@ namespace GNSeaCorp.Admin.uc
         {
             try
             {
-                MenuItem menuItem = new MenuItem();
-                menuItem.Crud = Constants.RETRIEVE_ALL;
-
-                IMenuProxy proxy = new MenuProxy();
-
-                DataTable dataResult = (DataTable) (proxy.MenuCrud(menuItem));
-
-                if (dataResult != null && dataResult.Rows.Count > 0)
+                if (Session["Admin-Login-Status"] != null)
                 {
-                    gridMenu.DataSource = dataResult;
-                    gridMenu.DataBind();
-                }
-                else
-                {
-                    MessageBox.Show("Không có data  !!!", this);
-                    dataResult = (DataTable) (proxy.MenuCrud(menuItem));
-
-                    if (dataResult != null && dataResult.Rows.Count > 0 &&
-                        dataResult.Rows[0][Constants.ERR_CODE].ToString().Equals(Constants.WR_SUCCESS))
-                    {
-                        Session["Admin-Login-Status"] = Constants.WR_SUCCESS;
-                        Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + "UcSlideCU");
-                    }
+                    if (!Session["Admin-Login-Status"].Equals(Constants.WR_SUCCESS))
+                        Response.Redirect("~/Admin/Login.aspx");
                     else
                     {
-                        Session["admin-login-status"] = Constants.WR_ERROR;
-                        MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác  !!!", this);
-
+                        BindData();
                     }
-
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(), this);
+                MessageBox.Show(ex.Message, this);
+            }
+        }
+
+        private void BindData()
+        {
+            MenuItem menuItem = new MenuItem();
+            menuItem.Crud = Constants.WS_RETRIEVE;
+            menuItem.MenuId = "";
+
+            IMenuProxy proxy = new MenuProxy();
+
+            DataTable dataResult = (DataTable)(proxy.MenuCrud(menuItem));
+
+            gridMenu.DataSource = dataResult;
+            gridMenu.DataBind();
+        }
+
+        protected void gridMenu_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            Session["ItemId"] = ((Label)gridMenu.Rows[e.NewEditIndex].FindControl("lblMenuId")).Text;
+            Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + Constants.UCMENUCU);
+        }
+
+        protected void btnNew_Click(object sender, EventArgs e)
+        {
+            Session["ItemId"] = null;
+            Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + Constants.UCMENUCU);
+        }
+
+        protected void gridMenu_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            try
+            {
+                MenuItem menuItem = new MenuItem();
+                menuItem.MenuId = ((Label)gridMenu.Rows[e.RowIndex].FindControl("lblMenuId")).Text;
+                menuItem.Crud = Constants.WS_DELETE;
+                if (Session["UserId"] != null)
+                    menuItem.User = Session["UserId"].ToString();
+
+                IMenuProxy proxy = new MenuProxy();
+                string resut = (string)proxy.MenuCrud(menuItem);
+
+                if (resut.Equals(Constants.WR_SUCCESS))
+                {
+                    MessageBox.Show("Delete success", this);
+                    BindData();
+                }
+                else
+                    MessageBox.Show("Delete fail", this);
+            }
+            catch (Exception)
+            {
+                Response.Redirect("~/Admin/404.aspx");
             }
         }
     }

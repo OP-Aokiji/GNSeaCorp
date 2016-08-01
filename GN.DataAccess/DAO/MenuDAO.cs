@@ -26,12 +26,19 @@ namespace GN.DataAccess.DAO
 
             switch (menuItem.Crud)
             {
+                //case Constants.RETRIEVE_ALL:
+                //    obj = new object[] {
+                //                        Constants.REFIX_PARAMETER + DbSchema.Menu.MENU_ID, menuItem.MenuId
+                //                    };
+
+                //    obj = new object[] { };
+                //    procedureName = DbSchema.Menu.P_MENUSEARCH;
+                //    returnDatatype = Constants.DATATABLE;
+                //    break;
                 case Constants.WS_RETRIEVE:
                     obj = new object[] {
                                         Constants.REFIX_PARAMETER + DbSchema.Menu.MENU_ID, menuItem.MenuId
                                     };
-
-                    obj = new object[] { };
                     procedureName = DbSchema.Menu.P_MENUSEARCH;
                     returnDatatype = Constants.DATATABLE;
                     break;
@@ -39,7 +46,7 @@ namespace GN.DataAccess.DAO
                     obj = new object[] {    Constants.REFIX_PARAMETER + DbSchema.Menu.MENU_ID, menuItem.MenuId,
                                         Constants.REFIX_PARAMETER + DbSchema.Menu.MENU_NAME, menuItem.MenuName,
                                         Constants.REFIX_PARAMETER + DbSchema.DES,"",
-                                        Constants.REFIX_PARAMETER + DbSchema.USER, menuItem.AddUser
+                                        Constants.REFIX_PARAMETER + DbSchema.USER, menuItem.User
                                     };
                     procedureName = DbSchema.Menu.P_MENUENTRY;
                     returnDatatype = Constants.STRING;
@@ -48,14 +55,14 @@ namespace GN.DataAccess.DAO
                     obj = new object[] {    Constants.REFIX_PARAMETER + DbSchema.Menu.MENU_ID, menuItem.MenuId,
                                         Constants.REFIX_PARAMETER + DbSchema.Menu.MENU_NAME, menuItem.MenuName,
                                         Constants.REFIX_PARAMETER + DbSchema.DES,"",
-                                        Constants.REFIX_PARAMETER + DbSchema.USER, menuItem.UpdateUser
+                                        Constants.REFIX_PARAMETER + DbSchema.USER, menuItem.User
                                     };
                     procedureName = DbSchema.Menu.P_MENUENTRY;
                     returnDatatype = Constants.STRING;
                     break;
                 case Constants.WS_DELETE:
                     obj = new object[] { Constants.REFIX_PARAMETER + DbSchema.Menu.MENU_ID , menuItem.MenuId,
-                                       Constants.REFIX_PARAMETER + DbSchema.USER,   menuItem.UpdateUser
+                                       Constants.REFIX_PARAMETER + DbSchema.USER,   menuItem.User
                                     };
                     procedureName = DbSchema.Menu.P_MENUDELETE;
                     returnDatatype = Constants.STRING;

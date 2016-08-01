@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UcMenuCU.ascx.cs" Inherits="GNSeaCorp.Admin.uc.UcMenuCU" %>
 <div class="graphs">
-    <h3 class="blank1">Basic Forms</h3>
+    <h3 class="blank1">Category Forms</h3>
     <div class="tab-content">
         <div class="tab-pane active" id="horizontal-form">
             <div class="form-horizontal">
@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2">
                             <asp:Button ID="btnSubmit" CssClass="btn-success btn" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
-                            <asp:Button ID="btnCancel" CssClass="btn-success btn" runat="server" Text="Cancel" />
+                            <asp:Button ID="btnCancel" CssClass="btn-success btn" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
                             <asp:Button ID="btnReset" CssClass="btn-success btn" runat="server" Text="Reset" OnClick="btnReset_Click" />
                         </div>
                     </div>

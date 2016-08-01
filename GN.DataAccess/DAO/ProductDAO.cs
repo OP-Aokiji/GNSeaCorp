@@ -36,9 +36,7 @@ namespace GN.DataAccess.DAO
             {
                 obj = new object[]
                 {
-                    Constants.REFIX_PARAMETER + DbSchema.OFFSET, productItem.OffSet,
-                    Constants.REFIX_PARAMETER + DbSchema.LIMIT, productItem.Limit,
-                    Constants.REFIX_PARAMETER + DbSchema.ORDER, productItem.Order
+
                 };
 
                 procedureName = DbSchema.Product.P_PRODUCTALL;

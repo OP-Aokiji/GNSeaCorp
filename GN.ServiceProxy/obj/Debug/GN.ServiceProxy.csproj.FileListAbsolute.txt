@@ -20,3 +20,25 @@ D:\WebForm\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.ADOService.pdb
 D:\WebForm\GNSeaCorp\GN.ServiceProxy\obj\Debug\GN.ServiceProxy.csprojResolveAssemblyReference.cache
 D:\WebForm\GNSeaCorp\GN.ServiceProxy\obj\Debug\GN.ServiceProxy.dll
 D:\WebForm\GNSeaCorp\GN.ServiceProxy\obj\Debug\GN.ServiceProxy.pdb
+E:\Chung Hieu\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.ServiceProxy.dll
+E:\Chung Hieu\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.ServiceProxy.pdb
+E:\Chung Hieu\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.Common.dll
+E:\Chung Hieu\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.DataAccess.dll
+E:\Chung Hieu\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.ADOService.dll
+E:\Chung Hieu\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.Common.pdb
+E:\Chung Hieu\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.DataAccess.pdb
+E:\Chung Hieu\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.ADOService.pdb
+E:\Chung Hieu\GNSeaCorp\GN.ServiceProxy\obj\Debug\GN.ServiceProxy.csprojResolveAssemblyReference.cache
+E:\Chung Hieu\GNSeaCorp\GN.ServiceProxy\obj\Debug\GN.ServiceProxy.dll
+E:\Chung Hieu\GNSeaCorp\GN.ServiceProxy\obj\Debug\GN.ServiceProxy.pdb
+F:\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.ServiceProxy.dll
+F:\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.ServiceProxy.pdb
+F:\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.Common.dll
+F:\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.DataAccess.dll
+F:\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.ADOService.dll
+F:\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.Common.pdb
+F:\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.DataAccess.pdb
+F:\GNSeaCorp\GN.ServiceProxy\bin\Debug\GN.ADOService.pdb
+F:\GNSeaCorp\GN.ServiceProxy\obj\Debug\GN.ServiceProxy.csprojResolveAssemblyReference.cache
+F:\GNSeaCorp\GN.ServiceProxy\obj\Debug\GN.ServiceProxy.dll
+F:\GNSeaCorp\GN.ServiceProxy\obj\Debug\GN.ServiceProxy.pdb

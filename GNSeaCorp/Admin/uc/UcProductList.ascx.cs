@@ -41,7 +41,7 @@ namespace GNSeaCorp.Admin.uc
         private void BindData()
         {
             ProductItem productItem = new ProductItem();
-            productItem.Crud = Constants.WS_RETRIEVE;
+            productItem.Crud = Constants.RETRIEVE_ALL;
             IProductProxy proxy = new ProductProxy();
             grdProduct.DataSource = proxy.ProductCRUD(productItem);
             grdProduct.DataBind();

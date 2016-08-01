@@ -8,3 +8,13 @@ D:\WebForm\GNSeaCorp\GN.Common\bin\Debug\GN.Common.pdb
 D:\WebForm\GNSeaCorp\GN.Common\obj\Debug\GN.Common.dll
 D:\WebForm\GNSeaCorp\GN.Common\obj\Debug\GN.Common.pdb
 D:\WebForm\GNSeaCorp\GN.Common\obj\Debug\GN.Common.csprojResolveAssemblyReference.cache
+E:\Chung Hieu\GNSeaCorp\GN.Common\bin\Debug\GN.Common.dll
+E:\Chung Hieu\GNSeaCorp\GN.Common\bin\Debug\GN.Common.pdb
+E:\Chung Hieu\GNSeaCorp\GN.Common\obj\Debug\GN.Common.csprojResolveAssemblyReference.cache
+E:\Chung Hieu\GNSeaCorp\GN.Common\obj\Debug\GN.Common.dll
+E:\Chung Hieu\GNSeaCorp\GN.Common\obj\Debug\GN.Common.pdb
+F:\GNSeaCorp\GN.Common\bin\Debug\GN.Common.dll
+F:\GNSeaCorp\GN.Common\bin\Debug\GN.Common.pdb
+F:\GNSeaCorp\GN.Common\obj\Debug\GN.Common.csprojResolveAssemblyReference.cache
+F:\GNSeaCorp\GN.Common\obj\Debug\GN.Common.dll
+F:\GNSeaCorp\GN.Common\obj\Debug\GN.Common.pdb

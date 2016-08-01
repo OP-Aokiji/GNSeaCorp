@@ -31,21 +31,28 @@ namespace GNSeaCorp.Admin.uc
                         {
                             if (!string.IsNullOrEmpty(Request["Id"]) && !string.IsNullOrEmpty(Request["CRUD"]) && Request["CRUD"].Equals(Constants.WS_UPDATE))
                             {
-                                ProductItem productItem = new ProductItem();
+                                try
+                                {
+                                    ProductItem productItem = new ProductItem();
 
-                                productItem.ProductId = Request["Id"];
-                                productItem.Crud = Constants.WS_RETRIEVE;
+                                    productItem.ProductId = Request["Id"];
+                                    productItem.Crud = Constants.WS_RETRIEVE;
 
-                                IProductProxy proxy = new ProductProxy();
-                                DataTable result = (DataTable)proxy.ProductCRUD(productItem);
+                                    IProductProxy proxy = new ProductProxy();
+                                    DataTable result = (DataTable)proxy.ProductCRUD(productItem);
 
-                                txtProductName.Text = result.Rows[0][DbSchema.Product.PRODUCT_NAME].ToString();
-                                txtDescription.Text = result.Rows[0][DbSchema.Product.DESCRIPTION].ToString();
-                                txtPrice.Text = Convert.ToDouble(result.Rows[0][DbSchema.Product.PRICE1].ToString()).ToString();
-                                lblImageUrlTemp.Text =
-                                    (string.IsNullOrEmpty(result.Rows[0][DbSchema.IMAGE_URL].ToString()))
-                                        ? "image.jpg"
-                                        : result.Rows[0][DbSchema.IMAGE_URL].ToString();
+                                    txtProductName.Text = result.Rows[0][DbSchema.Product.PRODUCT_NAME].ToString();
+                                    txtDescription.Text = result.Rows[0][DbSchema.Product.DESCRIPTION].ToString();
+                                    txtPrice.Text = Convert.ToDouble(result.Rows[0][DbSchema.Product.PRICE1].ToString()).ToString();
+                                    lblImageUrlTemp.Text =
+                                        (string.IsNullOrEmpty(result.Rows[0][DbSchema.IMAGE_URL].ToString()))
+                                            ? "image.jpg"
+                                            : result.Rows[0][DbSchema.IMAGE_URL].ToString();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message, this);
+                                }
                             }
                         }
                     }

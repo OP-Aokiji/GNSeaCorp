@@ -29,7 +29,7 @@ namespace GN.Common.Schema
             public const string USER_ID = "USER_ID";
             public const string ROLD_ID = "ROLD_ID";
             public const string LAST_NAME = "LAST_NAME";
-            public const string FIST_NAME = "FIST_NAME";
+            public const string FIRST_NAME = "FIRST_NAME";
             public const string PASSWORD = "PASSWORD";
             public const string ADDRESS = "ADDRESS";
             public const string PHONE_NUMBER = "PHONE_NUMBER";
@@ -40,6 +40,7 @@ namespace GN.Common.Schema
             public const string P_USERENTRY = "P_USERENTRY";
             public const string P_USERDELETE = "p_UserDelete";
             public const string P_ACCOUNT_LOGIN = "P_ACCOUNT_LOGIN";
+            public const string P_USERSEARCH = "P_USERSEARCH";
 
         }
 

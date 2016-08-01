@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="bs-example4" data-example-id="contextual-table">
-                <asp:GridView ID="grdProduct" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered" AllowPaging="True" OnPageIndexChanging="grdProduct_PageIndexChanging" OnRowEditing="grdProduct_RowEditing" PageSize="20" OnRowDeleting="grdProduct_RowDeleting">
+                <asp:GridView ID="grdProduct" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered" ShowHeaderWhenEmpty="True" EmptyDataText="No records Found" AllowPaging="True" OnPageIndexChanging="grdProduct_PageIndexChanging" OnRowEditing="grdProduct_RowEditing" PageSize="20" OnRowDeleting="grdProduct_RowDeleting">
                     <Columns>
                         <asp:BoundField DataField="Product_Id" HeaderText="Product ID" />
                         <asp:TemplateField HeaderText="Product Name">

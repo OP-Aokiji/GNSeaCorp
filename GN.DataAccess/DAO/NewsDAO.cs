@@ -27,12 +27,23 @@ namespace GN.DataAccess.DAO
                     obj = new object[] {
                                         Constants.REFIX_PARAMETER + DbSchema.News.NEWS_ID, newsItem.NewsId
                                     };
-                    procedureName = DbSchema.Menu.P_MENUSEARCH;
+                    procedureName = DbSchema.News.P_NEWSSEARCH;
                     returnDatatype = Constants.DATATABLE;
                     break;
                 case Constants.WS_INSERT:
+                    obj = new object[] {
+                                        Constants.REFIX_PARAMETER + DbSchema.News.NEWS_ID, newsItem.NewsId,
+                                        Constants.REFIX_PARAMETER + DbSchema.News.TITLE,newsItem.Title,
+                                        Constants.REFIX_PARAMETER + DbSchema.News.SUMMARY,newsItem.Summary,
+                                        Constants.REFIX_PARAMETER + DbSchema.News.CONTENT,newsItem.Content,
+                                        Constants.REFIX_PARAMETER + DbSchema.USER, newsItem.User
+                                    };
+                    procedureName = DbSchema.News.P_NEWSENTRY;
+                    returnDatatype = Constants.STRING;
+                    break;
                 case Constants.WS_UPDATE:
-                    obj = new object[] {    Constants.REFIX_PARAMETER + DbSchema.News.NEWS_ID, newsItem.NewsId,
+                    obj = new object[] {
+                                        Constants.REFIX_PARAMETER + DbSchema.News.NEWS_ID, newsItem.NewsId,
                                         Constants.REFIX_PARAMETER + DbSchema.News.TITLE,newsItem.Title,
                                         Constants.REFIX_PARAMETER + DbSchema.News.SUMMARY,newsItem.Summary,
                                         Constants.REFIX_PARAMETER + DbSchema.News.CONTENT,newsItem.Content,
@@ -42,8 +53,9 @@ namespace GN.DataAccess.DAO
                     returnDatatype = Constants.STRING;
                     break;
                 case Constants.WS_DELETE:
-                    obj = new object[] { Constants.REFIX_PARAMETER + DbSchema.News.NEWS_ID, newsItem.NewsId,
-                                       Constants.REFIX_PARAMETER + DbSchema.USER,   newsItem.User
+                    obj = new object[] {
+                                        Constants.REFIX_PARAMETER + DbSchema.News.NEWS_ID, newsItem.NewsId,
+                                        Constants.REFIX_PARAMETER + DbSchema.USER,   newsItem.User
                                     };
                     procedureName = DbSchema.Menu.P_MENUDELETE;
                     returnDatatype = Constants.STRING;

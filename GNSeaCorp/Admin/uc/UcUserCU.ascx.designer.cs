@@ -103,13 +103,22 @@ namespace GNSeaCorp.Admin.uc {
         protected global::System.Web.UI.WebControls.TextBox txtID;
         
         /// <summary>
-        /// imgAvatar control.
+        /// lblImageUrlTemp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgAvatar;
+        protected global::System.Web.UI.WebControls.Label lblImageUrlTemp;
+        
+        /// <summary>
+        /// dlImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataList dlImage;
         
         /// <summary>
         /// fuImage1 control.
