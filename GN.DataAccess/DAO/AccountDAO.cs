@@ -24,8 +24,8 @@ namespace GN.DataAccess.DAO
 
             if (accountItem.Crud.Equals(Constants.RETRIEVE_ALL))
             {
-                obj = new object[] {  };
-                procedureName = "p_CategorySearch";
+                obj = new object[] {    Constants.REFIX_PARAMETER + DbSchema.Account.USER_ID, accountItem.UserId  };
+                procedureName = DbSchema.Account.P_USERSEARCH;
                 returnDatatype = Constants.DATATABLE;
             }
             else if (accountItem.Crud.Equals(Constants.WS_INSERT) || accountItem.Crud.Equals(Constants.WS_UPDATE))
@@ -33,7 +33,7 @@ namespace GN.DataAccess.DAO
                 obj = new object[] {    Constants.REFIX_PARAMETER + DbSchema.Account.USER_ID, accountItem.UserId,
                                         Constants.REFIX_PARAMETER + DbSchema.Account.ROLD_ID,  accountItem.RoldId,
                                         Constants.REFIX_PARAMETER + DbSchema.Account.PASSWORD,  accountItem.Password,
-                                        Constants.REFIX_PARAMETER + DbSchema.Account.FIST_NAME,  accountItem.FirstName,
+                                        Constants.REFIX_PARAMETER + DbSchema.Account.FIRST_NAME,  accountItem.FirstName,
                                         Constants.REFIX_PARAMETER + DbSchema.Account.LAST_NAME,  accountItem.LastName,
                                         Constants.REFIX_PARAMETER + DbSchema.Account.ADDRESS,  accountItem.Address,
                                         Constants.REFIX_PARAMETER + DbSchema.Account.GENDER,  accountItem.Gender,

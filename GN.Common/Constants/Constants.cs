@@ -76,9 +76,14 @@ namespace GN.Common
         public const string UCSLIDELIST = "UcSlideList";
         public const string UCPRODUCTCU = "UcProductCU";
         public const string UCPRODUCTLIST = "UcProductList";
-
-        public const string UCMENUCU = "IMenuDAO";
-
+        public const string UCMENUCU = "UcMenuCU";
+        public const string UCMENUR = "UcMenuR";
+        public const string UCNEWSCU = "UcNewsCU";
+        public const string UCNEWSR = "UcNewsR";
+        public const string UCROLECU = "UcRoleCU";
+        public const string UCROLER = "UcRoleR";
+        public const string UCUSERCU = "UcUserCU";
+        public const string UCUSERR = "UcUserR";
 
         //Icon
         public const string DELETE_ICON = "~/Admin/images/delete.png";

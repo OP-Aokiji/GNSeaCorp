@@ -49,24 +49,6 @@ namespace GNSeaCorp.Admin.uc {
         protected global::CKEditor.NET.CKEditorControl txtContent;
         
         /// <summary>
-        /// fuImage1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuImage1;
-        
-        /// <summary>
-        /// btnUploadImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUploadImage;
-        
-        /// <summary>
         /// btnSubmit control.
         /// </summary>
         /// <remarks>

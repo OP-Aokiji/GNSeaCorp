@@ -100,7 +100,6 @@
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
     <Content Include="Admin\404.aspx" />
-    <Content Include="Admin\Catelogy.aspx" />
     <Content Include="Admin\ckeditor\adapters\jquery.js" />
     <Content Include="Admin\ckeditor\CHANGES.html" />
     <Content Include="Admin\ckeditor\ckeditor.js" />
@@ -1128,7 +1127,9 @@
     <Content Include="Admin\images\5.png" />
     <Content Include="Admin\images\6.png" />
     <Content Include="Admin\images\7.png" />
+    <Content Include="Admin\images\delete-grid.png" />
     <Content Include="Admin\images\delete.png" />
+    <Content Include="Admin\images\edit-grid.png" />
     <Content Include="Admin\images\edit.png" />
     <Content Include="Admin\images\image.jpg" />
     <Content Include="Admin\images\lock.png" />
@@ -1147,10 +1148,10 @@
     <Content Include="Admin\js\scripts.js" />
     <Content Include="Admin\js\skycons.js" />
     <Content Include="Admin\js\uisearch.js" />
+    <Content Include="Admin\js\validate.js" />
     <Content Include="Admin\js\validate.min.js" />
     <Content Include="Admin\js\wow.min.js" />
     <Content Include="Admin\Login.aspx" />
-    <Content Include="Admin\Menu.aspx" />
     <Content Include="Admin\uc\UcMenuCU.ascx" />
     <Content Include="Admin\uc\UcMenuR.ascx" />
     <Content Include="Admin\uc\UcNewsCU.ascx" />
@@ -1159,7 +1160,6 @@
     <Content Include="Admin\uc\UcProductList.ascx" />
     <Content Include="Admin\uc\UcRoleCU.ascx" />
     <Content Include="Admin\uc\UcRoleR.ascx" />
-    <Content Include="Admin\uc\UcProductMenuD.ascx" />
     <Content Include="Admin\uc\UcSlideCU.ascx" />
     <Content Include="Admin\uc\UcSlideList.ascx" />
     <Content Include="Admin\uc\UcUserCU.ascx" />
@@ -1279,13 +1279,6 @@
     <Compile Include="Admin\404.aspx.designer.cs">
       <DependentUpon>404.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Catelogy.aspx.cs">
-      <DependentUpon>Catelogy.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Catelogy.aspx.designer.cs">
-      <DependentUpon>Catelogy.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1306,13 +1299,6 @@
     </Compile>
     <Compile Include="Admin\MasterPage\GNSeaAdmin.Master.designer.cs">
       <DependentUpon>GNSeaAdmin.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Menu.aspx.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Menu.aspx.designer.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\uc\UcMenuCU.ascx.cs">
       <DependentUpon>UcMenuCU.ascx</DependentUpon>
@@ -1369,13 +1355,6 @@
     </Compile>
     <Compile Include="Admin\uc\UcRoleR.ascx.designer.cs">
       <DependentUpon>UcRoleR.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\uc\UcProductMenuD.ascx.cs">
-      <DependentUpon>UcProductMenuD.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\uc\UcProductMenuD.ascx.designer.cs">
-      <DependentUpon>UcProductMenuD.ascx</DependentUpon>
     </Compile>
     <Compile Include="Admin\uc\UcSlideCU.ascx.cs">
       <DependentUpon>UcSlideCU.ascx</DependentUpon>
