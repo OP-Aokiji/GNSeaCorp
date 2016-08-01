@@ -5,6 +5,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using GN.Common;
+using GN.Common.DataItem;
+using GN.ServiceProxy.IServiceProxy;
+using GN.ServiceProxy.ServiceProxy;
 
 namespace GNSeaCorp
 {
@@ -15,6 +19,13 @@ namespace GNSeaCorp
         {
             try
             {
+                NewsItem newsItem = new NewsItem();
+                newsItem.Crud = Constants.WS_RETRIEVE;
+                newsItem.NewsId = "";
+
+                INewsRoxy proxy = new NewsRoxy();
+                newList = (DataTable)proxy.NewsCrud(newsItem);
+
             }
             catch (Exception ex)
             {

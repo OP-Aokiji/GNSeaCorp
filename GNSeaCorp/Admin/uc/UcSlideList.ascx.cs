@@ -81,7 +81,7 @@ namespace GNSeaCorp.Admin.uc
             else if (e.CommandName.Equals(Constants.UPDATE_ITEM))
             {
                 //Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + "ucBannerCU&img_Id=" + e.CommandArgument.ToString() + "&crud=U");
-                Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + Constants.UCPRODUCTCU + "&Id=" + e.CommandArgument.ToString() + "&CRUD=U");
+                Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + Constants.UCSLIDECU + "&Id=" + e.CommandArgument.ToString() + "&CRUD=U");
             }
         }
 

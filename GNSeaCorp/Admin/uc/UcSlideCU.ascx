@@ -36,7 +36,7 @@
                         <asp:Label ID="lblImageUrlTemp" runat="server" Text="" Visible="True"></asp:Label>
                         <asp:DataList ID="dlImage" runat="server">
                             <ItemTemplate>
-                                <asp:Image ID="imgSlide" Height="64px" Width="64px" runat="server" ImageUrl='<%# Eval("imageUrl", "~/~/Admin/images/{0}") %>' />
+                                <asp:Image ID="imgSlide" Height="64px" Width="64px" runat="server" ImageUrl='<%# (Eval("imageUrl") == "") ? "/Admin/images/image.jpg" :  Eval("imageUrl", "/Admin/images/{0}") %>' />
                             </ItemTemplate>
                         </asp:DataList>
                     </div>

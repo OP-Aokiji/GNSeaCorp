@@ -1,7 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucSlide.ascx.cs" Inherits="GNSeaCorp.uc.ucSlide" %>
 <%@ Import Namespace="System.Data" %>
 <%@ Import Namespace="GN.Common" %>
-<% if(dataSlide.Rows.Count > 0)
+<% 
+    if (dataSlide != null && dataSlide.Rows.Count > 0)
     { %>
 <div class="col-xs-9 banner-body-right">
     <div class="wmuSlider example1">
@@ -11,7 +12,7 @@
                 { %>
                     <article style="position: absolute; width: 100%; opacity: 0;">
                         <div class="banner-wrap">
-                             <div class="banner" style="background: url(../images/<%=dataSlide.Rows[i]["image_Url"].ToString() %>) no-repeat 0px 0px; 
+                             <div class="banner" style="background: url(../Admin/images/<%=dataSlide.Rows[i]["image_Url"].ToString() %>) no-repeat 0px 0px; 
                                                                 background-size: cover; 
                                                                 -webkit-background-size: cover; 
                                                                 -moz-background-size: cover; 

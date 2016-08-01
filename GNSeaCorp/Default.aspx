@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/UserMasterPage.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="GNSeaCorp.index" %>
+
 <%@ Import Namespace="System.Data" %>
 <%@ Import Namespace="GN.Common" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -78,10 +79,10 @@
         </div>
     </div>--%>
     <% 
-        if(productList != null)
-        { 
-        if (productList.Rows.Count > 0)
+        if (productList != null)
         {
+            if (productList.Rows.Count > 0)
+            {
 
     %>
     <div class="col-xs-9 banner-body-right">
@@ -97,22 +98,23 @@
 					<div class="clearfix"> </div>
 				</div> -->
         <div class="msg-text-bottom">
-            <% for(int i =0; i < productList.Rows.Count; i++)
+            <% for (int i = 0; i < productList.Rows.Count; i++)
                 { %>
-                <div class="col-md-4 msg-text-bottom-left">
-                    <figure class="effect-winston">
-                        <a href="/ProductDetail.aspx?productId=<%=productList.Rows[i]["Product_ID"].ToString() %>">
-                            <img src="images/Fish/<%=productList.Rows[i]["image_Url"].ToString() %>" alt="<%=productList.Rows[i]["image_Url"].ToString() %>" class="img-responsive" />
-                            <figcaption></figcaption>
-                        </a>
-                    </figure>
+            <div class="col-md-4 msg-text-bottom-left">
+                <figure class="effect-winston">
+                    <a href="/ProductDetail.aspx?productId=<%=productList.Rows[i]["Product_ID"].ToString() %>">
+                        <img src="/Admin/images/<%=productList.Rows[i]["image_Url"].ToString() %>" alt="<%=productList.Rows[i]["image_Url"].ToString() %>" class="img-responsive" />
+                        <figcaption></figcaption>
+                    </a>
+                </figure>
 
-                    <h3><a href="ProductDetail.aspx?id=<%=productList.Rows[i]["Product_ID"].ToString() %>"><%=productList.Rows[i]["PRODUCT_NAME"].ToString() %></a></h3>
-                    <h4 style="text-align: center"><%=Convert.ToDouble(productList.Rows[i]["Price1"].ToString())%> VNĐ</h4>
-                </div>
+                <h3><a href="ProductDetail.aspx?id=<%=productList.Rows[i]["Product_ID"].ToString() %>"><%=productList.Rows[i]["PRODUCT_NAME"].ToString() %></a></h3>
+                <h4 style="text-align: center"><%=Convert.ToDouble(productList.Rows[i]["Price1"].ToString())%> VNĐ</h4>
+            </div>
             <% } %>
             <div class="clearfix"></div>
         </div>
     </div>
-    <% }} %>
+    <% }
+    } %>
 </asp:Content>
