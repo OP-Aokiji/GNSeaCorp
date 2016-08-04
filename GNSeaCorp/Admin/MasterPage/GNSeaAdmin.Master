@@ -40,7 +40,7 @@
     <!-- Placed js at the end of the document so the pages load faster -->
     <script src="../js/ckeditor.js"></script>
     <%--<script src="../js/validate.js"></script>--%>
-    <script src="../js/validate.js"></script>
+    <%--<script src="../js/validate.js"></script>
     <script>
         $(function (c) {
             $("#form1").validate({
@@ -88,7 +88,7 @@
                 }
             });
         });
-    </script>
+    </script>--%>
 </head>
 <body class="sticky-header left-side-collapsed" onload="initMap()">
 
@@ -124,7 +124,7 @@
                 <!--notification menu start -->
                 <div class="menu-right">
                     <div class="user-panel-top">
-                        <div class="profile_details_left">
+                        <%--<div class="profile_details_left">
                             <ul class="nofitications-dropdown">
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope"></i><span class="badge">3</span></a>
@@ -137,7 +137,8 @@
                                         </li>
                                         <li><a href="#">
                                             <div class="user_img">
-                                                <img src="../Admin/images/1.png" alt="" /> </div>
+                                                <img src="../Admin/images/1.png" alt="" />
+                                            </div>
                                             <div class="notification_desc">
                                                 <p>Lorem ipsum dolor sit amet</p>
                                                 <p><span>1 hour ago</span></p>
@@ -146,7 +147,8 @@
                                         </a></li>
                                         <li class="odd"><a href="#">
                                             <div class="user_img">
-                                                <img src="../Admin/images/1.png" alt="" /></div>
+                                                <img src="../Admin/images/1.png" alt="" />
+                                            </div>
                                             <div class="notification_desc">
                                                 <p>Lorem ipsum dolor sit amet </p>
                                                 <p><span>1 hour ago</span></p>
@@ -155,7 +157,8 @@
                                         </a></li>
                                         <li><a href="#">
                                             <div class="user_img">
-                                                <img src="../Admin/images/1.png" alt="" />  </div>
+                                                <img src="../Admin/images/1.png" alt="" />
+                                            </div>
                                             <div class="notification_desc">
                                                 <p>Lorem ipsum dolor sit amet </p>
                                                 <p><span>1 hour ago</span></p>
@@ -197,7 +200,8 @@
                                         </li>
                                         <li><a href="#">
                                             <div class="user_img">
-                                                <img src="images/1.png" alt=""></div>
+                                                <img src="images/1.png" alt="">
+                                            </div>
                                             <div class="notification_desc">
                                                 <p>Lorem ipsum dolor sit amet</p>
                                                 <p><span>1 hour ago</span></p>
@@ -206,7 +210,8 @@
                                         </a></li>
                                         <li class="odd"><a href="#">
                                             <div class="user_img">
-                                                <img src="images/1.png" alt=""></div>
+                                                <img src="images/1.png" alt="">
+                                            </div>
                                             <div class="notification_desc">
                                                 <p>Lorem ipsum dolor sit amet </p>
                                                 <p><span>1 hour ago</span></p>
@@ -215,7 +220,8 @@
                                         </a></li>
                                         <li><a href="#">
                                             <div class="user_img">
-                                                <img src="images/1.png" alt=""></div>
+                                                <img src="images/1.png" alt="">
+                                            </div>
                                             <div class="notification_desc">
                                                 <p>Lorem ipsum dolor sit amet </p>
                                                 <p><span>1 hour ago</span></p>
@@ -283,15 +289,19 @@
                                 </li>
                                 <div class="clearfix"></div>
                             </ul>
-                        </div>
+                        </div>--%>
+                        <%
+                            if(Session["Admin-Login-Status"] != null && Session["UserId"] != null)
+                            { 
+                             %>
                         <div class="profile_details">
                             <ul>
                                 <li class="dropdown profile_details_drop">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                         <div class="profile_img">
-                                            <span style="background: url(../../Admin/images/1.jpg) no-repeat center"></span>
+                                            <span style="background: url(../../Admin/images/<%=Session["Avatar"].ToString()%>) no-repeat center"></span>
                                             <div class="user-name">
-                                                <p>Michael<span>Administrator</span></p>
+                                                <p><%=Session["UserId"].ToString()%><span>Administrator</span></p>
                                             </div>
                                             <i class="lnr lnr-chevron-down"></i>
                                             <i class="lnr lnr-chevron-up"></i>
@@ -299,15 +309,16 @@
                                         </div>
                                     </a>
                                     <ul class="dropdown-menu drp-mnu">
-                                        <li><a href="#"><i class="fa fa-cog"></i>Settings</a> </li>
-                                        <li><a href="#"><i class="fa fa-user"></i>Profile</a> </li>
-                                        <li><a href="sign-up.html"><i class="fa fa-sign-out"></i>Logout</a> </li>
+<%--                                        <li><a href="#"><i class="fa fa-cog"></i>Settings</a> </li>
+                                        <li><a href="#"><i class="fa fa-user"></i>Profile</a> </li>--%>
+                                        <li><a href="/Admin/Login.aspx"><i class="fa fa-sign-out"></i>Logout</a> </li>
                                     </ul>
                                 </li>
                                 <div class="clearfix"></div>
                             </ul>
                         </div>
-                        <div class="social_icons">
+                        <% } %>
+                        <%--<div class="social_icons">
                             <div class="col-md-4 social_icons-left">
                                 <a href="#" class="yui"><i class="fa fa-facebook i1"></i><span>300<sup>+</sup> Likes</span></a>
                             </div>
@@ -318,7 +329,7 @@
                                 <a href="#"><i class="fa fa-twitter i1"></i><span>500<sup>+</sup> Tweets</span></a>
                             </div>
                             <div class="clearfix"></div>
-                        </div>
+                        </div>--%>
                         <div class="clearfix"></div>
                     </div>
                 </div>
@@ -335,7 +346,7 @@
         </div>
         <!--footer section start-->
         <footer>
-            <p>&copy 2015 Easy Admin Panel. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts.</a></p>
+            <p>28 Bui Van Them Streed, Ward 9, Phu Nhuan Disitrict, Ho Chi Minh City</p>
         </footer>
         <!--footer section end-->
 

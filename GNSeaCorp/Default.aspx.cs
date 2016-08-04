@@ -15,6 +15,7 @@ namespace GNSeaCorp
     public partial class index : System.Web.UI.Page
     {
         public static DataTable productList = null;
+        public static DataTable newList = null;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -24,6 +25,13 @@ namespace GNSeaCorp
 
                 IProductProxy proxy = new ProductProxy();
                 productList = (DataTable) proxy.ProductCRUD(productItem);
+
+                NewsItem newsItem = new NewsItem();
+                newsItem.Crud = Constants.WS_RETRIEVE;
+                newsItem.NewsId = "";
+
+                INewsRoxy newsProxy = new NewsRoxy();
+                newList = (DataTable)newsProxy.NewsCrud(newsItem);
             }
             catch (Exception ex)
             {

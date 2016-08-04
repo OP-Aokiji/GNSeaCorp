@@ -36,6 +36,49 @@
     <!-- Meters graphs -->
     <script src="../Admin/js/jquery-1.10.2.min.js"></script>
     <!-- Placed js at the end of the document so the pages load faster -->
+   <%-- <script src="../Admin/js/validate.min.js"></script>
+    <script src="../Admin/js/jquery.js"></script>
+
+    <script>
+        $(function (c) {
+            $("#form1").validate({
+                    rules: {
+                        txtUserName: {
+                            required: true,
+                            minlength: 4,
+                            maxlength: 30
+                        },
+
+                        txtPassword: {
+                            required: true,
+                            minlength: 6,
+                            maxlength: 40
+                        }
+                    },
+
+                    messages: {
+                        txtUserName: {
+                            required: 'Không để trống',
+                            minlength: 'Nhập từ 6-30 kí tự',
+                            maxlength: 'Không nhập quá 30 kí tự'
+                        },
+
+                        txtPassword: {
+                            required: 'Không để trống',
+                            minlength: 'Nhập 6-40 kí tự',
+                            maxlength: 'Không nhập quá 40 kí tự'
+                        }
+                    },
+
+                    success: function (label) {
+                        label.html('OK').removeClass('error').addClass('ok');
+                        setTimeout(function() {
+                            label.fadeOut(500);
+                        }, 2000)
+                    }
+                });
+            });
+    </script>--%>
 </head>
 <body class="sign-in-up">
 
@@ -48,24 +91,32 @@
                     </div>
                     <div class="signin">
                         <form id="form1" runat="server">
+                            <div class="signin-rit">
+                                <asp:ValidationSummary ID="ValidationSummary1" style="margin-bottom: 5%;" runat="server" ForeColor="#FF3300" />
+								<div class="clearfix"> </div>
+							</div>
                             <div class="log-input">
                                 <div class="log-input-left">
                                      <asp:TextBox ID="txtUserName" CssClass="user" runat="server" placeholder="User Name"></asp:TextBox>
                                 </div>
-                               <%-- <span class="checkbox2">
+                                <span class="checkbox2">
                                     <label class="checkbox">
-                                        <input type="checkbox" name="checkbox" checked=""><i> </i></label>
-                                </span>--%>
+                                        <%--<input type="checkbox" name="checkbox" checked=""><i> </i>--%>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="User Name can't be blank" ForeColor="#FF3300" ControlToValidate="txtUserName">*</asp:RequiredFieldValidator>
+                                    </label>
+                                </span>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="log-input">
                                 <div class="log-input-left">
                                     <asp:TextBox ID="txtPassword" runat="server" CssClass="lock" placeholder="Password" TextMode="Password"></asp:TextBox>
                                 </div>
-                               <%-- <span class="checkbox2">
+                                <span class="checkbox2">
                                     <label class="checkbox">
-                                        <input type="checkbox" name="checkbox" checked=""><i> </i></label>
-                                </span>--%>
+                                        <%--<input type="checkbox" name="checkbox" checked=""><i> </i>--%>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Password can't be blank" ControlToValidate="txtPassword" ForeColor="#FF3300">*</asp:RequiredFieldValidator>
+                                    </label>
+                                </span>
                                 <div class="clearfix"></div>
                             </div>
                            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
@@ -76,7 +127,7 @@
         </div>
         <!--footer section start--> 
         <footer>
-            <p>&copy 2015 Easy Admin Panel. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts.</a></p>
+           <p>28 Bui Van Them Streed, Ward 9, Phu Nhuan Disitrict, Ho Chi Minh City</p>
         </footer>
         <!--footer section end-->
     </section>

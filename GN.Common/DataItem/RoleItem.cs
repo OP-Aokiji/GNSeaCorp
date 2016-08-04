@@ -8,10 +8,10 @@ namespace GN.Common.DataItem
 {
     public class RoleItem:DataItem
     {
-        private string _roleId;
+        private string _roleId = "";
         private bool _type;
-        private string _roleName;
-        private string _description;
+        private string _roleName = "";
+        private string _description = "";
         private bool _roleFlag;
         private bool _validFlag;
         private bool _readOnly;

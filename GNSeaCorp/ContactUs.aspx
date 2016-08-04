@@ -13,28 +13,27 @@
 <%--						<p></p>--%>
 						<ul>
 							<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone<span>+84 8 38447173</span></li>
-							<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email<a href="mailto:gianguyen-imexco@vnn.vn">gianguyen-imexco@vnn.vn</a></li>
+                            <li><i class="glyphicon glyphicon-print" aria-hidden="true"></i>Fax<span>+84 8 38447539</span></li>
+							<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email<a href="mailto:info@gnseacorp.com.vn">info@GNSeaCorp.com.vn</a></li>
 						</ul>
 						<ul>
-							<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address<span>553/24B Nguyen Kiem Street, Phu Nhuan District, Ho Chi Minh City, Vietnam.</span></li>
+							<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address<span>28 Bui Van Them Street, Ward 9, Phu Nhuan District, Ho Chi Minh City, Vietnam.</span></li>
 						</ul>
 					</div>
 					<div class="mail-grid1">
 						<h3>Send a <span>Message</span></h3>
 						<p>Send email to order</p>
-						<form>
-							<input type="text" placeholder="Name" required=" ">
-							<input type="email" placeholder="Email" required=" ">
-							<div class="clearfix"> </div>
-							<input type="text" placeholder="Subject" required=" ">
-							<textarea placeholder="Type Your Text Here...." required=" "></textarea>
-							<input type="submit" value="Submit">
-						</form>
+                        <asp:TextBox ID="txtName" runat="server" placeholder="Name" Width="48.3%"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
+						<div class="clearfix"> </div>
+                        <asp:TextBox ID="txtSubject" runat="server" placeholder="Subject" ></asp:TextBox>
+                        <asp:TextBox ID="txtContent" runat="server" placeholder="Type Your Text Here...." TextMode="MultiLine"></asp:TextBox>
+                        <asp:Button ID="btnSend" runat="server" Text="Submit" OnClick="btnSend_Click" />
 					</div>
 				</div>
 				<div class="map">
 					<h3>Location On <span>Map</span></h3>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d979.7596977376837!2d106.67824647718886!3d10.808340979810266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528df6aad5f77%3A0xa4bfb23abe32ab4d!2zNTUzLzI0IE5ndXnhu4VuIEtp4buHbSwgcGjGsOG7nW5nIDksIFBow7ogTmh14bqtbiwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1470033556001" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0306895635745!2d106.67469911521654!3d10.808961361546976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528df7a5f5c3b%3A0xf4eb99fd3939bb05!2zQsO5aSBWxINuIFRow6ptLCBwaMaw4budbmcgOSwgUGjDuiBOaHXhuq1uLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1470284390869" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
 			<!-- //mail -->
 			</div>

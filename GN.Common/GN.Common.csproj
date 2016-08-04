@@ -43,6 +43,7 @@
     <Compile Include="Constants\Constants.cs" />
     <Compile Include="DataItem\AccountItem.cs" />
     <Compile Include="DataItem\DataItem.cs" />
+    <Compile Include="DataItem\EmailItem.cs" />
     <Compile Include="DataItem\ItemCodeItem.cs" />
     <Compile Include="DataItem\MenuItem.cs" />
     <Compile Include="DataItem\NewsItem.cs" />

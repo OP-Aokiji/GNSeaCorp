@@ -31,6 +31,7 @@ namespace GN.Common.Schema
             public const string LAST_NAME = "LAST_NAME";
             public const string FIRST_NAME = "FIRST_NAME";
             public const string PASSWORD = "PASSWORD";
+            public const string NEW_PASSWORD = "NEW_PASSWORD";
             public const string ADDRESS = "ADDRESS";
             public const string PHONE_NUMBER = "PHONE_NUMBER";
             public const string IDENTIFICATION = "IDENTIFICATION";
@@ -41,6 +42,7 @@ namespace GN.Common.Schema
             public const string P_USERDELETE = "p_UserDelete";
             public const string P_ACCOUNT_LOGIN = "P_ACCOUNT_LOGIN";
             public const string P_USERSEARCH = "P_USERSEARCH";
+            public const string P_CHANGEPASSWORD = "P_CHANGEPASSWORD";
 
         }
 
@@ -95,6 +97,7 @@ namespace GN.Common.Schema
             public const string VAT2 = "VAT2";
             public const string VAT3 = "VAT3";
             public const string DESCRIPTION = "DESCRIPTION";
+            public const string MENU_ID = "MENU_ID";
 
             public const string P_PRODUCTENTRY = "P_PRODUCTENTRY"; 
             public const string P_PRODUCTDELETE = "P_PRODUCTDELETE";

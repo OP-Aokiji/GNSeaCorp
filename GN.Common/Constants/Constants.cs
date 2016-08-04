@@ -84,6 +84,7 @@ namespace GN.Common
         public const string UCROLER = "UcRoleR";
         public const string UCUSERCU = "UcUserCU";
         public const string UCUSERR = "UcUserR";
+        public const string UcChangePassword = "UcChangePassword";
 
         //Icon
         public const string DELETE_ICON = "~/Admin/images/delete.png";

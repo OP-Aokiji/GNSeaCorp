@@ -8,12 +8,13 @@ namespace GN.Common.DataItem
 {
     public class NewsItem:DataItem
     {
-        private string _newsId;
-        private string _tagId;
-        private string _title;
-        private string _summary;
-        private string _content;
-        private bool _validFlag;
+        private string _newsId = "";
+        private string _tagId = "";
+        private string _title = "";
+        private string _summary = "";
+        private string _content = "";
+        private bool _validFlag = true;
+        private string _imageUrl = "";
 
         public string NewsId
         {
@@ -90,6 +91,19 @@ namespace GN.Common.DataItem
             set
             {
                 _validFlag = value;
+            }
+        }
+
+        public string ImageUrl
+        {
+            get
+            {
+                return _imageUrl;
+            }
+
+            set
+            {
+                _imageUrl = value;
             }
         }
     }

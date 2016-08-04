@@ -38,7 +38,8 @@ namespace GNSeaCorp.Admin
                                                          "UcUserR",
                                                          "UcUserCU",
                                                          "UcRoleR",
-                                                         "UcRoleCU"
+                                                         "UcRoleCU",
+                                                         "UcChangePassword"
                                                       };
                 string usercontrolName = Request["ctr"];
                 if (string.IsNullOrEmpty(usercontrolName))

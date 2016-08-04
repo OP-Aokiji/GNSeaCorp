@@ -40,6 +40,7 @@ namespace GNSeaCorp.Admin
                 {
                     Session["Admin-Login-Status"] = Constants.WR_SUCCESS;
                     Session["UserId"] = txtUserName.Text;
+                    Session["Avatar"] = dataResult.Rows[0]["Avatar_url"].ToString();
                     Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + Constants.UCSLIDELIST);
                 }
                 else

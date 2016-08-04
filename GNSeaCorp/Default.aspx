@@ -97,8 +97,11 @@
 					</div>
 					<div class="clearfix"> </div>
 				</div> -->
+        <div class="gallery-head">
+            <h5>Product</h5>
+        </div>
         <div class="msg-text-bottom">
-            <% for (int i = 0; i < productList.Rows.Count; i++)
+            <% for (int i = 0; i < 3; i++)
                 { %>
             <div class="col-md-4 msg-text-bottom-left">
                 <figure class="effect-winston">
@@ -109,12 +112,42 @@
                 </figure>
 
                 <h3><a href="ProductDetail.aspx?id=<%=productList.Rows[i]["Product_ID"].ToString() %>"><%=productList.Rows[i]["PRODUCT_NAME"].ToString() %></a></h3>
-                <h4 style="text-align: center"><%=Convert.ToDouble(productList.Rows[i]["Price1"].ToString())%> VNĐ</h4>
+                <p><%=productList.Rows[i]["DESCRIPTION"].ToString()%></p>
             </div>
             <% } %>
             <div class="clearfix"></div>
+            <% if (newList != null && newList.Rows.Count > 0)
+       { %>
+<%--    <div class="col-xs-9 banner-body-right">--%>
+        <div class="gallery-head">
+            <h5>News</h5>
+            <%--<p>But I must explain to you how all this mistaken idea of denouncing  pleasure and praising pain was born.</p>--%>
+        </div>
+        <div class="blog">
+            <% for(int i = 0; i < newList.Rows.Count; i++)
+                { %>
+            <div class="blog-grid">
+                <div class="col-xs-4 blog-grid-left">
+                    <a href="#">
+                        <img src="/Admin/images/<%=newList.Rows[i]["image_Url"].ToString() %>" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="col-xs-8 blog-grid-right">
+                    <h4><a href="#"><%=newList.Rows[i]["Title"].ToString() %></a></h4>
+                    <p>
+                        <%=newList.Rows[i]["SUMMARY"].ToString() %>
+                    </p>
+                    <a href="#"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <%} %>
         </div>
     </div>
+    <% } %>
+        </div>
+<%--    </div>--%>
     <% }
     } %>
+
+    
 </asp:Content>

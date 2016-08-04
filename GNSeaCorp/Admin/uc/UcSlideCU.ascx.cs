@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using GN.Common;
 using GN.Common.DataItem;
+using GN.Common.Schema;
 using GN.ServiceProxy.IServiceProxy;
 using GN.ServiceProxy.ServiceProxy;
 using GNSeaCorp.cm;
@@ -20,9 +21,44 @@ namespace GNSeaCorp.Admin
         {
             if (Session["Admin-Login-Status"] != null)
             {
-                if (!Session["Admin-Login-Status"].Equals(Constants.WR_SUCCESS))
-                    Response.Redirect("~/Admin/Login.aspx");
+                if (Session["Admin-Login-Status"].Equals(Constants.WR_SUCCESS))
+                {
+                    if (!IsPostBack)
+                    {
+                        if (Request.QueryString.AllKeys.Contains("Id") && Request.QueryString.AllKeys.Contains("CRUD"))
+                        {
+                            if (!string.IsNullOrEmpty(Request["Id"]) && !string.IsNullOrEmpty(Request["CRUD"]) &&
+                                Request["CRUD"].Equals(Constants.WS_UPDATE))
+                            {
+                                try
+                                {
+                                    SildeItem slideItem = new SildeItem();
 
+                                    slideItem.SlideId = Request["Id"];
+                                    slideItem.Crud = Constants.WS_RETRIEVE;
+
+                                    ISlideProxy proxy = new SlideProxy();
+                                    DataTable result = (DataTable) proxy.SlideCrud(slideItem);
+
+                                    txtDescription.Text = result.Rows[0][DbSchema.DES].ToString();
+                                    lblImageUrlTemp.Text =
+                                        (string.IsNullOrEmpty(result.Rows[0][DbSchema.IMAGE_URL].ToString()))
+                                            ? "image.jpg"
+                                            : result.Rows[0][DbSchema.IMAGE_URL].ToString();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message, this);
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+
+                    Response.Redirect("~/Admin/Login.aspx");
+                }
             }
         }
 
@@ -31,21 +67,27 @@ namespace GNSeaCorp.Admin
             try
             {
                 SildeItem slideItem = new SildeItem();
-                if (txtSlogan1.Text != null && txtSlogan2.Text != "")
-                    slideItem.Slogan1 = txtSlogan1.Text;
-                if (txtSlogan1.Text != null && txtSlogan2.Text != "")
-                    slideItem.Slogan2 = txtSlogan2.Text;
-                if (txtSlogan1.Text != null && txtSlogan2.Text != "")
-                    slideItem.Description = txtSlogan1.Text;
-                if(Session["UserId"] != null)
+                //if (txtSlogan1.Text != null && txtSlogan2.Text != "")
+                //    slideItem.Slogan1 = txtSlogan1.Text;
+                //if (txtSlogan1.Text != null && txtSlogan2.Text != "")
+                //    slideItem.Slogan2 = txtSlogan2.Text;
+                if (txtDescription.Text != "")
+                    slideItem.Description = txtDescription.Text;
+                if (Session["UserId"] != null)
                     slideItem.User = Session["UserId"].ToString();
+                slideItem.ImageUrl = lblImageUrlTemp.Text;
                 slideItem.Crud = Constants.WS_INSERT;
 
                 ISlideProxy proxy = new SlideProxy();
 
                 string result = (string)proxy.SlideCrud(slideItem);
-
-                MessageBox.Show(result.Equals(Constants.WR_SUCCESS) ? "Saving is successful!!!" : "Fail!", this);
+                if(result.Equals(Constants.WR_SUCCESS))
+                {
+                    MessageBox.Show("Saving is successful!!!", this);
+                    Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + Constants.UCSLIDELIST, false);
+                }
+                else
+                    MessageBox.Show("Fail!", this);
             }
             catch (Exception)
             {
@@ -78,5 +120,9 @@ namespace GNSeaCorp.Admin
             }
         }
 
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(Constants.NAVIGATE_DEFAULT_PAGE + Constants.UCSLIDELIST, false);
+        }
     }
 }

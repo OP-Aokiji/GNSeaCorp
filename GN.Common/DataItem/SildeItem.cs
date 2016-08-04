@@ -13,7 +13,7 @@ namespace GN.Common.DataItem
         private string _imageUrl = "";
         private string _slogan1 = "";
         private string _slogan2 ="";
-        private bool _validFlag;
+        private bool _validFlag = true;
 
         public string SlideId
         {

@@ -88,7 +88,7 @@ namespace GNSeaCorp.Admin.uc
                 else
                     MessageBox.Show("Delete fail", this);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 Response.Redirect("~/Admin/404.aspx");
             }

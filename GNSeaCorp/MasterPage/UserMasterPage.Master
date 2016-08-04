@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMasterPage.master.cs" Inherits="GNSeaCorp.MasterPage.UserMasterPage" %>
+<%@ Import Namespace="GN.Common.Schema" %>
 
 <%@ Register Src="~/uc/ucSlide.ascx" TagPrefix="uc1" TagName="ucSlide" %>
 
@@ -73,45 +74,25 @@
                                             <li class="active">
                                                 <a href="/Default.aspx"><i class="home"></i>HOME</a>
                                             </li>
-                                            <li><a href="/Default.aspx" class="hvr-underline-from-left"><i class="picture1"></i>ABOUT US</a></li>
+                                            <li><a href="/AboutUs.aspx" class="hvr-underline-from-left"><i class="picture1"></i>ABOUT US</a></li>
                                             <li class="menu-list">
                                                 <a href="/Product.aspx" class="hvr-underline-from-left">
                                                     <i class="edit1"></i>PRODUCT
                                                 </a>
-                                                <%--<ul class="sub-menu-list">
+                                                <% if(subMenuList != null && subMenuList.Rows.Count > 0)
+                                                    {
+                                                        %>
+                                                <ul class="sub-menu-list">
+                                                    <%  for(int i = 0; i < subMenuList.Rows.Count; i++)
+                                                        {  %>
                                                     <li>
-                                                        <a href="/Default.aspx">Product</a>
+                                                        <a href="/Product.aspx?id=<%=subMenuList.Rows[i][DbSchema.Menu.MENU_ID].ToString() %>"><%=subMenuList.Rows[i][DbSchema.Menu.MENU_NAME].ToString() %></a>
                                                     </li>
-                                                    <li>
-                                                        <a href="/Default.aspx">Product 1</a>
-                                                        --<ul>
-                                                            <li>
-                                                                <a href="/Default.aspx">Product</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/Default.aspx">aaaaa</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/Default.aspx">bbbbb</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/Default.aspx">ccccc</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/Default.aspx">dddddd</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/Default.aspx">Product 2</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/Default.aspx">Product 3</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/Default.aspx">Product 4</a>
-                                                    </li>
-                                                </ul>--%>
+                                                    <% } %>
+                                                </ul>
+                                                <%
+                                                        
+                                                    } %>
                                             </li>
                                             <li><a href="/News.aspx" class="hvr-underline-from-left"><i class="text-size1"></i>NEWS</a></li>
                                             <li><a href="/ContactUs.aspx" class="hvr-underline-from-left"><i class="envelope1"></i>CONTACT US</a></li>
@@ -126,7 +107,7 @@
                     <div class="clearfix"></div>
                     <div class="col-xs-3 banner-body-left">
                         <div class="latest-news">
-                            <h2>Latest News</h2>
+                            <%--<h2>Latest News</h2>
                             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingOne">
@@ -170,18 +151,30 @@
                             </div>
                             <div class="join">
                                 <a href="single.html">See More</a>
-                            </div>
+                            </div>--%>
                             <h3>Skype</h3>
-                            <%--	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p> --%>
+                            	<p style="margin-bottom: -35px;margin-left: 10px;color: #000;">Liz Nguyen</p> 
                             <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
-                            <div id="SkypeButton_Call_khoa.huynh02_1" style="margin-top: -30px;">
+                            <div id="SkypeButton_Call_gianguyen-imexco_1">
                                 <script type="text/javascript">
-                                    Skype.ui({
-                                        "name": "dropdown",
-                                        "element": "SkypeButton_Call_khoa.huynh02_1",
-                                        "participants": ["khoa.huynh02"],
-                                        "imageSize": 24
-                                    });
+                                Skype.ui({
+                                "name": "dropdown",
+                                "element": "SkypeButton_Call_gianguyen-imexco_1",
+                                "participants": ["gianguyen-imexco"],
+                                "imageSize": 24
+                                });
+                                </script>
+                            </div>
+                            <p style="margin-bottom: -35px;margin-left: 10px;color: #000;">John Nguyen</p> 
+                            <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
+                            <div id="SkypeButton_Call_johnnguyen7791_1">
+                                <script type="text/javascript">
+                                Skype.ui({
+                                "name": "dropdown",
+                                "element": "SkypeButton_Call_johnnguyen7791_1",
+                                "participants": ["johnnguyen7791"],
+                                "imageSize": 24
+                                });
                                 </script>
                             </div>
                         </div>
@@ -199,7 +192,7 @@
                                 <li><a href="/AboutUs.aspx">About Us</a>|</li>
                                 <li><a href="/News.aspx">Contact Us</a></li>
                             </ul>
-                            <p>Add: 553/24B Nguyen Kiem Street, Phu Nhuan District, Ho Chi Minh City, Vietnam</p>
+                            <p>28 Bui Van Them Street, Ward 9, Phu Nhuan District, Ho Chi Minh City, Vietnam</p>
                         </div>
                         <%--<div class="footer-right">
                             <ul class="social-nav model-3">

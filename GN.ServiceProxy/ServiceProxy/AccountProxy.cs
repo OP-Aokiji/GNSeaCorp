@@ -21,7 +21,8 @@ namespace GN.ServiceProxy.ServiceProxy
 
         public DataTable AccountChangePassword(AccountItem accountItem, string password)
         {
-            throw new NotImplementedException();
+            IAccountDAO accountDao = new AccountDAO();
+            return (DataTable)accountDao.AccountChangePassword(accountItem, password);
         }
     }
 }

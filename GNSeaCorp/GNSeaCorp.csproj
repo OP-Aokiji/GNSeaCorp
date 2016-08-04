@@ -1162,6 +1162,7 @@
     <Content Include="Admin\js\validate.min.js" />
     <Content Include="Admin\js\wow.min.js" />
     <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\uc\UcChangePassword.ascx" />
     <Content Include="Admin\uc\UcMenuCU.ascx" />
     <Content Include="Admin\uc\UcMenuR.ascx" />
     <Content Include="Admin\uc\UcNewsCU.ascx" />
@@ -1273,6 +1274,7 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="uc\ucNewsLeft.ascx" />
     <Content Include="uc\ucSlide.ascx" />
+    <Content Include="ViewNews.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1310,6 +1312,13 @@
     </Compile>
     <Compile Include="Admin\MasterPage\GNSeaAdmin.Master.designer.cs">
       <DependentUpon>GNSeaAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\uc\UcChangePassword.ascx.cs">
+      <DependentUpon>UcChangePassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\uc\UcChangePassword.ascx.designer.cs">
+      <DependentUpon>UcChangePassword.ascx</DependentUpon>
     </Compile>
     <Compile Include="Admin\uc\UcMenuCU.ascx.cs">
       <DependentUpon>UcMenuCU.ascx</DependentUpon>
@@ -1457,6 +1466,13 @@
     </Compile>
     <Compile Include="uc\ucSlide.ascx.designer.cs">
       <DependentUpon>ucSlide.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewNews.aspx.cs">
+      <DependentUpon>ViewNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewNews.aspx.designer.cs">
+      <DependentUpon>ViewNews.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

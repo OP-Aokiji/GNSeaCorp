@@ -36,6 +36,7 @@ namespace GN.DataAccess.DAO
                                         Constants.REFIX_PARAMETER + DbSchema.News.TITLE,newsItem.Title,
                                         Constants.REFIX_PARAMETER + DbSchema.News.SUMMARY,newsItem.Summary,
                                         Constants.REFIX_PARAMETER + DbSchema.News.CONTENT,newsItem.Content,
+                                        Constants.REFIX_PARAMETER + DbSchema.IMAGE_URL,newsItem.ImageUrl,
                                         Constants.REFIX_PARAMETER + DbSchema.USER, newsItem.User
                                     };
                     procedureName = DbSchema.News.P_NEWSENTRY;
@@ -47,6 +48,7 @@ namespace GN.DataAccess.DAO
                                         Constants.REFIX_PARAMETER + DbSchema.News.TITLE,newsItem.Title,
                                         Constants.REFIX_PARAMETER + DbSchema.News.SUMMARY,newsItem.Summary,
                                         Constants.REFIX_PARAMETER + DbSchema.News.CONTENT,newsItem.Content,
+                                        Constants.REFIX_PARAMETER + DbSchema.IMAGE_URL,newsItem.ImageUrl,
                                         Constants.REFIX_PARAMETER + DbSchema.USER, newsItem.User
                                     };
                     procedureName = DbSchema.News.P_NEWSENTRY;
@@ -57,7 +59,7 @@ namespace GN.DataAccess.DAO
                                         Constants.REFIX_PARAMETER + DbSchema.News.NEWS_ID, newsItem.NewsId,
                                         Constants.REFIX_PARAMETER + DbSchema.USER,   newsItem.User
                                     };
-                    procedureName = DbSchema.Menu.P_MENUDELETE;
+                    procedureName = DbSchema.News.P_NEWSDELETE;
                     returnDatatype = Constants.STRING;
                     break;
             }

@@ -12,12 +12,12 @@
     <div class="col-xs-9 banner-body-right">
 				<!-- single -->
 					<div class="single">
-						<h3><%=productDetail.Rows[i]["Product_Name"].ToString() %></h3>
+						<h3>Product Detail</h3>
 						<div class="single-left"  style="margin-top: 2%;">
-							<img src="images/Fish/<%=productDetail.Rows[i]["image_url"].ToString() %>" alt="<%=productDetail.Rows[i]["image_url"].ToString() %>" class="img-responsive" />
+							<img src="/Admin/images/<%=productDetail.Rows[i]["image_url"].ToString() %>" alt="<%=productDetail.Rows[i]["image_url"].ToString() %>" class="img-responsive" />
 						</div>
 						<div class="single-right">
-							<h4>Price: <%=Convert.ToDouble(productDetail.Rows[i]["price1"].ToString()) %> VNĐ</h4>
+							<h4>Name: <%=productDetail.Rows[i]["Product_Name"].ToString() %></h4>
 							<p><span>Description: <%=productDetail.Rows[i]["description"].ToString() %></span></p>
 						</div>
 						<div class="clearfix"> </div>

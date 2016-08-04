@@ -8,12 +8,12 @@ namespace GN.Common.DataItem
 {
     public class MenuItem:DataItem
     {
-        private string _menuId;
-        private bool _type;
-        private string _parentId;
-        private string _menuName;
-        private string _description;
-        private bool _validFlag;
+        private string _menuId = "";
+        private bool _type = true;
+        private string _parentId = "";
+        private string _menuName = "";
+        private string _description = "";
+        private bool _validFlag = true;
 
         public string MenuId
         {

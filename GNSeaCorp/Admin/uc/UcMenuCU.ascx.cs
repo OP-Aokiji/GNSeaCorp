@@ -43,7 +43,7 @@ namespace GNSeaCorp.Admin.uc
                             {
                                 MenuItem menuItem = new MenuItem();
                                 menuItem.MenuId = Menu_Id;
-                                menuItem.Crud = Constants.RETRIEVE_ALL;
+                                menuItem.Crud = Constants.WS_RETRIEVE;
 
                                 IMenuProxy proxy = new MenuProxy();
                                 DataTable resulTable = (DataTable)proxy.MenuCrud(menuItem);

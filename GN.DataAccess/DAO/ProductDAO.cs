@@ -26,7 +26,8 @@ namespace GN.DataAccess.DAO
             {
                 obj = new object[]
                 {
-                    Constants.REFIX_PARAMETER + DbSchema.Product.PRODUCT_ID, productItem.ProductId
+                    Constants.REFIX_PARAMETER + DbSchema.Product.PRODUCT_ID, productItem.ProductId,
+                    Constants.REFIX_PARAMETER + DbSchema.Product.MENU_ID, productItem.MenuId
                 };
 
                 procedureName = DbSchema.Product.P_PRODUCT;

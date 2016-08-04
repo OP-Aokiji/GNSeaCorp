@@ -75,7 +75,13 @@ namespace GN.DataAccess.DAO
 
         public object AccountChangePassword(AccountItem accountItem, string password)
         {
-            throw new NotImplementedException();
+            IDataAccessObject accessObj = new DataAccessObject();
+            object[] obj = new object[] {
+                                            DbSchema.Account.USER_ID, accountItem.UserId,
+                                            DbSchema.Account.PASSWORD, accountItem.Password,
+                                            DbSchema.Account.NEW_PASSWORD,  password
+                                        };
+            return (DataTable)accessObj.ExecuteDatatable(DbSchema.Account.P_CHANGEPASSWORD, obj);
         }
     }
 }

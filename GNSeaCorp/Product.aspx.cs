@@ -20,6 +20,8 @@ namespace GNSeaCorp
             try
             {
                 ProductItem productItem = new ProductItem();
+                if (Request.QueryString.AllKeys.Contains("id"))
+                    productItem.MenuId = Request["id"];
                 productItem.Crud = Constants.WS_RETRIEVE;
 
                 IProductProxy proxy = new ProductProxy();

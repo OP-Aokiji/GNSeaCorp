@@ -27,6 +27,7 @@ namespace GNSeaCorp.Admin.uc
                 {
                     if (!IsPostBack)
                     {
+                        BindDropdownList();
                         if (Request.QueryString.AllKeys.Contains("Id") && Request.QueryString.AllKeys.Contains("CRUD"))
                         {
                             if (!string.IsNullOrEmpty(Request["Id"]) && !string.IsNullOrEmpty(Request["CRUD"]) && Request["CRUD"].Equals(Constants.WS_UPDATE))
@@ -43,6 +44,7 @@ namespace GNSeaCorp.Admin.uc
 
                                     txtProductName.Text = result.Rows[0][DbSchema.Product.PRODUCT_NAME].ToString();
                                     txtDescription.Text = result.Rows[0][DbSchema.Product.DESCRIPTION].ToString();
+                                    ddlCategory.SelectedValue = result.Rows[0][DbSchema.Product.MENU_ID].ToString();
                                     txtPrice.Text = Convert.ToDouble(result.Rows[0][DbSchema.Product.PRICE1].ToString()).ToString();
                                     lblImageUrlTemp.Text =
                                         (string.IsNullOrEmpty(result.Rows[0][DbSchema.IMAGE_URL].ToString()))
@@ -63,6 +65,22 @@ namespace GNSeaCorp.Admin.uc
                     Response.Redirect("~/Admin/Login.aspx");
                 }
 
+            }
+        }
+
+        public void BindDropdownList()
+        {
+            MenuItem menuItem = new MenuItem();
+            menuItem.Crud = Constants.WS_RETRIEVE;
+            
+            IMenuProxy proxy = new MenuProxy();
+            DataTable result = (DataTable) proxy.MenuCrud(menuItem);
+            for (int i = 0; i < result.Rows.Count; i++)
+            {
+                ListItem item = new ListItem();
+                item.Value = result.Rows[i]["MENU_ID"].ToString();
+                item.Text = result.Rows[i]["MENU_NAME"].ToString();
+                ddlCategory.Items.Add(item);
             }
         }
 
@@ -97,8 +115,10 @@ namespace GNSeaCorp.Admin.uc
                 ProductItem productItem = new ProductItem();
 
                 productItem.ProductName = txtProductName.Text;
-                productItem.Price1 = Convert.ToDecimal(txtPrice.Text);
+                if(!string.IsNullOrEmpty(txtPrice.Text))
+                    productItem.Price1 = Convert.ToDecimal(txtPrice.Text);
                 productItem.Description = txtDescription.Text;
+                productItem.MenuId = ddlCategory.SelectedValue;
                 if (Session["UserId"] != null)
                     productItem.User = Session["UserId"].ToString();
 

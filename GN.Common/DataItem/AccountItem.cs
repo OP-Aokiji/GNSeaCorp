@@ -8,17 +8,17 @@ namespace GN.Common.DataItem
 {
     public class AccountItem:DataItem
     {
-        private string _userId;
-        private string _roldId;
-        private string _lastName;
-        private string _firstName;
-        private string _password;
-        private string _address;
+        private string _userId = "";
+        private string _roldId = "";
+        private string _lastName = "";
+        private string _firstName = "";
+        private string _password = "";
+        private string _address = "";
         private string _phoneNumber;
-        private string _identification;
-        private string _avatarUrl;
-        private bool _validFlag;
-        private string _gender;
+        private string _identification = "";
+        private string _avatarUrl = "";
+        private bool _validFlag = true;
+        private string _gender = "";
 
         public string UserId
         {

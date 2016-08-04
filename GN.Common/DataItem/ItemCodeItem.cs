@@ -8,9 +8,9 @@ namespace GN.Common.DataItem
 {
     public class ItemCodeItem:DataItem
     {
-        private string _coreId;
-        private string _itemId;
-        private string _itemName;
+        private string _coreId = "";
+        private string _itemId = "";
+        private string _itemName = "";
         private bool _validFlag;
 
         public string CoreId

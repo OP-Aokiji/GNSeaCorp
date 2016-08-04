@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/UserMasterPage.Master" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="GNSeaCorp.Product" %>
+<%@ Import Namespace="GN.Common.Schema" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -10,6 +11,9 @@
 
     %>
     <div class="col-xs-9 banner-body-right">
+        <div class="gallery-head">
+            <h5 style="margin-bottom: 20px;"><%=productList.Rows[0][DbSchema.Menu.MENU_NAME].ToString() %></h5>
+        </div>
         <div class="msg-text-bottom">
             <% for (int i = 0; i < productList.Rows.Count; i++)
                 { %>
@@ -22,7 +26,7 @@
                 </figure>
 
                 <h3><a href="ProductDetail.aspx?id=<%=productList.Rows[i]["Product_ID"].ToString() %>"><%=productList.Rows[i]["PRODUCT_NAME"].ToString() %></a></h3>
-                <h4 style="text-align: center"><%=Convert.ToDouble(productList.Rows[i]["Price1"].ToString())%> VNĐ</h4>
+                <p><%=productList.Rows[i]["DESCRIPTION"].ToString()%></p>
             </div>
             <% } %>
             <div class="clearfix"></div>
